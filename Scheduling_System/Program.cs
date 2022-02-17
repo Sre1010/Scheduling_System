@@ -16,7 +16,7 @@ namespace Scheduling_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Main_Screen());
+            Application.Run(new Form_Login());
         }
     }
 }
