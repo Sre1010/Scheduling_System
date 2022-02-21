@@ -30,6 +30,7 @@ namespace Scheduling_System
             this.Hide();
             Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
             fmm.Show();
+            // HELLO WORLD
         }
     }
 }
