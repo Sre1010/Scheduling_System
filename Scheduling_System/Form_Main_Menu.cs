@@ -48,5 +48,25 @@ namespace Scheduling_System
         {
             form_login.Show();
         }
+
+        private void Form_Main_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_scheduled_events_Click(object sender, EventArgs e)
+        {
+            Control control = new Control();
+            control.Show();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_schedule_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
