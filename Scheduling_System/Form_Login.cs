@@ -40,7 +40,7 @@ namespace Scheduling_System
         {
             if (label_usernameHint.Visible == false)    // If hidden, make visible when user presses button
             {
-                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: At least 8 characters (EX: Password$)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
+                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: 8 total characters (EX: Pa$sword)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
                 label_usernameHint.Visible = true;
             }
             else
