@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scheduling_System
 {
@@ -153,15 +154,38 @@ namespace Scheduling_System
 
                 }
 
-                //If Username and Password are acceptable, check inside the form
-
-                checkEmployeeInTheEmployeeFile();
+                //if Username and password are acceptable, check against the databse
+                checkEmployeeInTheEmployeeFile(textBox_username.Text);
             }
         }
 
-        private void checkEmployeeInTheEmployeeFile()
+        private void checkEmployeeInTheEmployeeFile(string username)
         {
-            //TEEEEEEEEEEESTTTTTTTTTTTTTTTTTTTTT
+            string currentline = "";
+            string[] fields;
+
+            //The TXT file is stored inside of automatically created Debug folder
+            StreamReader FileReader = new StreamReader(@"EmployeeFile.txt");
+
+            //check if the right username is passed
+            Console.WriteLine("Current username is {0}", username);
+   
+            while (!FileReader.EndOfStream)
+            {
+                currentline = FileReader.ReadLine();
+
+                fields = currentline.Split(',');
+
+                Console.WriteLine(fields[0]); //gets only ID!!!!
+
+                if (fields[0].Contains(username))
+                {
+                    Console.WriteLine("USERNAME FOUND IN THE DATABASE");
+                    break;
+                }
+              
+            }
         }
+    
     }
 }
