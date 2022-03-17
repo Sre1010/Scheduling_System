@@ -155,11 +155,11 @@ namespace Scheduling_System
                 }
 
                 //if Username and password are acceptable, check against the databse
-                checkEmployeeInTheEmployeeFile(textBox_username.Text);
+                checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text);
             }
         }
 
-        private void checkEmployeeInTheEmployeeFile(string username)
+        private void checkEmployeeInTheEmployeeFile(string username, string password)
         {
             string currentline = "";
             string[] fields;
@@ -178,7 +178,9 @@ namespace Scheduling_System
 
                 Console.WriteLine(fields[0]); //gets only ID!!!!
 
-                if (fields[0].Contains(username))
+                /*This version only checks the appearance of the password and username in the file. They are not linked together.
+                  If password is connected to another username it will still says that the username was found*/
+                if (fields[0].Contains(username) && fields[1].Contains(password))
                 {
                     Console.WriteLine("USERNAME FOUND IN THE DATABASE");
                     break;
