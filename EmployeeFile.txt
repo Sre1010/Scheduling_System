@@ -1,0 +1,9 @@
+EmployeeID,Password,FirstName,LastName,DateOfBirth,Email,PhoneNumber,Address
+SSA023456,0234Abc!,Uliana,Ozerova,04/07/1984,uliana@usf.edu,123-456-7890,Address1
+SSA123456,1234Abc!,Sanskar,Bhavnani,06/05/1993,sanskar@usf.edu,123-456-7890,Address2
+SSA223456,2234Abc!,Shawn,Broyles,02/28/1995,shawn@usf.edu,123-456-7890,Address3
+SSM323456,3234Abc!,Sreten,Dedic,01/17/1991,sreten@usf.edu,123-456-7890,Address4
+SSM423456,4234Abc!,Sergio,Garcia,10/30/1976,sergio@usf.edu,123-456-7890,Address5
+SSA523456,5234Abc!,Trevone,Mckie,11/12/1958,trevone@usf.edu,123-456-7890,Address6
+SSM623456,6234Abc!,Helga,Mustali,12/07/1976,helga@usf.edu,123-456-7890,Address7
+SSM723456,7234Abc!,Taylor,Tiede,03/26/2000,taylor@usf.edu,123-456-7890,Address8

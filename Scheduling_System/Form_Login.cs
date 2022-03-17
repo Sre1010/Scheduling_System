@@ -152,7 +152,16 @@ namespace Scheduling_System
                     /* TO DO */
 
                 }
+
+                //If Username and Password are acceptable, check inside the form
+
+                checkEmployeeInTheEmployeeFile();
             }
+        }
+
+        private void checkEmployeeInTheEmployeeFile()
+        {
+            //TEEEEEEEEEEESTTTTTTTTTTTTTTTTTTTTT
         }
     }
 }
