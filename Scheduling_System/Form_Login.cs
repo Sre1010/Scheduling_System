@@ -154,39 +154,64 @@ namespace Scheduling_System
 
                 }
 
-                //if Username and password are acceptable, check against the databse
+                //FIRST, CREATE ARRAYS OF USERNAMES AND PASSWORDS
+                usernameAndPasswords(textBox_username.Text, textBox_password.Text);
+                //SECOND, CHECK IF PASSWORDS MATCHES WITH THE PASSWORD CONNECTED TO THE USERNAME
                 checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text);
             }
         }
+        /// ULIANA IS STILL WORKING ON IT 3/19
 
-        private void checkEmployeeInTheEmployeeFile(string username, string password)
+        int NUM_OF_EMPLOYEES = 8; //not including the first line
+        string[] employeeIDs;
+        string[] listOfPasswords;
+
+        private void usernameAndPasswords(string username, string password)
         {
+            /*We need to read the file, get employee`s ID and corresponding passwords, and store them in the arrays to verify whether they are matching*/
+            employeeIDs = new string[NUM_OF_EMPLOYEES + 1];
+            listOfPasswords = new string[NUM_OF_EMPLOYEES + 1];
             string currentline = "";
             string[] fields;
+
+            // assuming that there are 8 employees
+
+            int i = 0;
 
             //The TXT file is stored inside of automatically created Debug folder
             StreamReader FileReader = new StreamReader(@"EmployeeFile.txt");
 
             //check if the right username is passed
-            Console.WriteLine("Current username is {0}", username);
-   
+            //Console.WriteLine("Current username is {0}", username);
+
             while (!FileReader.EndOfStream)
             {
                 currentline = FileReader.ReadLine();
-
                 fields = currentline.Split(',');
 
-                Console.WriteLine(fields[0]); //gets only ID!!!!
+                //All IDs are now stored in the 1D array employeeIDs
+                employeeIDs[i] = fields[0];
 
-                /*This version only checks the appearance of the password and username in the file. They are not linked together.
-                  If password is connected to another username it will still says that the username was found*/
-                if (fields[0].Contains(username) && fields[1].Contains(password))
-                {
-                    Console.WriteLine("USERNAME FOUND IN THE DATABASE");
-                    break;
-                }
-              
+                //All passwords are not stored in the 1D array listOfPasswords
+                listOfPasswords[i] = fields[1];
+
+                //Console.WriteLine("{0}, {1}", employeeIDs[i], listOfPasswords[i]);
+                i++;
             }
+
+        }
+        private void checkEmployeeInTheEmployeeFile(string username, string password)
+        {       
+            //Since arrays at index 0 contain the name of the column in the file, start looking at 1
+            for(int j = 1; j <= NUM_OF_EMPLOYEES + 1; j++)
+            {
+                if (employeeIDs[j] == username && listOfPasswords[j] == password)
+                {
+                    Console.WriteLine("Password matches the username");
+                    break;
+                } 
+            }
+
         }
     
     }
