@@ -13,18 +13,20 @@ namespace Scheduling_System
     public partial class Form_Main_Menu : Form
     {
         private string username;
+        private string firstName;
         Form_Login form_login;
 
         /// <summary>
         /// This is the constructor for the main menu form.
-        /// It expects a username.
+        /// It expects a username. Also expects first name of user (fn).
         /// </summary>
         /// <param name="u"></param>
-        public Form_Main_Menu(Form_Login fl, string u)
+        public Form_Main_Menu(Form_Login fl, string u, string fn)
         {
             InitializeComponent();
             username = u;
-            label_welcome.Text += u;
+            firstName = fn;
+            label_welcome.Text += fn;       // Displays users' first name when welcoming them
             form_login = fl;
         }
 

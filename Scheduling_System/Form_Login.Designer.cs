@@ -81,10 +81,10 @@ namespace Scheduling_System
             // label_login_title
             // 
             this.label_login_title.AutoSize = true;
-            this.label_login_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_login_title.Location = new System.Drawing.Point(283, 34);
+            this.label_login_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_login_title.Location = new System.Drawing.Point(262, 39);
             this.label_login_title.Name = "label_login_title";
-            this.label_login_title.Size = new System.Drawing.Size(255, 25);
+            this.label_login_title.Size = new System.Drawing.Size(319, 31);
             this.label_login_title.TabIndex = 4;
             this.label_login_title.Text = "Scheduling System Login";
             // 

@@ -50,7 +50,7 @@ namespace Scheduling_System
             // 
             // button_temp_login
             // 
-            this.button_temp_login.Location = new System.Drawing.Point(699, 162);
+            this.button_temp_login.Location = new System.Drawing.Point(696, 250);
             this.button_temp_login.Name = "button_temp_login";
             this.button_temp_login.Size = new System.Drawing.Size(92, 58);
             this.button_temp_login.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace Scheduling_System
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(38, 63);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -70,26 +70,26 @@ namespace Scheduling_System
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(283, 63);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             // 
             // button_settings
             // 
-            this.button_settings.Location = new System.Drawing.Point(699, 334);
-            this.button_settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_settings.Location = new System.Drawing.Point(697, 313);
+            this.button_settings.Margin = new System.Windows.Forms.Padding(2);
             this.button_settings.Name = "button_settings";
-            this.button_settings.Size = new System.Drawing.Size(92, 47);
+            this.button_settings.Size = new System.Drawing.Size(92, 58);
             this.button_settings.TabIndex = 5;
             this.button_settings.Text = "Settings";
             this.button_settings.UseVisualStyleBackColor = true;
             // 
             // button_schedule
             // 
-            this.button_schedule.Location = new System.Drawing.Point(699, 282);
-            this.button_schedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_schedule.Location = new System.Drawing.Point(697, 63);
+            this.button_schedule.Margin = new System.Windows.Forms.Padding(2);
             this.button_schedule.Name = "button_schedule";
-            this.button_schedule.Size = new System.Drawing.Size(92, 47);
+            this.button_schedule.Size = new System.Drawing.Size(92, 58);
             this.button_schedule.TabIndex = 6;
             this.button_schedule.Text = "Schedule an Event";
             this.button_schedule.UseVisualStyleBackColor = true;
@@ -97,18 +97,18 @@ namespace Scheduling_System
             // 
             // button_cancel
             // 
-            this.button_cancel.Location = new System.Drawing.Point(699, 225);
-            this.button_cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_cancel.Location = new System.Drawing.Point(697, 187);
+            this.button_cancel.Margin = new System.Windows.Forms.Padding(2);
             this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(92, 52);
+            this.button_cancel.Size = new System.Drawing.Size(92, 58);
             this.button_cancel.TabIndex = 7;
             this.button_cancel.Text = "Cancel Event";
             this.button_cancel.UseVisualStyleBackColor = true;
             // 
             // button_scheduled_events
             // 
-            this.button_scheduled_events.Location = new System.Drawing.Point(700, 98);
-            this.button_scheduled_events.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_scheduled_events.Location = new System.Drawing.Point(697, 125);
+            this.button_scheduled_events.Margin = new System.Windows.Forms.Padding(2);
             this.button_scheduled_events.Name = "button_scheduled_events";
             this.button_scheduled_events.Size = new System.Drawing.Size(92, 58);
             this.button_scheduled_events.TabIndex = 8;

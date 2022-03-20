@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scheduling_System
 {
@@ -28,7 +29,7 @@ namespace Scheduling_System
         private void button_temp_main_menu_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
+            Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text, textBox_username.Text); // Will only display the username instead of first name
             fmm.Show();
 
         }
@@ -40,11 +41,11 @@ namespace Scheduling_System
         {
             if (label_usernameHint.Visible == false)    // If hidden, make visible when user presses button
             {
-                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: 8 total characters (EX: Pa$sword)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
+                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: 8 total characters (EX: PaSsword)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
                 label_usernameHint.Visible = true;
             }
             else
-                label_usernameHint.Visible = false;     // If hidden, make invisible when user presses button
+                label_usernameHint.Visible = false;     // If not hidden, make invisible when user presses button
         }
 
         // <summary>
@@ -127,32 +128,117 @@ namespace Scheduling_System
                 }
             }
 
-            // If username and password follow the right format, go to the main menu *FOR NOW*
-            /* TO DO: Instead will have to go to Retention Form depending on first 3 letters */
+            // If username and password follow the right format, go to specific Form depending on first 3 letters
             if (isUsernameAcceptable == true && isPasswordAcceptable == true)
             {
-                label_verifyLogin.Visible = false;       // Hide verification of username/password (Don't remove)
+                label_verifyLogin.Visible = false;       // Hide verification of username/password
 
-                /////////////////////////////////////////////////////////////////// Remove later
-                // Hide the login page and show the main menu to the user *FOR NOW*
-                this.Hide();
-                Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-                fmm.Show();
-                /////////////////////////////////////////////////////////////////// Remove later
+                //FIRST, CREATE ARRAYS OF USERNAMES AND PASSWORDS
+                usernameAndPasswords(textBox_username.Text, textBox_password.Text);
+                //SECOND, CHECK IF PASSWORDS MATCHES WITH THE PASSWORD CONNECTED TO THE USERNAME
+                checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text);
+                // Moved these ^^^ above so they can verify is username and password match and are in the database before going to the specific form
 
-                // Redirect to Manager Retention Form
+                /* TO DO: If username/password are verified, go to specified form */
+
+                // Redirect to Manager Form
                 if (textBox_username.Text.StartsWith("SSM"))
                 {
                     /* TO DO */
 
                 }
-                // Redirect to Associate Retention Form
+
+                // Redirect to Associate Form
                 else if (textBox_username.Text.StartsWith("SSA"))
                 {
-                    /* TO DO */
+                    string firstName = getFirstName(textBox_username.Text);     // Get the users first name based on their username
+
+                    // Hide the login page and show the Associate Form (Form_Main_Menu)
+                    this.Hide();
+                    Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text, firstName);
+                    fmm.Show();
 
                 }
+
             }
         }
+        /// ULIANA IS STILL WORKING ON IT 3/19
+
+        int NUM_OF_EMPLOYEES = 8; //not including the first line
+        string[] employeeIDs;
+        string[] listOfPasswords;
+        string[] listOfFirstNames;//
+
+        private void usernameAndPasswords(string username, string password)
+        {
+            /*We need to read the file, get employee`s ID and corresponding passwords, and store them in the arrays to verify whether they are matching*/
+            employeeIDs = new string[NUM_OF_EMPLOYEES + 1];
+            listOfPasswords = new string[NUM_OF_EMPLOYEES + 1];
+            listOfFirstNames = new string[NUM_OF_EMPLOYEES + 1];//
+            string currentline = "";
+            string[] fields;
+
+            // assuming that there are 8 employees
+
+            int i = 0;
+
+            //The TXT file is stored inside of automatically created Debug folder
+            StreamReader FileReader = new StreamReader(@"EmployeeFile.txt");
+
+            //check if the right username is passed
+            //Console.WriteLine("Current username is {0}", username);
+
+            while (!FileReader.EndOfStream)
+            {
+                currentline = FileReader.ReadLine();
+                fields = currentline.Split(',');
+
+                //All IDs are now stored in the 1D array employeeIDs
+                employeeIDs[i] = fields[0];
+
+                //All passwords are not stored in the 1D array listOfPasswords
+                listOfPasswords[i] = fields[1];
+
+                // Get the list of first names and store them in the 1D array listOfFirstNames //
+                listOfFirstNames[i] = fields[2];//
+
+                //Console.WriteLine("{0}, {1}", employeeIDs[i], listOfPasswords[i]);
+                i++;
+            }
+
+        }
+        private void checkEmployeeInTheEmployeeFile(string username, string password)
+        {
+            //Since arrays at index 0 contain the name of the column in the file, start looking at 1
+            for (int j = 1; j <= NUM_OF_EMPLOYEES + 1; j++)
+            {
+                if (employeeIDs[j] == username && listOfPasswords[j] == password)
+                {
+                    Console.WriteLine("Password matches the username");
+                    break;
+                }
+            }
+
+        }
+
+        // Get the users first name based on their username
+        private string getFirstName(string username)
+        {
+            string name = " ";
+
+            for (int j = 1; j <= NUM_OF_EMPLOYEES + 1; j++)
+            {
+                if (employeeIDs[j] == username)
+                {
+                    name = listOfFirstNames[j];
+                    //Console.WriteLine(name);    // To verify if correct name
+                    return name;
+                }
+            }
+            return name;
+        }
+
     }
 }
+
+
