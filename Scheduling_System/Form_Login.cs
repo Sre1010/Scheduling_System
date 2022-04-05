@@ -13,6 +13,39 @@ namespace Scheduling_System
 {
     public partial class Form_Login : Form
     {
+        public class Employee
+        {
+            public string Password { get; set; }
+            public string EmployeeID { get; set; }
+            DateTime dobE { get; set; }
+            public string FirstNameE { get; set; }
+            public string LastNameE { get; set; }
+            public string EmailE { get; set; }
+            public string PhoneNumberE { get; set; }
+            public string AdressE { get; set; }
+
+        }
+        public class Customer
+        {
+            public string CustomerID { get; set; }
+            public string BussinessName { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            DateTime dobC { get; set; }
+            public string EmailC { get; set; }
+            public string PhoneNumberC { get; set; }
+            public string AdressC { get; set; }
+
+        }
+        public class Event
+        {
+            public string EventID { get; set; }
+            public string CustomerIDE { get; set; }
+            DateTime BookedDate { get; set; }
+            public string EmployeeIDE { get; set; }
+
+        }
+
         public static Form_Login form_login_instance;
         public Form_Login()
         {
@@ -28,10 +61,18 @@ namespace Scheduling_System
         /// <param name="e"></param>
         private void button_temp_main_menu_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-            fmm.Show();
+            
 
+            if (checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text) == 1)
+            {
+                this.Hide();
+                fmm.Show();
+                MessageBox.Show("Welcome to the system");
+            }
+            else
+                MessageBox.Show("Wrong employee ID or password");
         }
 
         // <summary>
@@ -157,7 +198,12 @@ namespace Scheduling_System
                 //FIRST, CREATE ARRAYS OF USERNAMES AND PASSWORDS
                 usernameAndPasswords(textBox_username.Text, textBox_password.Text);
                 //SECOND, CHECK IF PASSWORDS MATCHES WITH THE PASSWORD CONNECTED TO THE USERNAME
-                checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text);
+                if (checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text) == 1)
+                {
+                    MessageBox.Show("Welcome to the system");
+                }
+                else
+                    MessageBox.Show("Wrong employee ID or password");
             }
         }
         /// ULIANA IS STILL WORKING ON IT 3/19
@@ -200,17 +246,21 @@ namespace Scheduling_System
             }
 
         }
-        private void checkEmployeeInTheEmployeeFile(string username, string password)
-        {       
+        private int checkEmployeeInTheEmployeeFile(string username, string password)
+        {
+            int check = 0;
             //Since arrays at index 0 contain the name of the column in the file, start looking at 1
-            for(int j = 1; j <= NUM_OF_EMPLOYEES + 1; j++)
+            for(int j = 1; j <= NUM_OF_EMPLOYEES; j++)
             {
                 if (employeeIDs[j] == username && listOfPasswords[j] == password)
                 {
                     Console.WriteLine("Password matches the username");
+                    check = 1;
                     break;
-                } 
+                }
+                
             }
+            return check;
 
         }
     
