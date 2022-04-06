@@ -15,18 +15,53 @@ namespace Scheduling_System
     {
         public class Employee
         {
-            public string Password { get; set; }
+            //Constructor
+            public Employee(string employeeID, string password, string firstNameE, string lastNameE, 
+                DateTime dobE, string emailE, string phoneNumberE, string adressE)
+            {
+                EmployeeID = employeeID;
+                Password = password;
+                FirstNameE = firstNameE;
+                LastNameE = lastNameE;
+                this.dobE = dobE;
+                EmailE = emailE;
+                PhoneNumberE = phoneNumberE;
+                AdressE = adressE;
+            }
+
             public string EmployeeID { get; set; }
-            DateTime dobE { get; set; }
+            public string Password { get; set; }
             public string FirstNameE { get; set; }
             public string LastNameE { get; set; }
+            DateTime dobE { get; set; }
+
             public string EmailE { get; set; }
             public string PhoneNumberE { get; set; }
             public string AdressE { get; set; }
 
+            public override string ToString()
+            {
+                return EmployeeID + Password + FirstNameE + LastNameE + dobE + EmailE + PhoneNumberE + AdressE;
+            }
+
         }
+
+        
         public class Customer
         {
+            public Customer(string customerID, string bussinessName, string firstName, string lastName, 
+                DateTime dobC, string emailC, string phoneNumberC, string adressC)
+            {
+                CustomerID = customerID;
+                BussinessName = bussinessName;
+                FirstName = firstName;
+                LastName = lastName;
+                this.dobC = dobC;
+                EmailC = emailC;
+                PhoneNumberC = phoneNumberC;
+                AdressC = adressC;
+            }
+
             public string CustomerID { get; set; }
             public string BussinessName { get; set; }
             public string FirstName { get; set; }
@@ -39,6 +74,14 @@ namespace Scheduling_System
         }
         public class Event
         {
+            public Event(string eventID, string customerIDE, DateTime bookedDate, string employeeIDE)
+            {
+                EventID = eventID;
+                CustomerIDE = customerIDE;
+                BookedDate = bookedDate;
+                EmployeeIDE = employeeIDE;
+            }
+
             public string EventID { get; set; }
             public string CustomerIDE { get; set; }
             DateTime BookedDate { get; set; }
@@ -46,33 +89,26 @@ namespace Scheduling_System
 
         }
 
+        List<string> lines = new List<string>();
+        List<Employee> employeeList = new List<Employee>();
         public static Form_Login form_login_instance;
         public Form_Login()
         {
             form_login_instance = this;
             InitializeComponent();
+            createEmployeeList();
+
         }
 
-        /// <summary>
-        /// This function hides the login page and shows the main menu to the user.
-        /// This is a temporary function for demonstration purposes for the group.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button_temp_main_menu_Click(object sender, EventArgs e)
-        {
-            
-            Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-            
+      /*creates a lit of customer that will be used throughout the program*/
 
-            if (checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text) == 1)
-            {
-                this.Hide();
-                fmm.Show();
-                MessageBox.Show("Welcome to the system");
-            }
-            else
-                MessageBox.Show("Wrong employee ID or password");
+        private void button_temp_main_menu_Click(object sender, EventArgs e)
+        { 
+
+            Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
+
+            this.Hide();
+            fmm.Show();
         }
 
         // <summary>
@@ -194,75 +230,62 @@ namespace Scheduling_System
                     /* TO DO */
 
                 }
+            }
 
-                //FIRST, CREATE ARRAYS OF USERNAMES AND PASSWORDS
-                usernameAndPasswords(textBox_username.Text, textBox_password.Text);
-                //SECOND, CHECK IF PASSWORDS MATCHES WITH THE PASSWORD CONNECTED TO THE USERNAME
-                if (checkEmployeeInTheEmployeeFile(textBox_username.Text, textBox_password.Text) == 1)
+            checkPassword(textBox_username.Text, textBox_password.Text);
+        }
+
+        public void checkPassword(string s, string p)
+        {
+            bool isFound = false;
+            foreach (Employee e in employeeList)
+            {
+                if (e.EmployeeID == s)
                 {
-                    MessageBox.Show("Welcome to the system");
+                    if (e.Password == p)
+                    {
+
+                        Console.WriteLine("Employee found in the database");
+                        isFound = true;
+                        break;
+                    }
+                    else
+                        Console.WriteLine("Employee found, but wrong password");
+                    break;
                 }
                 else
-                    MessageBox.Show("Wrong employee ID or password");
+                    isFound = false;
+            }
+
+            if (isFound == false)
+            {
+                Console.WriteLine("Employee not found or password is incorrect");
+            }
+        }
+        private void createEmployeeList()
+        {
+            string filePath = @"EmployeeFile.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Employee e = new Employee(items[0], items[1], items[2], items[3], DateTime.Parse(items[4]), items[5],
+                    items[6], items[7]);
+                employeeList.Add(e);
+
+            }
+
+            //to print the whole list
+            foreach (Employee e in employeeList)
+            {
+                Console.WriteLine(e);
             }
         }
         /// ULIANA IS STILL WORKING ON IT 3/19
 
-        int NUM_OF_EMPLOYEES = 8; //not including the first line
-        string[] employeeIDs;
-        string[] listOfPasswords;
-
-        private void usernameAndPasswords(string username, string password)
-        {
-            /*We need to read the file, get employee`s ID and corresponding passwords, and store them in the arrays to verify whether they are matching*/
-            employeeIDs = new string[NUM_OF_EMPLOYEES + 1];
-            listOfPasswords = new string[NUM_OF_EMPLOYEES + 1];
-            string currentline = "";
-            string[] fields;
-
-            // assuming that there are 8 employees
-
-            int i = 0;
-
-            //The TXT file is stored inside of automatically created Debug folder
-            StreamReader FileReader = new StreamReader(@"EmployeeFile.txt");
-
-            //check if the right username is passed
-            //Console.WriteLine("Current username is {0}", username);
-
-            while (!FileReader.EndOfStream)
-            {
-                currentline = FileReader.ReadLine();
-                fields = currentline.Split(',');
-
-                //All IDs are now stored in the 1D array employeeIDs
-                employeeIDs[i] = fields[0];
-
-                //All passwords are not stored in the 1D array listOfPasswords
-                listOfPasswords[i] = fields[1];
-
-                //Console.WriteLine("{0}, {1}", employeeIDs[i], listOfPasswords[i]);
-                i++;
-            }
-
-        }
-        private int checkEmployeeInTheEmployeeFile(string username, string password)
-        {
-            int check = 0;
-            //Since arrays at index 0 contain the name of the column in the file, start looking at 1
-            for(int j = 1; j <= NUM_OF_EMPLOYEES; j++)
-            {
-                if (employeeIDs[j] == username && listOfPasswords[j] == password)
-                {
-                    Console.WriteLine("Password matches the username");
-                    check = 1;
-                    break;
-                }
-                
-            }
-            return check;
-
-        }
+      
     
     }
 }

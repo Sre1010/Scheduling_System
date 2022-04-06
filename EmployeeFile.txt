@@ -1,4 +1,3 @@
-EmployeeID,Password,FirstName,LastName,DateOfBirth,Email,PhoneNumber,Address
 SSA023456,0234Abc!,Uliana,Ozerova,04/07/1984,uliana@usf.edu,123-456-7890,Address1
 SSA123456,1234Abc!,Sanskar,Bhavnani,06/05/1993,sanskar@usf.edu,123-456-7890,Address2
 SSA223456,2234Abc!,Shawn,Broyles,02/28/1995,shawn@usf.edu,123-456-7890,Address3
