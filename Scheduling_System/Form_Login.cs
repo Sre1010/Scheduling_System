@@ -13,6 +13,10 @@ namespace Scheduling_System
 {
     public partial class Form_Login : Form
     {
+        List<string> lines = new List<string>();
+        List <Employee> employeeList = new List<Employee>();
+        List <Event> eventList = new List<Event>();
+        List <Customer> customerList = new List<Customer>();
         public class Employee
         {
             //Constructor
@@ -41,7 +45,7 @@ namespace Scheduling_System
 
             public override string ToString()
             {
-                return EmployeeID + Password + FirstNameE + LastNameE + dobE + EmailE + PhoneNumberE + AdressE;
+                return EmployeeID + " " + Password + " " + FirstNameE + " " + LastNameE + " " + dobE + " " + EmailE + " " + PhoneNumberE + " " + AdressE;
             }
 
         }
@@ -70,33 +74,44 @@ namespace Scheduling_System
             public string EmailC { get; set; }
             public string PhoneNumberC { get; set; }
             public string AdressC { get; set; }
+            public override string ToString()
+            {
+                return CustomerID + " " + BussinessName + " " + FirstName + " " + LastName + " " + dobC + " " + EmailC + " "+  PhoneNumberC + " "  + AdressC;
+            }
 
         }
         public class Event
         {
-            public Event(string eventID, string customerIDE, DateTime bookedDate, string employeeIDE)
+            public Event(string eventID, string customerIDE, DateTime bookedDate,
+                string description, string employeeIDE)
             {
                 EventID = eventID;
                 CustomerIDE = customerIDE;
                 BookedDate = bookedDate;
+                Description = description;
                 EmployeeIDE = employeeIDE;
             }
 
             public string EventID { get; set; }
             public string CustomerIDE { get; set; }
             DateTime BookedDate { get; set; }
+            public string Description { get; set; }
             public string EmployeeIDE { get; set; }
 
-        }
+            public override string ToString()
+            {
+                return EventID + " " + CustomerIDE + " " + BookedDate + " " + Description + " " + EmployeeIDE;
+            }
 
-        List<string> lines = new List<string>();
-        List<Employee> employeeList = new List<Employee>();
+        }
         public static Form_Login form_login_instance;
         public Form_Login()
         {
             form_login_instance = this;
             InitializeComponent();
             createEmployeeList();
+            createEventList();
+            createCustomerList();
 
         }
 
@@ -283,9 +298,31 @@ namespace Scheduling_System
                 Console.WriteLine(e);
             }
         }
+
+        private void createEventList()
+        {
+            string filePath = @"EventFile.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Event ev = new Event(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4]);
+                eventList.Add(ev);
+            }
+            foreach (Event ev in eventList)
+            {
+                Console.WriteLine(ev.ToString());
+            }
+        }
         /// ULIANA IS STILL WORKING ON IT 3/19
 
-      
-    
+        private void createCustomerList()
+        {
+
+        }
+
+
     }
 }
