@@ -31,5 +31,12 @@ namespace Scheduling_System
             Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
             fmm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
+            fmm.Show();
+        }
     }
 }
