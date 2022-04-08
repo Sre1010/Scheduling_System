@@ -13,7 +13,10 @@ namespace Scheduling_System
 {
     public partial class Form_Login : Form
     {
+        /*lines is a helper list*/
         List<string> lines = new List<string>();
+
+        /*the three main lists that will be used throughout the program*/
         List <Employee> employeeList = new List<Employee>();
         List <Event> eventList = new List<Event>();
         List <Customer> customerList = new List<Customer>();
@@ -28,8 +31,6 @@ namespace Scheduling_System
             createCustomerList();
 
         }
-
-      /*creates a lit of customer that will be used throughout the program*/
 
         private void button_temp_main_menu_Click(object sender, EventArgs e)
         { 
@@ -206,11 +207,13 @@ namespace Scheduling_System
 
             }
 
-            //to print the whole list
+            /*print to console to check the whole list*/
             foreach (Employee e in employeeList)
             {
                 Console.WriteLine(e);
             }
+
+            lines.Clear();
         }
 
         private void createEventList()
@@ -225,15 +228,36 @@ namespace Scheduling_System
                 Event ev = new Event(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4]);
                 eventList.Add(ev);
             }
+            /*print to console to check the content of the list*/
             foreach (Event ev in eventList)
             {
-                Console.WriteLine(ev.ToString());
+                Console.WriteLine(ev);
             }
+
+            lines.Clear();
         }
         /// ULIANA IS STILL WORKING ON IT 3/19
 
         private void createCustomerList()
         {
+            string filePath = @"ClientFile.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Customer cust = new Customer(items[0], items[1], items[2], items[3], DateTime.Parse(items[4]), items[5], items[6]);
+                customerList.Add(cust);
+            }
+
+            /*print to console to check the content of the list*/
+            foreach (Customer cust in customerList)
+            {
+                Console.WriteLine(cust);
+            }
+
+            lines.Clear();
 
         }
 
