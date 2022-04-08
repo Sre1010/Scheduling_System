@@ -54,7 +54,7 @@ namespace Scheduling_System
         public class Customer
         {
             public Customer(string customerID, string bussinessName, string firstName, string lastName, 
-                DateTime dobC, string emailC, string phoneNumberC, string adressC)
+                DateTime dobC, string emailC, string phoneNumberC)
             {
                 CustomerID = customerID;
                 BussinessName = bussinessName;
@@ -63,7 +63,6 @@ namespace Scheduling_System
                 this.dobC = dobC;
                 EmailC = emailC;
                 PhoneNumberC = phoneNumberC;
-                AdressC = adressC;
             }
 
             public string CustomerID { get; set; }
@@ -73,10 +72,9 @@ namespace Scheduling_System
             DateTime dobC { get; set; }
             public string EmailC { get; set; }
             public string PhoneNumberC { get; set; }
-            public string AdressC { get; set; }
             public override string ToString()
             {
-                return CustomerID + " " + BussinessName + " " + FirstName + " " + LastName + " " + dobC + " " + EmailC + " "+  PhoneNumberC + " "  + AdressC;
+                return CustomerID + " " + BussinessName + " " + FirstName + " " + LastName + " " + dobC + " " + EmailC + " " + PhoneNumberC + " ";
             }
 
         }
