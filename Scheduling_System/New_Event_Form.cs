@@ -106,6 +106,13 @@ namespace Scheduling_System
             
         }
 
+        private void button_backToMainMenu_Click(object sender, EventArgs e)
+        {
+            /*Form_Main_Menu main_form = new Form_Main_Menu();
+            this.Hide();
+            main_form.Show(); */
+            this.DialogResult = DialogResult.OK;
 
+        }
     }
 }

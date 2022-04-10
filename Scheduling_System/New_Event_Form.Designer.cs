@@ -46,6 +46,7 @@
             this.textBox_EventDate = new System.Windows.Forms.TextBox();
             this.textBox_DoB = new System.Windows.Forms.TextBox();
             this.button_scheduleEvent = new System.Windows.Forms.Button();
+            this.button_backToMainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -184,7 +185,7 @@
             // 
             // button_scheduleEvent
             // 
-            this.button_scheduleEvent.Location = new System.Drawing.Point(493, 305);
+            this.button_scheduleEvent.Location = new System.Drawing.Point(368, 297);
             this.button_scheduleEvent.Name = "button_scheduleEvent";
             this.button_scheduleEvent.Size = new System.Drawing.Size(168, 23);
             this.button_scheduleEvent.TabIndex = 17;
@@ -192,11 +193,22 @@
             this.button_scheduleEvent.UseVisualStyleBackColor = true;
             this.button_scheduleEvent.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_backToMainMenu
+            // 
+            this.button_backToMainMenu.Location = new System.Drawing.Point(644, 297);
+            this.button_backToMainMenu.Name = "button_backToMainMenu";
+            this.button_backToMainMenu.Size = new System.Drawing.Size(117, 23);
+            this.button_backToMainMenu.TabIndex = 18;
+            this.button_backToMainMenu.Text = "Back to Main Menu";
+            this.button_backToMainMenu.UseVisualStyleBackColor = true;
+            this.button_backToMainMenu.Click += new System.EventHandler(this.button_backToMainMenu_Click);
+            // 
             // New_Event_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_backToMainMenu);
             this.Controls.Add(this.button_scheduleEvent);
             this.Controls.Add(this.textBox_DoB);
             this.Controls.Add(this.textBox_EventDate);
@@ -242,5 +254,6 @@
         private System.Windows.Forms.TextBox textBox_EventDate;
         private System.Windows.Forms.TextBox textBox_DoB;
         private System.Windows.Forms.Button button_scheduleEvent;
+        private System.Windows.Forms.Button button_backToMainMenu;
     }
 }

@@ -29,6 +29,10 @@ namespace Scheduling_System
             form_login = fl;
         }
 
+        public Form_Main_Menu()
+        {
+        }
+
         /// <summary>
         /// This functions shows the login page to the user and closes the main menu.
         /// </summary>
@@ -68,9 +72,10 @@ namespace Scheduling_System
 
         private void button_schedule_Click(object sender, EventArgs e)
         {
-            New_Event_Form event_form = new New_Event_Form();
-            event_form.Show();
             this.Hide();
+            New_Event_Form event_form = new New_Event_Form();
+            event_form.ShowDialog();
+            this.Show();
         }
     }
 }
