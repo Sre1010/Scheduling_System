@@ -57,6 +57,10 @@ namespace Scheduling_System
             PhoneNumberC = phoneNumberC;
         }
 
+        public Customer()
+        {
+        }
+
         public string CustomerID { get; set; }
         public string BussinessName { get; set; }
         public string FirstName { get; set; }
