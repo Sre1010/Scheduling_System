@@ -43,31 +43,38 @@ namespace Scheduling_System
             {
               cust_id = createNewCustomer(); //override with the new customer ID
             }
-
-            //check if date is available
-            if (isDateAvailable() == false)
+            while (true)
             {
-                MessageBox.Show("Date not available");
-                //dateTimePicker_Event.Enabled = true;
+                //check if date is available
+                if (isDateAvailable() == false)
+                {
+                    MessageBox.Show("Date not available");
+
+                    //reset the date
+                    dateTimePicker_Event.Value = DateTime.Now;
+                }
+                else
+                {
+                    Event new_event = new Event(event_id, cust_id, DateTime.Parse(dateTimePicker_Event.Text), textBox_EventDescription.Text, Form_Login.current_employee);
+
+                    Form_Login.eventList.Add(new_event);
+
+                    List<string> lines = new List<string>();
+
+                    string event_new = event_id + "," + cust_id + "," + DateTime.Parse(dateTimePicker_Event.Text) + "," + textBox_EventDescription.Text + "," + Form_Login.current_employee;
+                    lines.Add(event_new);
+
+                    File.AppendAllLines(filepath, lines);
+                }
             }
-
-            Event new_event = new Event(event_id, cust_id, DateTime.Parse(dateTimePicker_Event.Text), textBox_Email.Text, Form_Login.current_employee);
-
-            Form_Login.eventList.Add(new_event);
-            
-            List<string> lines = new List<string>();
-
-            string event_new = event_id + "," + cust_id + "," + DateTime.Parse(dateTimePicker_Event.Text) + "," + textBox_Email.Text + "," + Form_Login.current_employee;
-            lines.Add(event_new);
-
-            File.AppendAllLines(filepath, lines);
 
         }
         private bool isDateAvailable()
         {
             if (Form_Login.eventList.Exists(x => x.BookedDate == DateTime.Parse(dateTimePicker_Event.Text)))
-                return true;
-            return false;
+                return false;
+
+            return true;
         }
         private string createNewCustomer()
         {
