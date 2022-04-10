@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_BusName = new System.Windows.Forms.TextBox();
@@ -43,10 +42,10 @@
             this.textBox_PhoneNum = new System.Windows.Forms.TextBox();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.textBox_EventDescription = new System.Windows.Forms.TextBox();
-            this.textBox_EventDate = new System.Windows.Forms.TextBox();
-            this.textBox_DoB = new System.Windows.Forms.TextBox();
             this.button_scheduleEvent = new System.Windows.Forms.Button();
             this.button_backToMainMenu = new System.Windows.Forms.Button();
+            this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Event = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -103,12 +102,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Event Description";
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(447, 36);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -131,63 +124,49 @@
             // 
             this.textBox_BusName.Location = new System.Drawing.Point(183, 36);
             this.textBox_BusName.Name = "textBox_BusName";
-            this.textBox_BusName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_BusName.Size = new System.Drawing.Size(179, 22);
             this.textBox_BusName.TabIndex = 9;
             // 
             // textBox_LastName
             // 
             this.textBox_LastName.Location = new System.Drawing.Point(183, 140);
             this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_LastName.Size = new System.Drawing.Size(179, 22);
             this.textBox_LastName.TabIndex = 10;
             // 
             // textBox_FirstName
             // 
             this.textBox_FirstName.Location = new System.Drawing.Point(183, 87);
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_FirstName.Size = new System.Drawing.Size(179, 22);
             this.textBox_FirstName.TabIndex = 11;
             // 
             // textBox_PhoneNum
             // 
             this.textBox_PhoneNum.Location = new System.Drawing.Point(183, 184);
             this.textBox_PhoneNum.Name = "textBox_PhoneNum";
-            this.textBox_PhoneNum.Size = new System.Drawing.Size(100, 22);
+            this.textBox_PhoneNum.Size = new System.Drawing.Size(179, 22);
             this.textBox_PhoneNum.TabIndex = 12;
             // 
             // textBox_Email
             // 
             this.textBox_Email.Location = new System.Drawing.Point(183, 233);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Email.Size = new System.Drawing.Size(179, 22);
             this.textBox_Email.TabIndex = 13;
             // 
             // textBox_EventDescription
             // 
             this.textBox_EventDescription.Location = new System.Drawing.Point(183, 373);
             this.textBox_EventDescription.Name = "textBox_EventDescription";
-            this.textBox_EventDescription.Size = new System.Drawing.Size(100, 22);
+            this.textBox_EventDescription.Size = new System.Drawing.Size(179, 22);
             this.textBox_EventDescription.TabIndex = 14;
-            // 
-            // textBox_EventDate
-            // 
-            this.textBox_EventDate.Location = new System.Drawing.Point(183, 328);
-            this.textBox_EventDate.Name = "textBox_EventDate";
-            this.textBox_EventDate.Size = new System.Drawing.Size(100, 22);
-            this.textBox_EventDate.TabIndex = 15;
-            // 
-            // textBox_DoB
-            // 
-            this.textBox_DoB.Location = new System.Drawing.Point(183, 280);
-            this.textBox_DoB.Name = "textBox_DoB";
-            this.textBox_DoB.Size = new System.Drawing.Size(100, 22);
-            this.textBox_DoB.TabIndex = 16;
             // 
             // button_scheduleEvent
             // 
-            this.button_scheduleEvent.Location = new System.Drawing.Point(368, 297);
+            this.button_scheduleEvent.Location = new System.Drawing.Point(609, 330);
             this.button_scheduleEvent.Name = "button_scheduleEvent";
-            this.button_scheduleEvent.Size = new System.Drawing.Size(168, 23);
+            this.button_scheduleEvent.Size = new System.Drawing.Size(117, 60);
             this.button_scheduleEvent.TabIndex = 17;
             this.button_scheduleEvent.Text = "Schedule This Event";
             this.button_scheduleEvent.UseVisualStyleBackColor = true;
@@ -195,23 +174,46 @@
             // 
             // button_backToMainMenu
             // 
-            this.button_backToMainMenu.Location = new System.Drawing.Point(644, 297);
+            this.button_backToMainMenu.Location = new System.Drawing.Point(453, 329);
             this.button_backToMainMenu.Name = "button_backToMainMenu";
-            this.button_backToMainMenu.Size = new System.Drawing.Size(117, 23);
+            this.button_backToMainMenu.Size = new System.Drawing.Size(117, 63);
             this.button_backToMainMenu.TabIndex = 18;
             this.button_backToMainMenu.Text = "Back to Main Menu";
             this.button_backToMainMenu.UseVisualStyleBackColor = true;
             this.button_backToMainMenu.Click += new System.EventHandler(this.button_backToMainMenu_Click);
+            // 
+            // dateTimePicker_DOB
+            // 
+            this.dateTimePicker_DOB.CustomFormat = "MM-dd-yyyy";
+            this.dateTimePicker_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(183, 283);
+            this.dateTimePicker_DOB.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker_DOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
+            this.dateTimePicker_DOB.Size = new System.Drawing.Size(111, 22);
+            this.dateTimePicker_DOB.TabIndex = 19;
+            // 
+            // dateTimePicker_Event
+            // 
+            this.dateTimePicker_Event.CustomFormat = "MM-dd-yyyy";
+            this.dateTimePicker_Event.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_Event.Location = new System.Drawing.Point(183, 328);
+            this.dateTimePicker_Event.MaxDate = new System.DateTime(2025, 4, 10, 12, 54, 0, 0);
+            this.dateTimePicker_Event.MinDate = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
+            this.dateTimePicker_Event.Name = "dateTimePicker_Event";
+            this.dateTimePicker_Event.Size = new System.Drawing.Size(111, 22);
+            this.dateTimePicker_Event.TabIndex = 20;
+            this.dateTimePicker_Event.Value = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
             // 
             // New_Event_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker_Event);
+            this.Controls.Add(this.dateTimePicker_DOB);
             this.Controls.Add(this.button_backToMainMenu);
             this.Controls.Add(this.button_scheduleEvent);
-            this.Controls.Add(this.textBox_DoB);
-            this.Controls.Add(this.textBox_EventDate);
             this.Controls.Add(this.textBox_EventDescription);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.textBox_PhoneNum);
@@ -220,7 +222,6 @@
             this.Controls.Add(this.textBox_BusName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -242,7 +243,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_BusName;
@@ -251,9 +251,9 @@
         private System.Windows.Forms.TextBox textBox_PhoneNum;
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.TextBox textBox_EventDescription;
-        private System.Windows.Forms.TextBox textBox_EventDate;
-        private System.Windows.Forms.TextBox textBox_DoB;
         private System.Windows.Forms.Button button_scheduleEvent;
         private System.Windows.Forms.Button button_backToMainMenu;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Event;
     }
 }

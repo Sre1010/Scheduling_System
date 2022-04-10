@@ -15,6 +15,7 @@ namespace Scheduling_System
     {
         /*lines is a helper list*/
         public List<string> lines = new List<string>();
+        public static string current_employee;
 
         /*the three main lists that will be used throughout the program*/
         public static List  <Employee> employeeList = new List<Employee>();
@@ -147,7 +148,7 @@ namespace Scheduling_System
                 Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
                 fmm.Show();
                 /////////////////////////////////////////////////////////////////// Remove later
-
+                current_employee = textBox_username.Text;
                 // Redirect to Manager Retention Form
                 if (textBox_username.Text.StartsWith("SSM"))
                 {

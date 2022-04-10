@@ -84,7 +84,7 @@ namespace Scheduling_System
 
         public string EventID { get; set; }
         public string CustomerIDE { get; set; }
-        DateTime BookedDate { get; set; }
+        public DateTime BookedDate { get; set; }
         public string Description { get; set; }
         public string EmployeeIDE { get; set; }
 
