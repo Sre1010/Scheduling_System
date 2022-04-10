@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scheduling_System
 {
@@ -26,6 +27,7 @@ namespace Scheduling_System
 
         private void createNewEvent()
         {
+            int exist;
             //Client File: CL1234,"BussinesName3",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
             //Event File: eventID, clientID.....employeeID EV010,CL1231,03/21/2022,"HolyMolly2 Event",SSA223456
 
@@ -45,24 +47,62 @@ namespace Scheduling_System
             EmployeeIDE = employeeIDE; */
 
             //generate an Event ID
-            //if customer does not exist, generate new customer ID. -->
-            //               function checkiIfCustomerExist(take the textboxes, check for bussiness - first - last in the current list).
 
+            if (checkIfCustomerExist() == 0) // ==0 customer does not exist
+            {
+               createNewCustomer();
+            }
 
-            //if booked date is available --> checkCalendar function
-            //put employee ID under which the system if working
+            //check if date is available(not booked)
+            //if booked, say booked and let the other person change the date
+            //if not booked:
+            //create a new event//get employeeID
 
             //Event new_event = new Event();
          }
 
-        public void checkIfCustomerExist()
+        private void createNewCustomer()
+        {
+            //generate a customer ID
+            //CL1234
+            string filepath = @"ClientFile.txt";
+            string start = "CL";
+
+            Random rand = new Random();
+            string digits = rand.Next(0000, 9999).ToString();
+            string id = start + digits;
+
+            //create a new Customer
+            Customer new_cust = new Customer(id, textBox_BusName.Text, textBox_FirstName.Text, textBox_LastName.Text, 
+                DateTime.Parse(textBox_DoB.Text), textBox_Email.Text, textBox_PhoneNum.Text);
+            Form_Login.customerList.Add(new_cust);
+
+            //need to write to a file as well
+            List<string> lines = new List<string>();
+            string customer = id + "," + textBox_BusName.Text + "," + textBox_FirstName.Text + "," + textBox_LastName.Text + "," +
+                DateTime.Parse(textBox_DoB.Text) + "," + textBox_Email.Text + "," + textBox_PhoneNum.Text;
+            lines.Add(customer);
+
+            File.WriteAllLines(filepath, lines);
+
+        }
+
+        public int checkIfCustomerExist()
         {
             // if (Form_Login.customerList.Contains( new Customer { BussinessName = textBox_BusName.Text } ));
+            int track;
             //right now only checks for exact match
             if (Form_Login.customerList.Exists(x => x.BussinessName == textBox_BusName.Text))
             {
+                //if customer exist, return 1
+                track = 1;
 
             }
+            else
+            {
+                track = 0;
+            }
+            return track;
             
         }
 

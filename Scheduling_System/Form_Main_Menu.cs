@@ -14,6 +14,7 @@ namespace Scheduling_System
     {
         private string username;
         Form_Login form_login;
+        New_Event_Form form_event;
 
         /// <summary>
         /// This is the constructor for the main menu form.
@@ -67,7 +68,9 @@ namespace Scheduling_System
 
         private void button_schedule_Click(object sender, EventArgs e)
         {
-
+            New_Event_Form event_form = new New_Event_Form();
+            event_form.Show();
+            this.Hide();
         }
     }
 }
