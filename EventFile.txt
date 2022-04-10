@@ -1,6 +1,6 @@
-EV010,shouldbeassigned1,03/21/2022,"HolyMolly2 Event",assignedID2
-EV200,shouldbeassigned2,03/24/2022,"HolyMolly3 Event",assignedID3
-EV980,shouldbeassigned3,03/23/2022,"HolyMolly4 Event",assignedID4 
-EV043,shouldbeassigned4,03/11/2022,"HolyMolly5 Event",assignedID5 
-EV240,shouldbeassigned5,02/21/2022,"HolyMolly6 Event",assignedID6
-EV055,shouldbeassigned6,04/21/2022,"HolyMolly7 Event",assignedID7 
+EV010,CL1231,03/21/2022,"HolyMolly2 Event",SSA223456
+EV200,CL2232,03/24/2022,"HolyMolly3 Event",SSM423456
+EV980,CL3233,03/23/2022,"HolyMolly4 Event",SSM623456
+EV043,CL1234,03/11/2022,"HolyMolly5 Event",SSM423456 
+EV240,CL2232,02/21/2022,"HolyMolly6 Event",SSA023456
+EV055,CL1234,04/21/2022,"HolyMolly7 Event",SSM623456

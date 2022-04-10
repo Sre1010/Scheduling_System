@@ -14,12 +14,12 @@ namespace Scheduling_System
     public partial class Form_Login : Form
     {
         /*lines is a helper list*/
-        List<string> lines = new List<string>();
+        public List<string> lines = new List<string>();
 
         /*the three main lists that will be used throughout the program*/
-        List <Employee> employeeList = new List<Employee>();
-        List <Event> eventList = new List<Event>();
-        List <Customer> customerList = new List<Customer>();
+        public static List  <Employee> employeeList = new List<Employee>();
+        public static List <Event> eventList = new List<Event>();
+        public static List <Customer> customerList = new List<Customer>();
        
         public static Form_Login form_login_instance;
         public Form_Login()
@@ -192,7 +192,7 @@ namespace Scheduling_System
                 Console.WriteLine("Employee not found or password is incorrect");
             }
         }
-        private void createEmployeeList()
+        public void createEmployeeList()
         {
             string filePath = @"EmployeeFile.txt";
 
@@ -216,7 +216,7 @@ namespace Scheduling_System
             lines.Clear();
         }
 
-        private void createEventList()
+        public void createEventList()
         {
             string filePath = @"EventFile.txt";
 
@@ -238,7 +238,7 @@ namespace Scheduling_System
         }
         /// ULIANA IS STILL WORKING ON IT 3/19
 
-        private void createCustomerList()
+        public void createCustomerList()
         {
             string filePath = @"ClientFile.txt";
 
@@ -260,6 +260,7 @@ namespace Scheduling_System
             lines.Clear();
 
         }
+
 
 
     }

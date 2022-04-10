@@ -37,15 +37,15 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_BusName = new System.Windows.Forms.TextBox();
+            this.textBox_LastName = new System.Windows.Forms.TextBox();
+            this.textBox_FirstName = new System.Windows.Forms.TextBox();
+            this.textBox_PhoneNum = new System.Windows.Forms.TextBox();
+            this.textBox_Email = new System.Windows.Forms.TextBox();
+            this.textBox_EventDescription = new System.Windows.Forms.TextBox();
+            this.textBox_EventDate = new System.Windows.Forms.TextBox();
+            this.textBox_DoB = new System.Windows.Forms.TextBox();
+            this.button_scheduleEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,85 +126,86 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Phone Number";
             // 
-            // textBox1
+            // textBox_BusName
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 9;
+            this.textBox_BusName.Location = new System.Drawing.Point(183, 36);
+            this.textBox_BusName.Name = "textBox_BusName";
+            this.textBox_BusName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_BusName.TabIndex = 9;
             // 
-            // textBox2
+            // textBox_LastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 10;
+            this.textBox_LastName.Location = new System.Drawing.Point(183, 140);
+            this.textBox_LastName.Name = "textBox_LastName";
+            this.textBox_LastName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_LastName.TabIndex = 10;
             // 
-            // textBox3
+            // textBox_FirstName
             // 
-            this.textBox3.Location = new System.Drawing.Point(183, 87);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 11;
+            this.textBox_FirstName.Location = new System.Drawing.Point(183, 87);
+            this.textBox_FirstName.Name = "textBox_FirstName";
+            this.textBox_FirstName.Size = new System.Drawing.Size(100, 22);
+            this.textBox_FirstName.TabIndex = 11;
             // 
-            // textBox4
+            // textBox_PhoneNum
             // 
-            this.textBox4.Location = new System.Drawing.Point(183, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 12;
+            this.textBox_PhoneNum.Location = new System.Drawing.Point(183, 184);
+            this.textBox_PhoneNum.Name = "textBox_PhoneNum";
+            this.textBox_PhoneNum.Size = new System.Drawing.Size(100, 22);
+            this.textBox_PhoneNum.TabIndex = 12;
             // 
-            // textBox5
+            // textBox_Email
             // 
-            this.textBox5.Location = new System.Drawing.Point(183, 233);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 13;
+            this.textBox_Email.Location = new System.Drawing.Point(183, 233);
+            this.textBox_Email.Name = "textBox_Email";
+            this.textBox_Email.Size = new System.Drawing.Size(100, 22);
+            this.textBox_Email.TabIndex = 13;
             // 
-            // textBox6
+            // textBox_EventDescription
             // 
-            this.textBox6.Location = new System.Drawing.Point(183, 373);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 14;
+            this.textBox_EventDescription.Location = new System.Drawing.Point(183, 373);
+            this.textBox_EventDescription.Name = "textBox_EventDescription";
+            this.textBox_EventDescription.Size = new System.Drawing.Size(100, 22);
+            this.textBox_EventDescription.TabIndex = 14;
             // 
-            // textBox7
+            // textBox_EventDate
             // 
-            this.textBox7.Location = new System.Drawing.Point(183, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 15;
+            this.textBox_EventDate.Location = new System.Drawing.Point(183, 328);
+            this.textBox_EventDate.Name = "textBox_EventDate";
+            this.textBox_EventDate.Size = new System.Drawing.Size(100, 22);
+            this.textBox_EventDate.TabIndex = 15;
             // 
-            // textBox8
+            // textBox_DoB
             // 
-            this.textBox8.Location = new System.Drawing.Point(183, 280);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 16;
+            this.textBox_DoB.Location = new System.Drawing.Point(183, 280);
+            this.textBox_DoB.Name = "textBox_DoB";
+            this.textBox_DoB.Size = new System.Drawing.Size(100, 22);
+            this.textBox_DoB.TabIndex = 16;
             // 
-            // button1
+            // button_scheduleEvent
             // 
-            this.button1.Location = new System.Drawing.Point(493, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Schedule This Event";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_scheduleEvent.Location = new System.Drawing.Point(493, 305);
+            this.button_scheduleEvent.Name = "button_scheduleEvent";
+            this.button_scheduleEvent.Size = new System.Drawing.Size(168, 23);
+            this.button_scheduleEvent.TabIndex = 17;
+            this.button_scheduleEvent.Text = "Schedule This Event";
+            this.button_scheduleEvent.UseVisualStyleBackColor = true;
+            this.button_scheduleEvent.Click += new System.EventHandler(this.button1_Click);
             // 
             // New_Event_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button_scheduleEvent);
+            this.Controls.Add(this.textBox_DoB);
+            this.Controls.Add(this.textBox_EventDate);
+            this.Controls.Add(this.textBox_EventDescription);
+            this.Controls.Add(this.textBox_Email);
+            this.Controls.Add(this.textBox_PhoneNum);
+            this.Controls.Add(this.textBox_FirstName);
+            this.Controls.Add(this.textBox_LastName);
+            this.Controls.Add(this.textBox_BusName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.monthCalendar1);
@@ -232,14 +233,14 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox_BusName;
+        private System.Windows.Forms.TextBox textBox_LastName;
+        private System.Windows.Forms.TextBox textBox_FirstName;
+        private System.Windows.Forms.TextBox textBox_PhoneNum;
+        private System.Windows.Forms.TextBox textBox_Email;
+        private System.Windows.Forms.TextBox textBox_EventDescription;
+        private System.Windows.Forms.TextBox textBox_EventDate;
+        private System.Windows.Forms.TextBox textBox_DoB;
+        private System.Windows.Forms.Button button_scheduleEvent;
     }
 }

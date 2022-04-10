@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scheduling_System
 {
-    internal class ClassCLientEventClasses
+    internal class Class1
     {
     }
     public class Employee
