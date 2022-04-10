@@ -251,12 +251,6 @@ namespace Scheduling_System
                 customerList.Add(cust);
             }
 
-            /*print to console to check the content of the list*/
-            foreach (Customer cust in customerList)
-            {
-                Console.WriteLine(cust);
-            }
-
             lines.Clear();
 
         }

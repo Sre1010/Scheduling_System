@@ -75,15 +75,23 @@ namespace Scheduling_System
             //create a new Customer
             Customer new_cust = new Customer(id, textBox_BusName.Text, textBox_FirstName.Text, textBox_LastName.Text, 
                 DateTime.Parse(textBox_DoB.Text), textBox_Email.Text, textBox_PhoneNum.Text);
+
             Form_Login.customerList.Add(new_cust);
 
             //need to write to a file as well
             List<string> lines = new List<string>();
+
             string customer = id + "," + textBox_BusName.Text + "," + textBox_FirstName.Text + "," + textBox_LastName.Text + "," +
                 DateTime.Parse(textBox_DoB.Text) + "," + textBox_Email.Text + "," + textBox_PhoneNum.Text;
             lines.Add(customer);
 
-            File.WriteAllLines(filepath, lines);
+            File.AppendAllLines(filepath, lines);
+
+            //outputting all customers to the console to check if added
+            foreach (Customer cust in Form_Login.customerList)
+            {
+                Console.WriteLine(cust);
+            }
 
         }
 
