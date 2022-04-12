@@ -167,11 +167,15 @@ namespace Scheduling_System
             // 
             // listView_UpcomingEventsTwoWeeks
             // 
+            this.listView_UpcomingEventsTwoWeeks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView_UpcomingEventsTwoWeeks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_UpcomingEventsTwoWeeks.GridLines = true;
             this.listView_UpcomingEventsTwoWeeks.HideSelection = false;
             this.listView_UpcomingEventsTwoWeeks.Location = new System.Drawing.Point(521, 154);
             this.listView_UpcomingEventsTwoWeeks.Name = "listView_UpcomingEventsTwoWeeks";
             this.listView_UpcomingEventsTwoWeeks.Size = new System.Drawing.Size(504, 279);
             this.listView_UpcomingEventsTwoWeeks.TabIndex = 11;
+            this.listView_UpcomingEventsTwoWeeks.TileSize = new System.Drawing.Size(1, 1);
             this.listView_UpcomingEventsTwoWeeks.UseCompatibleStateImageBehavior = false;
             // 
             // pictureBox1
@@ -181,7 +185,7 @@ namespace Scheduling_System
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 89);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
