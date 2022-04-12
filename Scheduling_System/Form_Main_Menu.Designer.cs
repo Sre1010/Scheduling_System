@@ -42,16 +42,20 @@ namespace Scheduling_System
             this.label_TodaysDate = new System.Windows.Forms.Label();
             this.listView_UpcomingEventsTwoWeeks = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menu_panel = new System.Windows.Forms.Panel();
+            this.main_panel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menu_panel.SuspendLayout();
+            this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_date
             // 
             this.label_date.AutoSize = true;
-            this.label_date.BackColor = System.Drawing.Color.White;
+            this.label_date.BackColor = System.Drawing.Color.Transparent;
             this.label_date.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_date.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label_date.Location = new System.Drawing.Point(535, 97);
+            this.label_date.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label_date.Location = new System.Drawing.Point(12, 502);
             this.label_date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_date.Name = "label_date";
             this.label_date.Size = new System.Drawing.Size(72, 27);
@@ -64,12 +68,12 @@ namespace Scheduling_System
             this.button_temp_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_temp_login.FlatAppearance.BorderSize = 0;
             this.button_temp_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_temp_login.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_temp_login.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_temp_login.ForeColor = System.Drawing.Color.White;
-            this.button_temp_login.Location = new System.Drawing.Point(94, 215);
+            this.button_temp_login.Location = new System.Drawing.Point(12, 281);
             this.button_temp_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_temp_login.Name = "button_temp_login";
-            this.button_temp_login.Size = new System.Drawing.Size(137, 71);
+            this.button_temp_login.Size = new System.Drawing.Size(220, 35);
             this.button_temp_login.TabIndex = 1;
             this.button_temp_login.Text = "Logout";
             this.button_temp_login.UseVisualStyleBackColor = true;
@@ -81,12 +85,12 @@ namespace Scheduling_System
             this.button_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_settings.FlatAppearance.BorderSize = 0;
             this.button_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_settings.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_settings.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_settings.ForeColor = System.Drawing.Color.White;
-            this.button_settings.Location = new System.Drawing.Point(290, 293);
+            this.button_settings.Location = new System.Drawing.Point(11, 397);
             this.button_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_settings.Name = "button_settings";
-            this.button_settings.Size = new System.Drawing.Size(145, 71);
+            this.button_settings.Size = new System.Drawing.Size(220, 35);
             this.button_settings.TabIndex = 5;
             this.button_settings.Text = "Settings";
             this.button_settings.UseVisualStyleBackColor = true;
@@ -97,16 +101,14 @@ namespace Scheduling_System
             this.button_schedule_Event.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_schedule_Event.FlatAppearance.BorderSize = 0;
             this.button_schedule_Event.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_schedule_Event.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_schedule_Event.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_schedule_Event.ForeColor = System.Drawing.Color.White;
-            this.button_schedule_Event.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_schedule_Event.Location = new System.Drawing.Point(290, 167);
+            this.button_schedule_Event.Location = new System.Drawing.Point(11, 104);
             this.button_schedule_Event.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_schedule_Event.Name = "button_schedule_Event";
-            this.button_schedule_Event.Size = new System.Drawing.Size(145, 71);
+            this.button_schedule_Event.Size = new System.Drawing.Size(220, 35);
             this.button_schedule_Event.TabIndex = 6;
             this.button_schedule_Event.Text = "Schedule new Event";
-            this.button_schedule_Event.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_schedule_Event.UseVisualStyleBackColor = true;
             this.button_schedule_Event.Click += new System.EventHandler(this.button_schedule_Click);
             // 
@@ -116,12 +118,12 @@ namespace Scheduling_System
             this.button_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_cancel.FlatAppearance.BorderSize = 0;
             this.button_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_cancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cancel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cancel.ForeColor = System.Drawing.Color.White;
-            this.button_cancel.Location = new System.Drawing.Point(94, 330);
+            this.button_cancel.Location = new System.Drawing.Point(11, 166);
             this.button_cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(137, 71);
+            this.button_cancel.Size = new System.Drawing.Size(220, 35);
             this.button_cancel.TabIndex = 7;
             this.button_cancel.Text = "Cancel an Event";
             this.button_cancel.UseVisualStyleBackColor = true;
@@ -129,14 +131,14 @@ namespace Scheduling_System
             // button_scheduled_events
             // 
             this.button_scheduled_events.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_scheduled_events.BackgroundImage")));
-            this.button_scheduled_events.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_scheduled_events.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_scheduled_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_scheduled_events.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_scheduled_events.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_scheduled_events.ForeColor = System.Drawing.Color.White;
-            this.button_scheduled_events.Location = new System.Drawing.Point(94, 108);
+            this.button_scheduled_events.Location = new System.Drawing.Point(11, 224);
             this.button_scheduled_events.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_scheduled_events.Name = "button_scheduled_events";
-            this.button_scheduled_events.Size = new System.Drawing.Size(137, 71);
+            this.button_scheduled_events.Size = new System.Drawing.Size(220, 35);
             this.button_scheduled_events.TabIndex = 8;
             this.button_scheduled_events.Text = "See All Upcomming Events";
             this.button_scheduled_events.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -158,7 +160,7 @@ namespace Scheduling_System
             this.label_TodaysDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_TodaysDate.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TodaysDate.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label_TodaysDate.Location = new System.Drawing.Point(665, 97);
+            this.label_TodaysDate.Location = new System.Drawing.Point(665, 108);
             this.label_TodaysDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TodaysDate.Name = "label_TodaysDate";
             this.label_TodaysDate.Size = new System.Drawing.Size(0, 27);
@@ -171,7 +173,7 @@ namespace Scheduling_System
             this.listView_UpcomingEventsTwoWeeks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_UpcomingEventsTwoWeeks.GridLines = true;
             this.listView_UpcomingEventsTwoWeeks.HideSelection = false;
-            this.listView_UpcomingEventsTwoWeeks.Location = new System.Drawing.Point(521, 154);
+            this.listView_UpcomingEventsTwoWeeks.Location = new System.Drawing.Point(408, 154);
             this.listView_UpcomingEventsTwoWeeks.Name = "listView_UpcomingEventsTwoWeeks";
             this.listView_UpcomingEventsTwoWeeks.Size = new System.Drawing.Size(504, 279);
             this.listView_UpcomingEventsTwoWeeks.TabIndex = 11;
@@ -183,11 +185,38 @@ namespace Scheduling_System
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 89);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 89);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // menu_panel
+            // 
+            this.menu_panel.BackColor = System.Drawing.Color.Transparent;
+            this.menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.menu_panel.Controls.Add(this.button_settings);
+            this.menu_panel.Controls.Add(this.pictureBox1);
+            this.menu_panel.Controls.Add(this.label_date);
+            this.menu_panel.Controls.Add(this.button_temp_login);
+            this.menu_panel.Controls.Add(this.button_scheduled_events);
+            this.menu_panel.Controls.Add(this.button_schedule_Event);
+            this.menu_panel.Controls.Add(this.button_cancel);
+            this.menu_panel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menu_panel.Location = new System.Drawing.Point(0, 0);
+            this.menu_panel.Name = "menu_panel";
+            this.menu_panel.Size = new System.Drawing.Size(255, 554);
+            this.menu_panel.TabIndex = 14;
+            // 
+            // main_panel
+            // 
+            this.main_panel.BackColor = System.Drawing.Color.Transparent;
+            this.main_panel.Controls.Add(this.listView_UpcomingEventsTwoWeeks);
+            this.main_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.main_panel.Location = new System.Drawing.Point(0, 0);
+            this.main_panel.Name = "main_panel";
+            this.main_panel.Size = new System.Drawing.Size(1067, 554);
+            this.main_panel.TabIndex = 15;
             // 
             // Form_Main_Menu
             // 
@@ -196,23 +225,21 @@ namespace Scheduling_System
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listView_UpcomingEventsTwoWeeks);
             this.Controls.Add(this.label_TodaysDate);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button_scheduled_events);
-            this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.button_schedule_Event);
-            this.Controls.Add(this.button_settings);
-            this.Controls.Add(this.button_temp_login);
-            this.Controls.Add(this.label_date);
+            this.Controls.Add(this.menu_panel);
+            this.Controls.Add(this.main_panel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main_Menu";
             this.Text = "Form_Main_Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_Menu_FormClosed);
             this.Load += new System.EventHandler(this.Form_Main_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menu_panel.ResumeLayout(false);
+            this.menu_panel.PerformLayout();
+            this.main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +257,7 @@ namespace Scheduling_System
         private System.Windows.Forms.Label label_TodaysDate;
         private System.Windows.Forms.ListView listView_UpcomingEventsTwoWeeks;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel menu_panel;
+        private System.Windows.Forms.Panel main_panel;
     }
 }
