@@ -14,6 +14,7 @@ namespace Scheduling_System
     {
         private string username;
         Form_Login form_login;
+        New_Event_Form form_event;
 
         /// <summary>
         /// This is the constructor for the main menu form.
@@ -24,8 +25,26 @@ namespace Scheduling_System
         {
             InitializeComponent();
             username = u;
-            label_welcome.Text += u;
+            label_TodaysDate.Text = DateTime.Now.ToShortDateString();
             form_login = fl;
+        }
+
+        public void loadform(object Form)
+        {
+            if (this.main_panel.Controls.Count > 0)
+            {
+                this.main_panel.Controls.RemoveAt(0);
+            }
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.main_panel.Controls.Add(f);
+            this.main_panel.Tag = f;
+            f.Show();
+
+        }
+        public Form_Main_Menu()
+        {
         }
 
         /// <summary>
@@ -67,6 +86,17 @@ namespace Scheduling_System
 
         private void button_schedule_Click(object sender, EventArgs e)
         {
+            /*this.Hide();
+            New_Event_Form event_form = new New_Event_Form();
+            event_form.ShowDialog();
+            this.Show(); */
+            loadform(new New_Event_Form());
+
+        }
+
+        private void label_TodaysDate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

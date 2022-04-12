@@ -29,92 +29,181 @@ namespace Scheduling_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.label_username = new System.Windows.Forms.Label();
             this.label_password = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.label_login_title = new System.Windows.Forms.Label();
-            this.button_temp_main_menu = new System.Windows.Forms.Button();
-            this.label_temp_main_menu = new System.Windows.Forms.Label();
+            this.button_usernameHint = new System.Windows.Forms.Button();
+            this.label_usernameHint = new System.Windows.Forms.Label();
+            this.button_exit = new System.Windows.Forms.Button();
+            this.label_verifyLogin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_login = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox_username
             // 
-            this.textBox_username.Location = new System.Drawing.Point(374, 105);
+            this.textBox_username.Location = new System.Drawing.Point(504, 167);
+            this.textBox_username.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_username.MaxLength = 9;
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(100, 20);
+            this.textBox_username.Size = new System.Drawing.Size(132, 22);
             this.textBox_username.TabIndex = 0;
             // 
             // label_username
             // 
             this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(310, 108);
+            this.label_username.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label_username.Location = new System.Drawing.Point(378, 163);
+            this.label_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(58, 13);
+            this.label_username.Size = new System.Drawing.Size(113, 27);
             this.label_username.TabIndex = 1;
             this.label_username.Text = "Username:";
             // 
             // label_password
             // 
             this.label_password.AutoSize = true;
-            this.label_password.Location = new System.Drawing.Point(312, 155);
+            this.label_password.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_password.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label_password.Location = new System.Drawing.Point(383, 220);
+            this.label_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(56, 13);
+            this.label_password.Size = new System.Drawing.Size(108, 27);
             this.label_password.TabIndex = 2;
             this.label_password.Text = "Password:";
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(374, 152);
+            this.textBox_password.Location = new System.Drawing.Point(504, 225);
+            this.textBox_password.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_password.MaxLength = 8;
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_password.Size = new System.Drawing.Size(132, 22);
             this.textBox_password.TabIndex = 3;
             // 
             // label_login_title
             // 
             this.label_login_title.AutoSize = true;
-            this.label_login_title.Location = new System.Drawing.Point(328, 35);
+            this.label_login_title.BackColor = System.Drawing.Color.Transparent;
+            this.label_login_title.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_login_title.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label_login_title.Location = new System.Drawing.Point(828, 479);
+            this.label_login_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_login_title.Name = "label_login_title";
-            this.label_login_title.Size = new System.Drawing.Size(126, 13);
+            this.label_login_title.Size = new System.Drawing.Size(277, 26);
             this.label_login_title.TabIndex = 4;
             this.label_login_title.Text = "Scheduling System Login";
             // 
-            // button_temp_main_menu
+            // button_usernameHint
             // 
-            this.button_temp_main_menu.Location = new System.Drawing.Point(331, 297);
-            this.button_temp_main_menu.Name = "button_temp_main_menu";
-            this.button_temp_main_menu.Size = new System.Drawing.Size(186, 23);
-            this.button_temp_main_menu.TabIndex = 5;
-            this.button_temp_main_menu.Text = "Go to the main menu";
-            this.button_temp_main_menu.UseVisualStyleBackColor = true;
-            this.button_temp_main_menu.Click += new System.EventHandler(this.button_temp_main_menu_Click);
+            this.button_usernameHint.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button_usernameHint.Location = new System.Drawing.Point(658, 165);
+            this.button_usernameHint.Margin = new System.Windows.Forms.Padding(4);
+            this.button_usernameHint.Name = "button_usernameHint";
+            this.button_usernameHint.Size = new System.Drawing.Size(36, 28);
+            this.button_usernameHint.TabIndex = 7;
+            this.button_usernameHint.Text = "💡";
+            this.button_usernameHint.UseVisualStyleBackColor = false;
+            this.button_usernameHint.Click += new System.EventHandler(this.button_usernameHint_Click);
             // 
-            // label_temp_main_menu
+            // label_usernameHint
             // 
-            this.label_temp_main_menu.AutoSize = true;
-            this.label_temp_main_menu.Location = new System.Drawing.Point(233, 271);
-            this.label_temp_main_menu.Name = "label_temp_main_menu";
-            this.label_temp_main_menu.Size = new System.Drawing.Size(443, 13);
-            this.label_temp_main_menu.TabIndex = 6;
-            this.label_temp_main_menu.Text = "This button will take you to the main menu (temporary functionality and will be c" +
-    "hanged later).";
+            this.label_usernameHint.AutoSize = true;
+            this.label_usernameHint.Location = new System.Drawing.Point(702, 165);
+            this.label_usernameHint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_usernameHint.Name = "label_usernameHint";
+            this.label_usernameHint.Size = new System.Drawing.Size(225, 16);
+            this.label_usernameHint.TabIndex = 8;
+            this.label_usernameHint.Text = "username + password hint (HIDDEN)";
+            this.label_usernameHint.UseWaitCursor = true;
+            this.label_usernameHint.Visible = false;
+            // 
+            // button_exit
+            // 
+            this.button_exit.Location = new System.Drawing.Point(483, 403);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(4);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(100, 29);
+            this.button_exit.TabIndex = 9;
+            this.button_exit.Text = "Exit";
+            this.button_exit.UseVisualStyleBackColor = true;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // label_verifyLogin
+            // 
+            this.label_verifyLogin.ForeColor = System.Drawing.Color.Red;
+            this.label_verifyLogin.Location = new System.Drawing.Point(399, 352);
+            this.label_verifyLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_verifyLogin.Name = "label_verifyLogin";
+            this.label_verifyLogin.Size = new System.Drawing.Size(248, 47);
+            this.label_verifyLogin.TabIndex = 11;
+            this.label_verifyLogin.Text = "verify input (HIDDEN)";
+            this.label_verifyLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_verifyLogin.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(288, 130);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button_login
+            // 
+            this.button_login.BackColor = System.Drawing.Color.White;
+            this.button_login.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_login.BackgroundImage")));
+            this.button_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_login.FlatAppearance.BorderSize = 0;
+            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_login.ForeColor = System.Drawing.Color.Transparent;
+            this.button_login.Location = new System.Drawing.Point(402, 286);
+            this.button_login.Margin = new System.Windows.Forms.Padding(4);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(234, 29);
+            this.button_login.TabIndex = 10;
+            this.button_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_login.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_temp_main_menu);
-            this.Controls.Add(this.button_temp_main_menu);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1142, 553);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label_verifyLogin);
+            this.Controls.Add(this.button_login);
+            this.Controls.Add(this.button_exit);
+            this.Controls.Add(this.label_usernameHint);
+            this.Controls.Add(this.button_usernameHint);
             this.Controls.Add(this.label_login_title);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.label_password);
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.textBox_username);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1160, 600);
             this.Name = "Form_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Scheduling System";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,8 +216,12 @@ namespace Scheduling_System
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label_login_title;
-        private System.Windows.Forms.Button button_temp_main_menu;
-        private System.Windows.Forms.Label label_temp_main_menu;
+        private System.Windows.Forms.Button button_usernameHint;
+        private System.Windows.Forms.Label label_usernameHint;
+        private System.Windows.Forms.Button button_exit;
+        private System.Windows.Forms.Label label_verifyLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button_login;
     }
 }
 
