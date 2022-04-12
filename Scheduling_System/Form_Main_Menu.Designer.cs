@@ -34,7 +34,6 @@ namespace Scheduling_System
             this.label_welcome = new System.Windows.Forms.Label();
             this.button_temp_login = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.button_settings = new System.Windows.Forms.Button();
             this.button_schedule_Event = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
@@ -47,14 +46,14 @@ namespace Scheduling_System
             this.label_welcome.Location = new System.Drawing.Point(47, 31);
             this.label_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(68, 16);
+            this.label_welcome.Size = new System.Drawing.Size(60, 16);
             this.label_welcome.TabIndex = 0;
-            this.label_welcome.Text = "Welcome ";
+            this.label_welcome.Text = "Today is";
             // 
             // button_temp_login
             // 
             this.button_temp_login.Location = new System.Drawing.Point(932, 199);
-            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_temp_login.Name = "button_temp_login";
             this.button_temp_login.Size = new System.Drawing.Size(123, 71);
             this.button_temp_login.TabIndex = 1;
@@ -64,18 +63,15 @@ namespace Scheduling_System
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 78);
+            this.dateTimePicker1.CustomFormat = "MM - dd - yyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(114, 31);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(125, 22);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 4, 11, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(377, 78);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
             // 
             // button_settings
             // 
@@ -115,7 +111,7 @@ namespace Scheduling_System
             this.button_scheduled_events.Name = "button_scheduled_events";
             this.button_scheduled_events.Size = new System.Drawing.Size(123, 71);
             this.button_scheduled_events.TabIndex = 8;
-            this.button_scheduled_events.Text = "See Upcomming Events";
+            this.button_scheduled_events.Text = "See All Upcomming Events";
             this.button_scheduled_events.UseVisualStyleBackColor = true;
             this.button_scheduled_events.Click += new System.EventHandler(this.button_scheduled_events_Click);
             // 
@@ -128,11 +124,10 @@ namespace Scheduling_System
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_schedule_Event);
             this.Controls.Add(this.button_settings);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button_temp_login);
             this.Controls.Add(this.label_welcome);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main_Menu";
             this.Text = "Form_Main_Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_Menu_FormClosed);
@@ -147,7 +142,6 @@ namespace Scheduling_System
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Button button_temp_login;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button button_settings;
         private System.Windows.Forms.Button button_schedule_Event;
         private System.Windows.Forms.Button button_cancel;
