@@ -195,7 +195,7 @@ namespace Scheduling_System
         }
         public void createEmployeeList()
         {
-            string filePath = @"EmployeeFile.txt";
+            string filePath = "..//..//text_files//EmployeeFile.txt";
 
             lines = File.ReadAllLines(filePath).ToList();
 
@@ -219,7 +219,7 @@ namespace Scheduling_System
 
         public void createEventList()
         {
-            string filePath = @"EventFile.txt";
+            string filePath = "..//..//text_files//EventFile.txt";
 
             lines = File.ReadAllLines(filePath).ToList();
 
@@ -241,7 +241,7 @@ namespace Scheduling_System
 
         public void createCustomerList()
         {
-            string filePath = @"ClientFile.txt";
+            string filePath = "..//..//text_files//ClientFile.txt";
 
             lines = File.ReadAllLines(filePath).ToList();
 

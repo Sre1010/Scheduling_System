@@ -1,0 +1,12 @@
+CL1231,"BussinesName1",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
+CL2232,"BussinesName2",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
+CL3233,"BussinesName3",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
+CL1234,"BussinesName3",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
+CL2961,A,B,C,12/21/1932 12:00:00 AM,dfe,123456
+CL5713,new,new1,new2,6/16/1953 12:00:00 AM,new4,new3
+CL9790,MCDonalds ALC,Barbara,Collins,6/17/1993 12:00:00 AM,barbara@gmail.com,453-563-245
+CL8789,Losh INC,Alex,Stevens,1/18/2022 12:00:00 AM,alex@gmail.com,345-324-333
+CL5139,Avc,A,A,6/21/2022 12:00:00 AM,A,A
+CL6924,check,check,check,6/22/2022 12:00:00 AM,check@gmail.com,123454321
+CL565,kaka inc,bebe,ababa,10/25/2021 12:00:00 AM,kaka@google,3kaka567fgh
+CL9214,love inc,t,d,1/15/2019 12:00:00 AM,google,45
