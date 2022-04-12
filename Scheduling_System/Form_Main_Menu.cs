@@ -25,7 +25,7 @@ namespace Scheduling_System
         {
             InitializeComponent();
             username = u;
-            label_welcome.Text += u;
+            label_TodaysDate.Text = DateTime.Now.ToShortDateString();
             form_login = fl;
         }
 
@@ -76,6 +76,11 @@ namespace Scheduling_System
             New_Event_Form event_form = new New_Event_Form();
             event_form.ShowDialog();
             this.Show();
+        }
+
+        private void label_TodaysDate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

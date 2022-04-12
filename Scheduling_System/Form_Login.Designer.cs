@@ -126,7 +126,7 @@ namespace Scheduling_System
             // 
             // button_exit
             // 
-            this.button_exit.Location = new System.Drawing.Point(517, 403);
+            this.button_exit.Location = new System.Drawing.Point(483, 403);
             this.button_exit.Margin = new System.Windows.Forms.Padding(4);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(100, 29);
@@ -152,9 +152,9 @@ namespace Scheduling_System
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-7, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(276, 126);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
