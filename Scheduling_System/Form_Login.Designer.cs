@@ -183,7 +183,7 @@ namespace Scheduling_System
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1127, 553);
+            this.ClientSize = new System.Drawing.Size(1142, 553);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_verifyLogin);
             this.Controls.Add(this.button_login);
@@ -199,7 +199,7 @@ namespace Scheduling_System
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1140, 600);
+            this.MinimumSize = new System.Drawing.Size(1160, 600);
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Scheduling System";
