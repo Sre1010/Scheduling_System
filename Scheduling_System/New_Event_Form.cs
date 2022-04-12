@@ -52,6 +52,7 @@ namespace Scheduling_System
 
                     //reset the date
                     dateTimePicker_Event.Value = DateTime.Now;
+                    break;
                 }
                 else
                 {
@@ -65,6 +66,8 @@ namespace Scheduling_System
                     lines.Add(event_new);
 
                     File.AppendAllLines(filepath, lines);
+                    MessageBox.Show("Event has been scheduled!");
+                    break;
                 }
             }
 
@@ -138,6 +141,11 @@ namespace Scheduling_System
             this.Hide();
             main_form.Show(); */
             this.DialogResult = DialogResult.OK;
+
+        }
+
+        private void New_Event_Form_Load(object sender, EventArgs e)
+        {
 
         }
     }

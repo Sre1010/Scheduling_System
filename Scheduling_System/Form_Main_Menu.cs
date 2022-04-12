@@ -77,5 +77,13 @@ namespace Scheduling_System
             event_form.ShowDialog();
             this.Show();
         }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_Cancel_Event cancel_Event = new Form_Cancel_Event();
+            cancel_Event.ShowDialog();
+            this.Show();
+        }
     }
 }

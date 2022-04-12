@@ -47,14 +47,14 @@ namespace Scheduling_System
             this.label_welcome.Location = new System.Drawing.Point(47, 31);
             this.label_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(68, 16);
+            this.label_welcome.Size = new System.Drawing.Size(70, 17);
             this.label_welcome.TabIndex = 0;
             this.label_welcome.Text = "Welcome ";
             // 
             // button_temp_login
             // 
             this.button_temp_login.Location = new System.Drawing.Point(932, 199);
-            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_temp_login.Name = "button_temp_login";
             this.button_temp_login.Size = new System.Drawing.Size(123, 71);
             this.button_temp_login.TabIndex = 1;
@@ -107,6 +107,7 @@ namespace Scheduling_System
             this.button_cancel.TabIndex = 7;
             this.button_cancel.Text = "Cancel Event";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // button_scheduled_events
             // 
@@ -132,7 +133,7 @@ namespace Scheduling_System
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button_temp_login);
             this.Controls.Add(this.label_welcome);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main_Menu";
             this.Text = "Form_Main_Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_Menu_FormClosed);
