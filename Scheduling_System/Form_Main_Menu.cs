@@ -98,5 +98,10 @@ namespace Scheduling_System
         {
             
         }
+
+        private void button_removeCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

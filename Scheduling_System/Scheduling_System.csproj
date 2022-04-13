@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassCLientEventClasses.cs" />
+    <Compile Include="Form_Delete_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Delete_Customer.Designer.cs">
+      <DependentUpon>Form_Delete_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
