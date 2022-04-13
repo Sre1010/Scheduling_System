@@ -136,28 +136,17 @@ namespace Scheduling_System
                 }
             }
 
-            // If username and password follow the right format, go to Retention Form depending on first 3 letters
+            // If username and password follow the right format, go to Retention Form
             if (isUsernameAcceptable == true && isPasswordAcceptable == true)
             {
-                label_verifyLogin.Visible = false;       // Hide verification of username/password (Don't remove)
+                label_verifyLogin.Visible = false;       // Hide verification of username/password
 
                 current_employee = textBox_username.Text;
-                // Redirect to Manager Retention Form
-                if (textBox_username.Text.StartsWith("SSM"))
-                {
-                    this.Hide();
-                    Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-                    fmm.Show();
 
-                }
-                // Redirect to Associate Retention Form
-                else if (textBox_username.Text.StartsWith("SSA"))
-                {
-                    this.Hide();
-                    Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-                    fmm.Show();
-
-                }
+                // Redirect to Retention Form
+                this.Hide();
+                Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
+                fmm.Show();
             }
 
             checkPassword(textBox_username.Text, textBox_password.Text);

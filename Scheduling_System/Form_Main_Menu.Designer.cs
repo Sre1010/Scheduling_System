@@ -42,10 +42,10 @@ namespace Scheduling_System
             this.label_TodaysDate = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_panel = new System.Windows.Forms.Panel();
+            this.button_removeCustomer = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.main_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_removeCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
@@ -88,7 +88,7 @@ namespace Scheduling_System
             this.button_settings.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_settings.ForeColor = System.Drawing.Color.White;
             this.button_settings.Location = new System.Drawing.Point(13, 323);
-            this.button_settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_settings.Margin = new System.Windows.Forms.Padding(2);
             this.button_settings.Name = "button_settings";
             this.button_settings.Size = new System.Drawing.Size(165, 28);
             this.button_settings.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace Scheduling_System
             this.button_schedule_Event.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_schedule_Event.ForeColor = System.Drawing.Color.White;
             this.button_schedule_Event.Location = new System.Drawing.Point(13, 89);
-            this.button_schedule_Event.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_schedule_Event.Margin = new System.Windows.Forms.Padding(2);
             this.button_schedule_Event.Name = "button_schedule_Event";
             this.button_schedule_Event.Size = new System.Drawing.Size(165, 28);
             this.button_schedule_Event.TabIndex = 6;
@@ -121,7 +121,7 @@ namespace Scheduling_System
             this.button_cancel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cancel.ForeColor = System.Drawing.Color.White;
             this.button_cancel.Location = new System.Drawing.Point(13, 135);
-            this.button_cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_cancel.Margin = new System.Windows.Forms.Padding(2);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(165, 28);
             this.button_cancel.TabIndex = 7;
@@ -136,7 +136,7 @@ namespace Scheduling_System
             this.button_scheduled_events.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_scheduled_events.ForeColor = System.Drawing.Color.White;
             this.button_scheduled_events.Location = new System.Drawing.Point(13, 182);
-            this.button_scheduled_events.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_scheduled_events.Margin = new System.Windows.Forms.Padding(2);
             this.button_scheduled_events.Name = "button_scheduled_events";
             this.button_scheduled_events.Size = new System.Drawing.Size(165, 28);
             this.button_scheduled_events.TabIndex = 8;
@@ -149,7 +149,7 @@ namespace Scheduling_System
             // 
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(1148, 285);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(366, 275);
             this.listView1.TabIndex = 9;
@@ -173,7 +173,7 @@ namespace Scheduling_System
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 63);
             this.pictureBox1.TabIndex = 13;
@@ -194,16 +194,32 @@ namespace Scheduling_System
             this.menu_panel.Controls.Add(this.button_cancel);
             this.menu_panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.menu_panel.Location = new System.Drawing.Point(0, 0);
-            this.menu_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menu_panel.Margin = new System.Windows.Forms.Padding(2);
             this.menu_panel.Name = "menu_panel";
             this.menu_panel.Size = new System.Drawing.Size(194, 450);
             this.menu_panel.TabIndex = 14;
+            // 
+            // button_removeCustomer
+            // 
+            this.button_removeCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.button_removeCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_removeCustomer.BackgroundImage")));
+            this.button_removeCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_removeCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_removeCustomer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeCustomer.ForeColor = System.Drawing.Color.White;
+            this.button_removeCustomer.Location = new System.Drawing.Point(13, 278);
+            this.button_removeCustomer.Name = "button_removeCustomer";
+            this.button_removeCustomer.Size = new System.Drawing.Size(165, 28);
+            this.button_removeCustomer.TabIndex = 13;
+            this.button_removeCustomer.Text = "Remove Customer";
+            this.button_removeCustomer.UseVisualStyleBackColor = false;
+            this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Location = new System.Drawing.Point(192, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 390);
             this.panel1.TabIndex = 12;
@@ -215,7 +231,7 @@ namespace Scheduling_System
             this.main_panel.Controls.Add(this.label1);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.main_panel.Location = new System.Drawing.Point(192, 0);
-            this.main_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.main_panel.Margin = new System.Windows.Forms.Padding(2);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(608, 450);
             this.main_panel.TabIndex = 15;
@@ -229,16 +245,6 @@ namespace Scheduling_System
             this.label1.Size = new System.Drawing.Size(264, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Event for the next 2 weeks needs to be displayed here";
-            // 
-            // button_removeCustomer
-            // 
-            this.button_removeCustomer.Location = new System.Drawing.Point(13, 278);
-            this.button_removeCustomer.Name = "button_removeCustomer";
-            this.button_removeCustomer.Size = new System.Drawing.Size(165, 28);
-            this.button_removeCustomer.TabIndex = 13;
-            this.button_removeCustomer.Text = "Remove Customer";
-            this.button_removeCustomer.UseVisualStyleBackColor = true;
-            this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
             // 
             // Form_Main_Menu
             // 
