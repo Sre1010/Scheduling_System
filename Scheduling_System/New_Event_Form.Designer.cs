@@ -44,128 +44,154 @@
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.textBox_EventDescription = new System.Windows.Forms.TextBox();
             this.button_scheduleEvent = new System.Windows.Forms.Button();
-            this.button_backToMainMenu = new System.Windows.Forms.Button();
             this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_Event = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 42);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(143, 157);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.Size = new System.Drawing.Size(102, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bussines Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 93);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(169, 194);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "First Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 143);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(169, 232);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Last Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 283);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(156, 345);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(88, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Date of Birth";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 334);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(169, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.Size = new System.Drawing.Size(76, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Event Date";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 373);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(130, 384);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 16);
+            this.label6.Size = new System.Drawing.Size(117, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Event Description";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(54, 233);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(203, 304);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(41, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Email";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(54, 190);
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(144, 270);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 16);
+            this.label8.Size = new System.Drawing.Size(103, 19);
             this.label8.TabIndex = 8;
             this.label8.Text = "Phone Number";
             // 
             // textBox_BusName
             // 
-            this.textBox_BusName.Location = new System.Drawing.Point(183, 36);
+            this.textBox_BusName.AcceptsTab = true;
+            this.textBox_BusName.Location = new System.Drawing.Point(266, 156);
+            this.textBox_BusName.Multiline = true;
             this.textBox_BusName.Name = "textBox_BusName";
-            this.textBox_BusName.Size = new System.Drawing.Size(179, 22);
+            this.textBox_BusName.Size = new System.Drawing.Size(328, 23);
             this.textBox_BusName.TabIndex = 9;
             // 
             // textBox_LastName
             // 
-            this.textBox_LastName.Location = new System.Drawing.Point(183, 140);
+            this.textBox_LastName.AcceptsTab = true;
+            this.textBox_LastName.Location = new System.Drawing.Point(266, 232);
+            this.textBox_LastName.Multiline = true;
             this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(179, 22);
+            this.textBox_LastName.Size = new System.Drawing.Size(328, 23);
             this.textBox_LastName.TabIndex = 10;
             // 
             // textBox_FirstName
             // 
-            this.textBox_FirstName.Location = new System.Drawing.Point(183, 87);
+            this.textBox_FirstName.AcceptsTab = true;
+            this.textBox_FirstName.Location = new System.Drawing.Point(266, 194);
+            this.textBox_FirstName.Multiline = true;
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(179, 22);
+            this.textBox_FirstName.Size = new System.Drawing.Size(328, 23);
             this.textBox_FirstName.TabIndex = 11;
             // 
             // textBox_PhoneNum
             // 
-            this.textBox_PhoneNum.Location = new System.Drawing.Point(183, 184);
+            this.textBox_PhoneNum.AcceptsTab = true;
+            this.textBox_PhoneNum.Location = new System.Drawing.Point(266, 270);
+            this.textBox_PhoneNum.Multiline = true;
             this.textBox_PhoneNum.Name = "textBox_PhoneNum";
-            this.textBox_PhoneNum.Size = new System.Drawing.Size(179, 22);
+            this.textBox_PhoneNum.Size = new System.Drawing.Size(328, 23);
             this.textBox_PhoneNum.TabIndex = 12;
             // 
             // textBox_Email
             // 
-            this.textBox_Email.Location = new System.Drawing.Point(183, 233);
+            this.textBox_Email.AcceptsTab = true;
+            this.textBox_Email.Location = new System.Drawing.Point(266, 304);
+            this.textBox_Email.Multiline = true;
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(179, 22);
+            this.textBox_Email.Size = new System.Drawing.Size(328, 23);
             this.textBox_Email.TabIndex = 13;
             // 
             // textBox_EventDescription
             // 
-            this.textBox_EventDescription.Location = new System.Drawing.Point(183, 373);
+            this.textBox_EventDescription.AcceptsTab = true;
+            this.textBox_EventDescription.Location = new System.Drawing.Point(267, 389);
+            this.textBox_EventDescription.Multiline = true;
             this.textBox_EventDescription.Name = "textBox_EventDescription";
-            this.textBox_EventDescription.Size = new System.Drawing.Size(179, 22);
+            this.textBox_EventDescription.Size = new System.Drawing.Size(328, 65);
             this.textBox_EventDescription.TabIndex = 14;
             // 
             // button_scheduleEvent
             // 
-            this.button_scheduleEvent.Location = new System.Drawing.Point(609, 330);
+            this.button_scheduleEvent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_scheduleEvent.BackgroundImage")));
+            this.button_scheduleEvent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_scheduleEvent.FlatAppearance.BorderSize = 0;
+            this.button_scheduleEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_scheduleEvent.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_scheduleEvent.ForeColor = System.Drawing.Color.White;
+            this.button_scheduleEvent.Location = new System.Drawing.Point(653, 384);
             this.button_scheduleEvent.Name = "button_scheduleEvent";
             this.button_scheduleEvent.Size = new System.Drawing.Size(117, 60);
             this.button_scheduleEvent.TabIndex = 17;
@@ -173,21 +199,11 @@
             this.button_scheduleEvent.UseVisualStyleBackColor = true;
             this.button_scheduleEvent.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button_backToMainMenu
-            // 
-            this.button_backToMainMenu.Location = new System.Drawing.Point(453, 329);
-            this.button_backToMainMenu.Name = "button_backToMainMenu";
-            this.button_backToMainMenu.Size = new System.Drawing.Size(117, 63);
-            this.button_backToMainMenu.TabIndex = 18;
-            this.button_backToMainMenu.Text = "Back to Main Menu";
-            this.button_backToMainMenu.UseVisualStyleBackColor = true;
-            this.button_backToMainMenu.Click += new System.EventHandler(this.button_backToMainMenu_Click);
-            // 
             // dateTimePicker_DOB
             // 
             this.dateTimePicker_DOB.CustomFormat = "MM-dd-yyyy";
             this.dateTimePicker_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_DOB.Location = new System.Drawing.Point(183, 283);
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(267, 345);
             this.dateTimePicker_DOB.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_DOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
@@ -198,7 +214,7 @@
             // 
             this.dateTimePicker_Event.CustomFormat = "MM-dd-yyyy";
             this.dateTimePicker_Event.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_Event.Location = new System.Drawing.Point(183, 328);
+            this.dateTimePicker_Event.Location = new System.Drawing.Point(267, 118);
             this.dateTimePicker_Event.MaxDate = new System.DateTime(2025, 4, 10, 12, 54, 0, 0);
             this.dateTimePicker_Event.MinDate = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
             this.dateTimePicker_Event.Name = "dateTimePicker_Event";
@@ -206,16 +222,32 @@
             this.dateTimePicker_Event.TabIndex = 20;
             this.dateTimePicker_Event.Value = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(785, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 26);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // New_Event_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(811, 554);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker_Event);
             this.Controls.Add(this.dateTimePicker_DOB);
-            this.Controls.Add(this.button_backToMainMenu);
             this.Controls.Add(this.button_scheduleEvent);
             this.Controls.Add(this.textBox_EventDescription);
             this.Controls.Add(this.textBox_Email);
@@ -233,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(259, 0);
             this.Name = "New_Event_Form";
             this.Text = "New_Event_Form";
             this.ResumeLayout(false);
@@ -257,8 +290,8 @@
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.TextBox textBox_EventDescription;
         private System.Windows.Forms.Button button_scheduleEvent;
-        private System.Windows.Forms.Button button_backToMainMenu;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Event;
+        private System.Windows.Forms.Button button1;
     }
 }
