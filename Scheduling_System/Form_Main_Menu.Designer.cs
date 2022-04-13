@@ -159,12 +159,12 @@ namespace Scheduling_System
             // 
             this.label_TodaysDate.AutoSize = true;
             this.label_TodaysDate.BackColor = System.Drawing.Color.Transparent;
-            this.label_TodaysDate.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TodaysDate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TodaysDate.ForeColor = System.Drawing.Color.White;
-            this.label_TodaysDate.Location = new System.Drawing.Point(123, 502);
+            this.label_TodaysDate.Location = new System.Drawing.Point(119, 526);
             this.label_TodaysDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TodaysDate.Name = "label_TodaysDate";
-            this.label_TodaysDate.Size = new System.Drawing.Size(0, 27);
+            this.label_TodaysDate.Size = new System.Drawing.Size(0, 23);
             this.label_TodaysDate.TabIndex = 10;
             this.label_TodaysDate.Click += new System.EventHandler(this.label_TodaysDate_Click);
             // 
