@@ -148,5 +148,10 @@ namespace Scheduling_System
         {
 
         }
+
+        private void button_x_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

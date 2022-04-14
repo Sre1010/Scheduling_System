@@ -41,15 +41,10 @@ namespace Scheduling_System
 
 
 
-        // Returns user back to manager form
+        // Returns user back to main menu form
         private void return_btn_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Form_Main_Menu fmm = new Form_Main_Menu();
-
-            this.Hide();
-            fmm.Show();
-            //mForm.Show();
+            this.Close();
         }
 
         private void Form_Cancel_Event_Load_1(object sender, EventArgs e)

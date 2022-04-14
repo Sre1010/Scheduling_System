@@ -29,7 +29,7 @@ namespace Scheduling_System
             InitializeComponent();
             createEmployeeList();
             createEventList();
-            //createCustomerList();
+            createCustomerList();
 
         }
 
@@ -239,8 +239,9 @@ namespace Scheduling_System
         }
         /// ULIANA IS STILL WORKING ON IT 3/19
 
-        /*public void createCustomerList()
+        public void createCustomerList()
         {
+            lines.Clear();
             string filePath = @"ClientFile.txt";
 
             lines = File.ReadAllLines(filePath).ToList();
@@ -254,7 +255,7 @@ namespace Scheduling_System
 
             lines.Clear();
 
-        }*/
+        }
 
 
 
