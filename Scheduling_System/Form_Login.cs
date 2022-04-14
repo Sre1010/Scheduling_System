@@ -252,6 +252,12 @@ namespace Scheduling_System
                 Customer cust = new Customer(items[0], items[1], items[2], items[3], DateTime.Parse(items[4]), items[5], items[6]);
                 customerList.Add(cust);
             }
+            /*print to console to check the content of the list*/
+            foreach (Customer cust in customerList)
+            {
+                Console.WriteLine(cust);
+            }
+
 
             lines.Clear();
 
