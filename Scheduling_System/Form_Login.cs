@@ -49,11 +49,11 @@ namespace Scheduling_System
         {
             if (label_usernameHint.Visible == false)    // If hidden, make visible when user presses button
             {
-                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: At least 8 characters (EX: Password$)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
+                label_usernameHint.Text = "Username: 9 total characters (EX: SSM123456)\n3 uppercase letters for role then 5 numbers for ID.\n\nPassword: 8 total characters (EX: Pa$sword)\nAt least 1 lowercase, 1 uppercase, and 1 special symbol.";
                 label_usernameHint.Visible = true;
             }
             else
-                label_usernameHint.Visible = false;     // If hidden, make invisible when user presses button
+                label_usernameHint.Visible = false;     // If not hidden, make invisible when user presses button
         }
 
         // <summary>
@@ -136,31 +136,17 @@ namespace Scheduling_System
                 }
             }
 
-            // If username and password follow the right format, go to the main menu *FOR NOW*
-            /* TO DO: Instead will have to go to Retention Form depending on first 3 letters */
+            // If username and password follow the right format, go to Retention Form
             if (isUsernameAcceptable == true && isPasswordAcceptable == true)
             {
-                label_verifyLogin.Visible = false;       // Hide verification of username/password (Don't remove)
+                label_verifyLogin.Visible = false;       // Hide verification of username/password
 
-                /////////////////////////////////////////////////////////////////// Remove later
-                // Hide the login page and show the main menu to the user *FOR NOW*
+                current_employee = textBox_username.Text;
+
+                // Redirect to Retention Form
                 this.Hide();
                 Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
                 fmm.Show();
-                /////////////////////////////////////////////////////////////////// Remove later
-                current_employee = textBox_username.Text;
-                // Redirect to Manager Retention Form
-                if (textBox_username.Text.StartsWith("SSM"))
-                {
-                    /* TO DO */
-
-                }
-                // Redirect to Associate Retention Form
-                else if (textBox_username.Text.StartsWith("SSA"))
-                {
-                    /* TO DO */
-
-                }
             }
 
             checkPassword(textBox_username.Text, textBox_password.Text);

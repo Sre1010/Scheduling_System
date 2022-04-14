@@ -27,6 +27,13 @@ namespace Scheduling_System
             username = u;
             label_TodaysDate.Text = DateTime.Now.ToShortDateString();
             form_login = fl;
+
+            // Hide remove customer button from associate  
+            if (username[2] == 'A')
+                button_removeCustomer.Visible = false;
+            // Show remove customer button to manager
+            else if (username[2] == 'M')
+                button_removeCustomer.Visible = true;
         }
 
         public void loadform(object Form)
@@ -97,6 +104,13 @@ namespace Scheduling_System
         private void label_TodaysDate_Click(object sender, EventArgs e)
         {
             
+        }
+
+        // Only shows for manager, able to remove cutomer from client file
+        private void button_removeCustomer_Click(object sender, EventArgs e)
+        {
+            // Open delete customer form and hide this one
+            loadform(new Form_Delete_Customer(this));
         }
     }
 }
