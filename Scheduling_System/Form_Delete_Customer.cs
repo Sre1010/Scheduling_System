@@ -76,8 +76,7 @@ namespace Scheduling_System
         private void button1_Click(object sender, EventArgs e)
         {
             // Returns user back to manager form
-            this.Hide();
-            mmForm.Show();
+            this.Close();
         }
     }
 }

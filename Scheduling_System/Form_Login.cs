@@ -22,6 +22,8 @@ namespace Scheduling_System
         public static List<Event> eventList = new List<Event>();
         public static List<Customer> customerList = new List<Customer>();
 
+        public static List<Employee> recentLogsList = new List<Employee>();
+
         public static Form_Login form_login_instance;
         public Form_Login()
         {
@@ -30,7 +32,24 @@ namespace Scheduling_System
             createEmployeeList();
             createEventList();
             createCustomerList();
+            trackRecentLogs(); //kust writing to a database
 
+        }
+
+        public void trackRecentLogs()
+        {
+            string filePath = "..//..//text_files//RecentLogsFile.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Employee e = new Employee(items[0], DateTime.Parse(items[1]));
+                recentLogsList.Add(e);
+            }
+
+            lines.Clear();
         }
 
         private void button_temp_main_menu_Click(object sender, EventArgs e)
@@ -168,6 +187,7 @@ namespace Scheduling_System
                     label_verifyLogin.Visible = false;       // Hide verification of username/password
 
                     current_employee = textBox_username.Text;
+                    recordEmployee(current_employee);
 
                     // Redirect to Retention Form
                     this.Hide();
@@ -176,6 +196,21 @@ namespace Scheduling_System
                 }
             }
 
+        }
+
+        public void recordEmployee(string cur)
+        {
+            string filepath = "..//..//text_files//RecentLogsFile.txt";
+            Employee current = new Employee(cur, DateTime.Parse(DateTime.Now.ToString("yyyy - MM - dd h: mm:ss tt")));
+
+            recentLogsList.Add(current);
+
+            List<string> lines = new List<string>();
+
+            string torecord = cur + "," + DateTime.Parse(DateTime.Now.ToString("yyyy - MM - dd h: mm:ss tt"));
+        
+            lines.Add(torecord);
+            File.AppendAllLines(filepath, lines);
         }
     
 
@@ -263,6 +298,7 @@ namespace Scheduling_System
 
         }
 
+    
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 

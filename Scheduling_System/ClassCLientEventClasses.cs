@@ -25,6 +25,13 @@ namespace Scheduling_System
             AdressE = adressE;
         }
 
+        public Employee(string employeeID, DateTime recent)
+        {
+            EmployeeID = employeeID;
+            this.recent = recent;
+        }
+
+        DateTime recent { get; set; }
         public string EmployeeID { get; set; }
         public string Password { get; set; }
         public string FirstNameE { get; set; }
