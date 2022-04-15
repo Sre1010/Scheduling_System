@@ -9,4 +9,5 @@ CL8789,Losh INC,Alex,Stevens,1/18/2022 12:00:00 AM,alex@gmail.com,345-324-333
 CL5139,Avc,A,A,6/21/2022 12:00:00 AM,A,A
 CL6924,check,check,check,6/22/2022 12:00:00 AM,check@gmail.com,123454321
 CL565,kaka inc,bebe,ababa,10/25/2021 12:00:00 AM,kaka@google,3kaka567fgh
-CL9214,love inc,t,d,1/15/2019 12:00:00 AM,google,45
+CL3010,Haha,FN,LN,4/15/2022 12:00:00 AM,EM,PN
+CL6120,BN1,FN1,LN1,4/19/2021 12:00:00 AM,EM1,PN1

@@ -21,13 +21,38 @@ namespace Scheduling_System
         /*creates a New Event*/
         private void button1_Click(object sender, EventArgs e)
         {
+
+            bool isEmpty = false;
+            int count = 0;
+
+            while (isEmpty == false && count < 2)
+            {
+                if (string.IsNullOrWhiteSpace(textBox_BusName.Text) || string.IsNullOrWhiteSpace(textBox_Email.Text) || string.IsNullOrWhiteSpace(textBox_FirstName.Text)
+                    || string.IsNullOrWhiteSpace(textBox_LastName.Text) || string.IsNullOrWhiteSpace(textBox_PhoneNum.Text) || string.IsNullOrWhiteSpace(textBox_EventDescription.Text))
+                {
+
+                    isEmpty = true;
+                    count++;
+                }
+                else
+                    break;
+            }
+
+            if (isEmpty == true)
+                {
+                    MessageBox.Show("Some fields are empty, try again");
+                }
+
             if (isDateAvailable())
             {
                 createNewEvent();
+                MessageBox.Show("New event created. Check the database.");
+                this.Close();
             }
             else
                 MessageBox.Show("Date not available. Choose another date");
 
+          //  New_Event_Form.All
             //buttons: bussines, first, last, phone, email, dateofbirth, event date, event description
         }
 
@@ -36,7 +61,7 @@ namespace Scheduling_System
             int exist;
 
             //generate an Event ID
-            string filepath = @"EventFile.txt";
+            string filepath =  "..//..//text_files//EventFile.txt";
             string start = "EV";
 
                     Random rand = new Random();
@@ -72,7 +97,7 @@ namespace Scheduling_System
         {
             //generate a customer ID
             //CL1234
-            string filepath = @"ClientFile.txt";
+            string filepath = "..//..//text_files//ClientFile.txt";
             string start = "CL";
 
             Random rand = new Random();
