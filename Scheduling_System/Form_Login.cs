@@ -18,10 +18,12 @@ namespace Scheduling_System
         public static string current_employee;
 
         /*the three main lists that will be used throughout the program*/
-        public static List  <Employee> employeeList = new List<Employee>();
-        public static List <Event> eventList = new List<Event>();
-        public static List <Customer> customerList = new List<Customer>();
-       
+        public static List<Employee> employeeList = new List<Employee>();
+        public static List<Event> eventList = new List<Event>();
+        public static List<Customer> customerList = new List<Customer>();
+
+        public static List<Employee> recentLogsList = new List<Employee>();
+
         public static Form_Login form_login_instance;
         public Form_Login()
         {
@@ -30,11 +32,28 @@ namespace Scheduling_System
             createEmployeeList();
             createEventList();
             createCustomerList();
+            trackRecentLogs(); //kust writing to a database
 
         }
 
+        public void trackRecentLogs()
+        {
+            string filePath = "..//..//text_files//RecentLogsFile.txt";
+
+            lines = File.ReadAllLines(filePath).ToList();
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Employee e = new Employee(items[0], DateTime.Parse(items[1]));
+                recentLogsList.Add(e);
+            }
+
+            lines.Clear();
+        }
+
         private void button_temp_main_menu_Click(object sender, EventArgs e)
-        { 
+        {
 
             Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
 
@@ -136,48 +155,85 @@ namespace Scheduling_System
                 }
             }
 
-            // If username and password follow the right format, go to Retention Form
-            if (isUsernameAcceptable == true && isPasswordAcceptable == true)
+            bool isCorrect;
+            int count = 0;
+
+            isCorrect = checkPassword(textBox_username.Text, textBox_password.Text);
+
+            while (count < 3)
             {
-                label_verifyLogin.Visible = false;       // Hide verification of username/password
+                count++;
+                if (isCorrect == false)
+                {
+                    isCorrect = checkPassword(textBox_username.Text, textBox_password.Text);
+                    textBox_password.Clear();
+                    textBox_password.Focus();
 
-                current_employee = textBox_username.Text;
-
-                // Redirect to Retention Form
-                this.Hide();
-                Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
-                fmm.Show();
+                }
+                else
+                    break;
             }
 
-            checkPassword(textBox_username.Text, textBox_password.Text);
+            if (!isCorrect)
+            {
+                MessageBox.Show("Wrong password, sorry.");
+            }
+            else
+            {
+
+                // If username and password follow the right format, go to Retention Form
+                if (isUsernameAcceptable == true && isPasswordAcceptable == true)
+                {
+                    label_verifyLogin.Visible = false;       // Hide verification of username/password
+
+                    current_employee = textBox_username.Text;
+                    recordEmployee(current_employee);
+
+                    // Redirect to Retention Form
+                    this.Hide();
+                    Form_Main_Menu fmm = new Form_Main_Menu(form_login_instance, textBox_username.Text);
+                    fmm.Show();
+                }
+            }
+
         }
 
-        public void checkPassword(string s, string p)
+        public void recordEmployee(string cur)
+        {
+            string filepath = "..//..//text_files//RecentLogsFile.txt";
+            Employee current = new Employee(cur, DateTime.Parse(DateTime.Now.ToString("yyyy - MM - dd h: mm:ss tt")));
+
+            recentLogsList.Add(current);
+
+            List<string> lines = new List<string>();
+
+            string torecord = cur + "," + DateTime.Parse(DateTime.Now.ToString("yyyy - MM - dd h: mm:ss tt"));
+        
+            lines.Add(torecord);
+            File.AppendAllLines(filepath, lines);
+        }
+    
+
+
+
+        public bool checkPassword(string s, string p)
         {
             bool isFound = false;
+
             foreach (Employee e in employeeList)
             {
-                if (e.EmployeeID == s)
+                if (e.EmployeeID == s && e.Password == p)
                 {
-                    if (e.Password == p)
-                    {
 
                         Console.WriteLine("Employee found in the database");
                         isFound = true;
                         break;
-                    }
-                    else
-                        Console.WriteLine("Employee found, but wrong password");
-                    break;
                 }
                 else
                     isFound = false;
             }
 
-            if (isFound == false)
-            {
-                Console.WriteLine("Employee not found or password is incorrect");
-            }
+            return isFound;
         }
         public void createEmployeeList()
         {
@@ -242,6 +298,7 @@ namespace Scheduling_System
 
         }
 
+    
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 

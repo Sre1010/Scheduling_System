@@ -220,7 +220,7 @@
             this.dateTimePicker_Event.Name = "dateTimePicker_Event";
             this.dateTimePicker_Event.Size = new System.Drawing.Size(111, 22);
             this.dateTimePicker_Event.TabIndex = 20;
-            this.dateTimePicker_Event.Value = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
+            this.dateTimePicker_Event.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             // 
             // button1
             // 

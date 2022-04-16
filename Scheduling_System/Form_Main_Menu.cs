@@ -61,6 +61,8 @@ namespace Scheduling_System
         /// <param name="e"></param>
         private void button_temp_login_Click(object sender, EventArgs e)
         {
+            form_login.textBox_username.Text = "";
+            form_login.textBox_password.Text = "";
             form_login.Show();
             this.Close();
         }
