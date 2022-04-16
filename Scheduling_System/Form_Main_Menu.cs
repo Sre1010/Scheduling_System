@@ -112,5 +112,11 @@ namespace Scheduling_System
             // Open delete customer form and hide this one
             loadform(new Form_Delete_Customer(this));
         }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            loadform(new Cancel_Event_Form());
+
+        }
     }
 }
