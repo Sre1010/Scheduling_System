@@ -82,8 +82,7 @@ namespace Scheduling_System
 
         private void button_scheduled_events_Click(object sender, EventArgs e)
         {
-            Control control = new Control();
-            control.Show();
+            loadform(new Form_See_Upcoming_Events());
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
