@@ -31,6 +31,13 @@ namespace Scheduling_System
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_See_Upcoming_Events));
             this.button_exit_form = new System.Windows.Forms.Button();
+            this.dataGridView_events = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
+            this.label_date_range = new System.Windows.Forms.Label();
+            this.label_date_range_2 = new System.Windows.Forms.Label();
+            this.button_search = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_events)).BeginInit();
             this.SuspendLayout();
             // 
             // button_exit_form
@@ -48,6 +55,64 @@ namespace Scheduling_System
             this.button_exit_form.UseVisualStyleBackColor = false;
             this.button_exit_form.Click += new System.EventHandler(this.button_exit_form_Click);
             // 
+            // dataGridView_events
+            // 
+            this.dataGridView_events.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_events.Location = new System.Drawing.Point(21, 216);
+            this.dataGridView_events.Name = "dataGridView_events";
+            this.dataGridView_events.Size = new System.Drawing.Size(564, 163);
+            this.dataGridView_events.TabIndex = 6;
+            // 
+            // dateTimePicker_start
+            // 
+            this.dateTimePicker_start.Location = new System.Drawing.Point(69, 110);
+            this.dateTimePicker_start.Name = "dateTimePicker_start";
+            this.dateTimePicker_start.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_start.TabIndex = 7;
+            // 
+            // dateTimePicker_end
+            // 
+            this.dateTimePicker_end.Location = new System.Drawing.Point(327, 110);
+            this.dateTimePicker_end.Name = "dateTimePicker_end";
+            this.dateTimePicker_end.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_end.TabIndex = 8;
+            // 
+            // label_date_range
+            // 
+            this.label_date_range.AutoSize = true;
+            this.label_date_range.BackColor = System.Drawing.Color.Transparent;
+            this.label_date_range.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_date_range.Location = new System.Drawing.Point(219, 75);
+            this.label_date_range.Name = "label_date_range";
+            this.label_date_range.Size = new System.Drawing.Size(174, 16);
+            this.label_date_range.TabIndex = 9;
+            this.label_date_range.Text = "Select a specific date range";
+            // 
+            // label_date_range_2
+            // 
+            this.label_date_range_2.AutoSize = true;
+            this.label_date_range_2.BackColor = System.Drawing.Color.Transparent;
+            this.label_date_range_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_date_range_2.Location = new System.Drawing.Point(291, 114);
+            this.label_date_range_2.Name = "label_date_range_2";
+            this.label_date_range_2.Size = new System.Drawing.Size(19, 16);
+            this.label_date_range_2.TabIndex = 10;
+            this.label_date_range_2.Text = "to";
+            // 
+            // button_search
+            // 
+            this.button_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_search.BackgroundImage")));
+            this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_search.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_search.ForeColor = System.Drawing.Color.White;
+            this.button_search.Location = new System.Drawing.Point(261, 182);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(79, 28);
+            this.button_search.TabIndex = 11;
+            this.button_search.Text = "Search";
+            this.button_search.UseVisualStyleBackColor = true;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            // 
             // Form_See_Upcoming_Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -56,16 +121,30 @@ namespace Scheduling_System
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(608, 450);
+            this.Controls.Add(this.button_search);
+            this.Controls.Add(this.label_date_range_2);
+            this.Controls.Add(this.label_date_range);
+            this.Controls.Add(this.dateTimePicker_end);
+            this.Controls.Add(this.dateTimePicker_start);
+            this.Controls.Add(this.dataGridView_events);
             this.Controls.Add(this.button_exit_form);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_See_Upcoming_Events";
             this.Text = "Form_See_Upcoming_Events";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_events)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button_exit_form;
+        private System.Windows.Forms.DataGridView dataGridView_events;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
+        private System.Windows.Forms.Label label_date_range;
+        private System.Windows.Forms.Label label_date_range_2;
+        public System.Windows.Forms.Button button_search;
     }
 }
