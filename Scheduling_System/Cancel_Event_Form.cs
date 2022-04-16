@@ -41,7 +41,7 @@ namespace Scheduling_System
                 // Remove from list of customers
                 foreach (Event ev in Form_Login.eventList)
                 {
-                    if (ev.EventID == EventIDs.ElementAt(indexOfSelectedItem))     // Remove customer based on customer ID
+                    if (ev.EventID == EventIDs.ElementAt(indexOfSelectedItem))     // Remove event based on event ID
                     {
                         Form_Login.eventList.Remove(ev);
                         break;
@@ -49,7 +49,7 @@ namespace Scheduling_System
                 }
 
                 // Remove from file
-                string[] oldLines = File.ReadAllLines("EventFile.txt");
+                string[] oldLines = File.ReadAllLines("..//..//text_files//EventFile.txt");
                 string[] newLines = new string[oldLines.Length - 1];
                 int index = 0;
                 foreach (string line in oldLines)
@@ -57,13 +57,13 @@ namespace Scheduling_System
                     if (line == null)
                         break;
                     string[] lineInfo = line.Split(',');
-                    if (lineInfo[0] == EventIDs.ElementAt(indexOfSelectedItem))      // If customer ID of selected customer found, remove line from file
+                    if (lineInfo[0] == EventIDs.ElementAt(indexOfSelectedItem))      // If event ID of selected event found, remove line from file
                         continue;
                     newLines[index] = line;
                     index++;
                 }
 
-                File.WriteAllLines("ClientFile.txt", newLines);     // Copy into the Client File
+                File.WriteAllLines("..//..//text_files//EventFile.txt", newLines);     // Copy into the Event File
                 EventIDs.Remove(EventIDs.ElementAt(indexOfSelectedItem));
             }
         }
