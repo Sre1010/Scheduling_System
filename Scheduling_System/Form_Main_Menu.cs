@@ -84,8 +84,7 @@ namespace Scheduling_System
 
         private void button_scheduled_events_Click(object sender, EventArgs e)
         {
-            Control control = new Control();
-            control.Show();
+            loadform(new Form_See_Upcoming_Events());
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -113,6 +112,12 @@ namespace Scheduling_System
         {
             // Open delete customer form and hide this one
             loadform(new Form_Delete_Customer(this));
+        }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            loadform(new Cancel_Event_Form());
+
         }
     }
 }
