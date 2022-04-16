@@ -37,6 +37,9 @@ namespace Scheduling_System
             this.label_date_range = new System.Windows.Forms.Label();
             this.label_date_range_2 = new System.Windows.Forms.Label();
             this.button_search = new System.Windows.Forms.Button();
+            this.textBox_client_company_name = new System.Windows.Forms.TextBox();
+            this.label_client_company_name = new System.Windows.Forms.Label();
+            this.button_modify_events = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_events)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,14 +68,14 @@ namespace Scheduling_System
             // 
             // dateTimePicker_start
             // 
-            this.dateTimePicker_start.Location = new System.Drawing.Point(69, 110);
+            this.dateTimePicker_start.Location = new System.Drawing.Point(69, 99);
             this.dateTimePicker_start.Name = "dateTimePicker_start";
             this.dateTimePicker_start.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_start.TabIndex = 7;
             // 
             // dateTimePicker_end
             // 
-            this.dateTimePicker_end.Location = new System.Drawing.Point(327, 110);
+            this.dateTimePicker_end.Location = new System.Drawing.Point(327, 99);
             this.dateTimePicker_end.Name = "dateTimePicker_end";
             this.dateTimePicker_end.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_end.TabIndex = 8;
@@ -93,7 +96,7 @@ namespace Scheduling_System
             this.label_date_range_2.AutoSize = true;
             this.label_date_range_2.BackColor = System.Drawing.Color.Transparent;
             this.label_date_range_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_date_range_2.Location = new System.Drawing.Point(291, 114);
+            this.label_date_range_2.Location = new System.Drawing.Point(291, 103);
             this.label_date_range_2.Name = "label_date_range_2";
             this.label_date_range_2.Size = new System.Drawing.Size(19, 16);
             this.label_date_range_2.TabIndex = 10;
@@ -113,6 +116,38 @@ namespace Scheduling_System
             this.button_search.UseVisualStyleBackColor = true;
             this.button_search.Click += new System.EventHandler(this.button_search_Click);
             // 
+            // textBox_client_company_name
+            // 
+            this.textBox_client_company_name.Location = new System.Drawing.Point(126, 137);
+            this.textBox_client_company_name.Name = "textBox_client_company_name";
+            this.textBox_client_company_name.Size = new System.Drawing.Size(143, 20);
+            this.textBox_client_company_name.TabIndex = 12;
+            // 
+            // label_client_company_name
+            // 
+            this.label_client_company_name.AutoSize = true;
+            this.label_client_company_name.BackColor = System.Drawing.Color.Transparent;
+            this.label_client_company_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_client_company_name.Location = new System.Drawing.Point(18, 137);
+            this.label_client_company_name.Name = "label_client_company_name";
+            this.label_client_company_name.Size = new System.Drawing.Size(102, 16);
+            this.label_client_company_name.TabIndex = 13;
+            this.label_client_company_name.Text = "Client Compnay";
+            // 
+            // button_modify_events
+            // 
+            this.button_modify_events.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_modify_events.BackgroundImage")));
+            this.button_modify_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_modify_events.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_modify_events.ForeColor = System.Drawing.Color.White;
+            this.button_modify_events.Location = new System.Drawing.Point(467, 385);
+            this.button_modify_events.Name = "button_modify_events";
+            this.button_modify_events.Size = new System.Drawing.Size(118, 28);
+            this.button_modify_events.TabIndex = 14;
+            this.button_modify_events.Text = "Modify Events";
+            this.button_modify_events.UseVisualStyleBackColor = true;
+            this.button_modify_events.Click += new System.EventHandler(this.button_modify_events_Click);
+            // 
             // Form_See_Upcoming_Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,6 +156,9 @@ namespace Scheduling_System
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(608, 450);
+            this.Controls.Add(this.button_modify_events);
+            this.Controls.Add(this.label_client_company_name);
+            this.Controls.Add(this.textBox_client_company_name);
             this.Controls.Add(this.button_search);
             this.Controls.Add(this.label_date_range_2);
             this.Controls.Add(this.label_date_range);
@@ -146,5 +184,8 @@ namespace Scheduling_System
         private System.Windows.Forms.Label label_date_range;
         private System.Windows.Forms.Label label_date_range_2;
         public System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.TextBox textBox_client_company_name;
+        private System.Windows.Forms.Label label_client_company_name;
+        public System.Windows.Forms.Button button_modify_events;
     }
 }
