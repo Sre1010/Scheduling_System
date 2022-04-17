@@ -84,7 +84,7 @@ namespace Scheduling_System
 
         private void button_scheduled_events_Click(object sender, EventArgs e)
         {
-            loadform(new Form_See_Upcoming_Events());
+            loadform(new Form_See_Upcoming_Events(this));
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

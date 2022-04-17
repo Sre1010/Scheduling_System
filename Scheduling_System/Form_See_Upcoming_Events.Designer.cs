@@ -39,7 +39,7 @@ namespace Scheduling_System
             this.button_search = new System.Windows.Forms.Button();
             this.textBox_client_company_name = new System.Windows.Forms.TextBox();
             this.label_client_company_name = new System.Windows.Forms.Label();
-            this.button_modify_events = new System.Windows.Forms.Button();
+            this.button_modify_event = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_events)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,8 +63,11 @@ namespace Scheduling_System
             this.dataGridView_events.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_events.Location = new System.Drawing.Point(21, 216);
             this.dataGridView_events.Name = "dataGridView_events";
+            this.dataGridView_events.ReadOnly = true;
+            this.dataGridView_events.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_events.Size = new System.Drawing.Size(564, 163);
             this.dataGridView_events.TabIndex = 6;
+            this.dataGridView_events.SelectionChanged += new System.EventHandler(this.dataGridView_events_SelectionChanged);
             // 
             // dateTimePicker_start
             // 
@@ -108,7 +111,7 @@ namespace Scheduling_System
             this.button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_search.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_search.ForeColor = System.Drawing.Color.White;
-            this.button_search.Location = new System.Drawing.Point(261, 182);
+            this.button_search.Location = new System.Drawing.Point(21, 182);
             this.button_search.Name = "button_search";
             this.button_search.Size = new System.Drawing.Size(79, 28);
             this.button_search.TabIndex = 11;
@@ -134,19 +137,19 @@ namespace Scheduling_System
             this.label_client_company_name.TabIndex = 13;
             this.label_client_company_name.Text = "Client Compnay";
             // 
-            // button_modify_events
+            // button_modify_event
             // 
-            this.button_modify_events.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_modify_events.BackgroundImage")));
-            this.button_modify_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_modify_events.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_modify_events.ForeColor = System.Drawing.Color.White;
-            this.button_modify_events.Location = new System.Drawing.Point(467, 385);
-            this.button_modify_events.Name = "button_modify_events";
-            this.button_modify_events.Size = new System.Drawing.Size(118, 28);
-            this.button_modify_events.TabIndex = 14;
-            this.button_modify_events.Text = "Modify Events";
-            this.button_modify_events.UseVisualStyleBackColor = true;
-            this.button_modify_events.Click += new System.EventHandler(this.button_modify_events_Click);
+            this.button_modify_event.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_modify_event.BackgroundImage")));
+            this.button_modify_event.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_modify_event.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_modify_event.ForeColor = System.Drawing.Color.White;
+            this.button_modify_event.Location = new System.Drawing.Point(467, 182);
+            this.button_modify_event.Name = "button_modify_event";
+            this.button_modify_event.Size = new System.Drawing.Size(118, 28);
+            this.button_modify_event.TabIndex = 14;
+            this.button_modify_event.Text = "Modify Event";
+            this.button_modify_event.UseVisualStyleBackColor = true;
+            this.button_modify_event.Click += new System.EventHandler(this.button_modify_event_Click);
             // 
             // Form_See_Upcoming_Events
             // 
@@ -156,7 +159,7 @@ namespace Scheduling_System
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(608, 450);
-            this.Controls.Add(this.button_modify_events);
+            this.Controls.Add(this.button_modify_event);
             this.Controls.Add(this.label_client_company_name);
             this.Controls.Add(this.textBox_client_company_name);
             this.Controls.Add(this.button_search);
@@ -166,6 +169,7 @@ namespace Scheduling_System
             this.Controls.Add(this.dateTimePicker_start);
             this.Controls.Add(this.dataGridView_events);
             this.Controls.Add(this.button_exit_form);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_See_Upcoming_Events";
             this.Text = "Form_See_Upcoming_Events";
@@ -186,6 +190,6 @@ namespace Scheduling_System
         public System.Windows.Forms.Button button_search;
         private System.Windows.Forms.TextBox textBox_client_company_name;
         private System.Windows.Forms.Label label_client_company_name;
-        public System.Windows.Forms.Button button_modify_events;
+        public System.Windows.Forms.Button button_modify_event;
     }
 }
