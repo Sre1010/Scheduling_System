@@ -12,9 +12,12 @@ namespace Scheduling_System
 {
     public partial class Form_See_Upcoming_Events : Form
     {
-        public Form_See_Upcoming_Events()
+        Form_Main_Menu fmm = null;
+        string event_to_be_modified = "";
+        public Form_See_Upcoming_Events(Form_Main_Menu mainMenuForm)
         {
             InitializeComponent();
+            fmm = mainMenuForm;
             dataGridView_events.DataSource = Form_Login.eventList; // Display all events by default
         }
 
@@ -89,9 +92,38 @@ namespace Scheduling_System
             return "";
         }
 
-        private void button_modify_events_Click(object sender, EventArgs e) // DOES NOT DO ANYTHING OTHER THAN CLOSING THE CURRENT FORM
+        private void button_modify_event_Click(object sender, EventArgs e)
         {
+            if (event_to_be_modified == "") // ensures an event is selected for modification
+            {
+                return;
+            }
+
             this.Close();
+            fmm.loadform(new Form_Modify_Event(fmm, find_event(event_to_be_modified)));
+        }
+
+        private void dataGridView_events_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_events.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView_events.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView_events.Rows[selectedrowindex];
+                event_to_be_modified = Convert.ToString(selectedRow.Cells["EventID"].Value);
+            }
+        }
+
+        private Event find_event(string eventID)
+        {
+            foreach(Event ev in Form_Login.eventList)
+            {
+                if (ev.EventID == eventID)
+                {
+                    return ev;
+                }
+            }
+
+            return null; // if there is an error then null is returned
         }
     }
 }
