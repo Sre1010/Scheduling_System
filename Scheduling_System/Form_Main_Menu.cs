@@ -28,6 +28,21 @@ namespace Scheduling_System
             label_TodaysDate.Text = DateTime.Now.ToShortDateString();
             form_login = fl;
 
+            //Set Today's Event text
+            if (Form_Login.eventList.Exists(x => x.BookedDate == DateTime.Today))
+            {
+                foreach (Event ev in Form_Login.eventList)
+                {
+                    if(ev.BookedDate == DateTime.Today)
+                    {
+                        todays_event.Text = "Today's event is " + ev.Description + "!";
+                        break;
+                    }
+                }
+            }
+            else
+                todays_event.Text = "No events Scheduled for Today";
+
             // Hide remove customer button from associate  
             if (username[2] == 'A')
                 button_removeCustomer.Visible = false;
