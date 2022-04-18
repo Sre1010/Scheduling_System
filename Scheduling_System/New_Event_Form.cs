@@ -80,7 +80,7 @@ namespace Scheduling_System
 
                     List<string> lines = new List<string>();
 
-                    string event_new = event_id + "," + cust_id + "," + DateTime.Parse(dateTimePicker_Event.Text).Date + "," + textBox_EventDescription.Text + "," + Form_Login.current_employee;
+                    string event_new = event_id + "," + cust_id + "," + DateTime.Parse(dateTimePicker_Event.Text).Date + ",\"" + textBox_EventDescription.Text + "\"," + Form_Login.current_employee;
                     lines.Add(event_new);
 
                     File.AppendAllLines(filepath, lines);
