@@ -47,7 +47,7 @@ namespace Scheduling_System
             // textBox_username
             // 
             this.textBox_username.Location = new System.Drawing.Point(504, 167);
-            this.textBox_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_username.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_username.MaxLength = 9;
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(132, 22);
@@ -80,7 +80,7 @@ namespace Scheduling_System
             // textBox_password
             // 
             this.textBox_password.Location = new System.Drawing.Point(504, 225);
-            this.textBox_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_password.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_password.MaxLength = 8;
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '*';
@@ -104,7 +104,7 @@ namespace Scheduling_System
             // 
             this.button_usernameHint.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button_usernameHint.Location = new System.Drawing.Point(659, 165);
-            this.button_usernameHint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_usernameHint.Margin = new System.Windows.Forms.Padding(4);
             this.button_usernameHint.Name = "button_usernameHint";
             this.button_usernameHint.Size = new System.Drawing.Size(36, 28);
             this.button_usernameHint.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace Scheduling_System
             // button_exit
             // 
             this.button_exit.Location = new System.Drawing.Point(483, 402);
-            this.button_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(4);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(100, 30);
             this.button_exit.TabIndex = 9;
@@ -168,7 +168,7 @@ namespace Scheduling_System
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.ForeColor = System.Drawing.Color.Transparent;
             this.button_login.Location = new System.Drawing.Point(403, 286);
-            this.button_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(235, 30);
             this.button_login.TabIndex = 10;
@@ -199,11 +199,12 @@ namespace Scheduling_System
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1159, 598);
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Scheduling System";
+            this.Text = "SSS Login Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
