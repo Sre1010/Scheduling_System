@@ -115,7 +115,7 @@ namespace Scheduling_System
 
         private void button_see_cust_Click(object sender, EventArgs e)
         {
-            loadform(new See_Customer());
+            loadform(new See_Customer_panel(this));
         }
     }
 }

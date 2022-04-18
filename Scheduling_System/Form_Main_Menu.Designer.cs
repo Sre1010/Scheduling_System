@@ -42,11 +42,11 @@ namespace Scheduling_System
             this.label_TodaysDate = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_panel = new System.Windows.Forms.Panel();
-            this.button_removeCustomer = new System.Windows.Forms.Button();
+            this.button_see_cust = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_removeCustomer = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_see_cust = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
@@ -74,7 +74,7 @@ namespace Scheduling_System
             this.button_temp_login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_temp_login.ForeColor = System.Drawing.Color.White;
             this.button_temp_login.Location = new System.Drawing.Point(17, 282);
-            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_temp_login.Name = "button_temp_login";
             this.button_temp_login.Size = new System.Drawing.Size(220, 34);
             this.button_temp_login.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace Scheduling_System
             this.button_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_settings.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_settings.ForeColor = System.Drawing.Color.White;
-            this.button_settings.Location = new System.Drawing.Point(17, 428);
+            this.button_settings.Location = new System.Drawing.Point(17, 416);
             this.button_settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_settings.Name = "button_settings";
             this.button_settings.Size = new System.Drawing.Size(220, 34);
@@ -187,7 +187,6 @@ namespace Scheduling_System
             // 
             this.menu_panel.BackColor = System.Drawing.Color.Transparent;
             this.menu_panel.Controls.Add(this.button_see_cust);
-            this.menu_panel.Controls.Add(this.button_removeCustomer);
             this.menu_panel.Controls.Add(this.panel1);
             this.menu_panel.Controls.Add(this.pictureBox1);
             this.menu_panel.Controls.Add(this.label_TodaysDate);
@@ -204,22 +203,20 @@ namespace Scheduling_System
             this.menu_panel.Size = new System.Drawing.Size(259, 554);
             this.menu_panel.TabIndex = 14;
             // 
-            // button_removeCustomer
+            // button_see_cust
             // 
-            this.button_removeCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.button_removeCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_removeCustomer.BackgroundImage")));
-            this.button_removeCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_removeCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_removeCustomer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_removeCustomer.ForeColor = System.Drawing.Color.White;
-            this.button_removeCustomer.Location = new System.Drawing.Point(17, 333);
-            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button_removeCustomer.Name = "button_removeCustomer";
-            this.button_removeCustomer.Size = new System.Drawing.Size(220, 34);
-            this.button_removeCustomer.TabIndex = 13;
-            this.button_removeCustomer.Text = "Remove Customer";
-            this.button_removeCustomer.UseVisualStyleBackColor = false;
-            this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
+            this.button_see_cust.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_see_cust.BackgroundImage")));
+            this.button_see_cust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_see_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_see_cust.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_see_cust.ForeColor = System.Drawing.SystemColors.Control;
+            this.button_see_cust.Location = new System.Drawing.Point(17, 350);
+            this.button_see_cust.Name = "button_see_cust";
+            this.button_see_cust.Size = new System.Drawing.Size(220, 34);
+            this.button_see_cust.TabIndex = 13;
+            this.button_see_cust.Text = "See Customers";
+            this.button_see_cust.UseVisualStyleBackColor = true;
+            this.button_see_cust.Click += new System.EventHandler(this.button_see_cust_Click);
             // 
             // panel1
             // 
@@ -230,11 +227,29 @@ namespace Scheduling_System
             this.panel1.Size = new System.Drawing.Size(3, 480);
             this.panel1.TabIndex = 12;
             // 
+            // button_removeCustomer
+            // 
+            this.button_removeCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.button_removeCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_removeCustomer.BackgroundImage")));
+            this.button_removeCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_removeCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_removeCustomer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeCustomer.ForeColor = System.Drawing.Color.White;
+            this.button_removeCustomer.Location = new System.Drawing.Point(38, 136);
+            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.button_removeCustomer.Name = "button_removeCustomer";
+            this.button_removeCustomer.Size = new System.Drawing.Size(220, 34);
+            this.button_removeCustomer.TabIndex = 13;
+            this.button_removeCustomer.Text = "Remove Customer";
+            this.button_removeCustomer.UseVisualStyleBackColor = false;
+            this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
+            // 
             // main_panel
             // 
             this.main_panel.BackColor = System.Drawing.Color.Transparent;
             this.main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.main_panel.Controls.Add(this.label1);
+            this.main_panel.Controls.Add(this.button_removeCustomer);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.main_panel.Location = new System.Drawing.Point(256, 0);
             this.main_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -251,21 +266,6 @@ namespace Scheduling_System
             this.label1.TabIndex = 12;
             this.label1.Text = "Event for the next 2 weeks needs to be displayed here";
             // 
-            // button_see_cust
-            // 
-            this.button_see_cust.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_see_cust.BackgroundImage")));
-            this.button_see_cust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_see_cust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_see_cust.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_see_cust.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_see_cust.Location = new System.Drawing.Point(17, 383);
-            this.button_see_cust.Name = "button_see_cust";
-            this.button_see_cust.Size = new System.Drawing.Size(220, 34);
-            this.button_see_cust.TabIndex = 13;
-            this.button_see_cust.Text = "See Customers";
-            this.button_see_cust.UseVisualStyleBackColor = true;
-            this.button_see_cust.Click += new System.EventHandler(this.button_see_cust_Click);
-            // 
             // Form_Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,7 +279,7 @@ namespace Scheduling_System
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main_Menu";
             this.Text = "SSS Main Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_Menu_FormClosed);
