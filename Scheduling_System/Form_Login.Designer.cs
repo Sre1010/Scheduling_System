@@ -126,13 +126,20 @@ namespace Scheduling_System
             // 
             // button_exit
             // 
+            this.button_exit.BackColor = System.Drawing.Color.Transparent;
+            this.button_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_exit.BackgroundImage")));
+            this.button_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_exit.FlatAppearance.BorderSize = 0;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_exit.ForeColor = System.Drawing.Color.AliceBlue;
             this.button_exit.Location = new System.Drawing.Point(483, 402);
             this.button_exit.Margin = new System.Windows.Forms.Padding(4);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(100, 30);
             this.button_exit.TabIndex = 9;
             this.button_exit.Text = "Exit";
-            this.button_exit.UseVisualStyleBackColor = true;
+            this.button_exit.UseVisualStyleBackColor = false;
             this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // label_verifyLogin

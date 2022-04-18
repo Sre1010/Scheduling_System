@@ -61,8 +61,8 @@ namespace Scheduling_System
         /// <param name="e"></param>
         private void button_temp_login_Click(object sender, EventArgs e)
         {
-            form_login.textBox_username.Text = "";
-            form_login.textBox_password.Text = "";
+            form_login.textBox_username.Clear();
+            form_login.textBox_password.Clear();
             form_login.Show();
             this.Close();
         }
@@ -85,11 +85,6 @@ namespace Scheduling_System
         private void button_scheduled_events_Click(object sender, EventArgs e)
         {
             loadform(new Form_See_Upcoming_Events(this));
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button_schedule_Click(object sender, EventArgs e)
@@ -118,6 +113,14 @@ namespace Scheduling_System
         {
             loadform(new Cancel_Event_Form());
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form_login.textBox_username.Clear();
+            form_login.textBox_password.Clear();
+
+            this.Close();
         }
     }
 }

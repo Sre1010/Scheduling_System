@@ -46,6 +46,7 @@ namespace Scheduling_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.main_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
@@ -73,7 +74,7 @@ namespace Scheduling_System
             this.button_temp_login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_temp_login.ForeColor = System.Drawing.Color.White;
             this.button_temp_login.Location = new System.Drawing.Point(17, 282);
-            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_temp_login.Margin = new System.Windows.Forms.Padding(4);
             this.button_temp_login.Name = "button_temp_login";
             this.button_temp_login.Size = new System.Drawing.Size(220, 34);
             this.button_temp_login.TabIndex = 1;
@@ -164,7 +165,7 @@ namespace Scheduling_System
             this.label_TodaysDate.BackColor = System.Drawing.Color.Transparent;
             this.label_TodaysDate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TodaysDate.ForeColor = System.Drawing.Color.White;
-            this.label_TodaysDate.Location = new System.Drawing.Point(119, 526);
+            this.label_TodaysDate.Location = new System.Drawing.Point(120, 522);
             this.label_TodaysDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TodaysDate.Name = "label_TodaysDate";
             this.label_TodaysDate.Size = new System.Drawing.Size(0, 23);
@@ -212,7 +213,7 @@ namespace Scheduling_System
             this.button_removeCustomer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_removeCustomer.ForeColor = System.Drawing.Color.White;
             this.button_removeCustomer.Location = new System.Drawing.Point(17, 342);
-            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.button_removeCustomer.Name = "button_removeCustomer";
             this.button_removeCustomer.Size = new System.Drawing.Size(220, 34);
             this.button_removeCustomer.TabIndex = 13;
@@ -233,6 +234,7 @@ namespace Scheduling_System
             // 
             this.main_panel.BackColor = System.Drawing.Color.Transparent;
             this.main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.main_panel.Controls.Add(this.button1);
             this.main_panel.Controls.Add(this.label1);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.main_panel.Location = new System.Drawing.Point(256, 0);
@@ -246,14 +248,31 @@ namespace Scheduling_System
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(117, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 17);
+            this.label1.Size = new System.Drawing.Size(326, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Event for the next 2 weeks needs to be displayed here";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(783, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 26);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
@@ -261,9 +280,9 @@ namespace Scheduling_System
             this.Controls.Add(this.menu_panel);
             this.Controls.Add(this.main_panel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Main_Menu";
             this.Text = "SSS Main Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_Menu_FormClosed);
@@ -293,5 +312,6 @@ namespace Scheduling_System
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_removeCustomer;
+        private System.Windows.Forms.Button button1;
     }
 }

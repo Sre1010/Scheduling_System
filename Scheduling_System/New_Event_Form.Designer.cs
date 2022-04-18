@@ -229,7 +229,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(785, 3);
+            this.button1.Location = new System.Drawing.Point(786, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 26);
             this.button1.TabIndex = 21;
