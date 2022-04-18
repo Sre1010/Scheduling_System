@@ -119,6 +119,10 @@ namespace Scheduling_System
             // 
             // button_exit
             // 
+            this.button_exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_exit.BackgroundImage")));
+            this.button_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_exit.ForeColor = System.Drawing.Color.Transparent;
             this.button_exit.Location = new System.Drawing.Point(362, 327);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(75, 24);
@@ -144,7 +148,7 @@ namespace Scheduling_System
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(216, 106);
             this.pictureBox1.TabIndex = 12;
@@ -174,7 +178,7 @@ namespace Scheduling_System
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(858, 456);
+            this.ClientSize = new System.Drawing.Size(871, 491);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_verifyLogin);

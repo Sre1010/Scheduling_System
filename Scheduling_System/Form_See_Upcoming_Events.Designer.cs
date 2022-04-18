@@ -90,7 +90,7 @@ namespace Scheduling_System
             this.label_date_range.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date_range.Location = new System.Drawing.Point(219, 75);
             this.label_date_range.Name = "label_date_range";
-            this.label_date_range.Size = new System.Drawing.Size(174, 16);
+            this.label_date_range.Size = new System.Drawing.Size(173, 16);
             this.label_date_range.TabIndex = 9;
             this.label_date_range.Text = "Select a specific date range";
             // 
@@ -101,7 +101,7 @@ namespace Scheduling_System
             this.label_date_range_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_date_range_2.Location = new System.Drawing.Point(291, 103);
             this.label_date_range_2.Name = "label_date_range_2";
-            this.label_date_range_2.Size = new System.Drawing.Size(19, 16);
+            this.label_date_range_2.Size = new System.Drawing.Size(18, 16);
             this.label_date_range_2.TabIndex = 10;
             this.label_date_range_2.Text = "to";
             // 
@@ -133,9 +133,9 @@ namespace Scheduling_System
             this.label_client_company_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_client_company_name.Location = new System.Drawing.Point(18, 137);
             this.label_client_company_name.Name = "label_client_company_name";
-            this.label_client_company_name.Size = new System.Drawing.Size(102, 16);
+            this.label_client_company_name.Size = new System.Drawing.Size(101, 16);
             this.label_client_company_name.TabIndex = 13;
-            this.label_client_company_name.Text = "Client Compnay";
+            this.label_client_company_name.Text = "Client Company";
             // 
             // button_modify_event
             // 
