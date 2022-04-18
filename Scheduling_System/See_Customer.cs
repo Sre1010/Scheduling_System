@@ -13,7 +13,7 @@ namespace Scheduling_System
 {
     public partial class See_Customer_panel : Form
     {
-        List<string> customers = new List<string>();      // List of customer IDs (used to figure out which person to remove from list/file)
+        private List<string> customers = new List<string>();      // List of customer IDs (used to figure out which person to remove from list/file)
         Form_Main_Menu rmc = null;
         Customer modify_customer = null;
         public See_Customer_panel(Form_Main_Menu mainMenuForm)
@@ -36,7 +36,7 @@ namespace Scheduling_System
             this.Close();
             rmc.loadform(new Form_Delete_Customer(rmc));
         }
-        private void modifycustomerbusiness()
+        private void Modifycustomerbusiness()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
@@ -44,7 +44,7 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.BussinessName = change_business.Text;
-                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.BussinessName = change_business.Text;
                     break;
                 }
             }
@@ -60,7 +60,7 @@ namespace Scheduling_System
                 string[] lineInfo = line.Split(',');
                 if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
                 {
-                    newLines[index] = modifiedBusiness();
+                    newLines[index] = ModifiedBusiness();
                     index++;
                     continue;
                 }
@@ -71,7 +71,7 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
             
         }
-        private void modifycustomerfname()
+        private void Modifycustomerfname()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
@@ -79,7 +79,7 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.FirstName = change_FL.Text;
-                    modify_customer.FirstName = cust.FirstName;
+                    modify_customer.FirstName = change_FL.Text;
                     break;
                 }
             }
@@ -95,7 +95,7 @@ namespace Scheduling_System
                 string[] lineInfo = line.Split(',');
                 if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
                 {
-                    newLines[index] = modifiedfirstname();
+                    newLines[index] = Modifiedfirstname();
                     index++;
                     continue;
                 }
@@ -106,15 +106,15 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
-        private void modifycustomerlname()
+        private void Modifycustomerlname()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
             {
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
-                    cust.LastName = change_LN.Text;
-                    modify_customer.LastName = cust.LastName;
+                    cust.LastName = lable3.Text;
+                    modify_customer.LastName = lable3.Text;
                     break;
                 }
             }
@@ -130,7 +130,7 @@ namespace Scheduling_System
                 string[] lineInfo = line.Split(',');
                 if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
                 {
-                    newLines[index] = modifiedlastname();
+                    newLines[index] = Modifiedlastname();
                     index++;
                     continue;
                 }
@@ -141,7 +141,7 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
-        private void modifycustomeremail()
+        private void Modifycustomeremail()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
@@ -165,7 +165,7 @@ namespace Scheduling_System
                 string[] lineInfo = line.Split(',');
                 if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
                 {
-                    newLines[index] = modifiedemail();
+                    newLines[index] = Modifiedemail();
                     index++;
                     continue;
                 }
@@ -176,7 +176,7 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
-        private void modifycustomerPhone()
+        private void ModifycustomerPhone()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
@@ -184,7 +184,7 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.PhoneNumberC = Change_phone.Text;
-                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
+                    modify_customer.PhoneNumberC = Change_phone.Text;
                     break;
                 }
             }
@@ -200,7 +200,7 @@ namespace Scheduling_System
                 string[] lineInfo = line.Split(',');
                 if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
                 {
-                    newLines[index] = modifiedphone();
+                    newLines[index] = Modifiedphone();
                     index++;
                     continue;
                 }
@@ -211,52 +211,53 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
-        private string modifiedBusiness()
+        private string ModifiedBusiness()
         {
-            Customer cust = new Customer();
-            return cust.CustomerID + "," + change_business.Text + "," + cust.FirstName + "," + cust.LastName + "," + cust.EmailC + cust.PhoneNumberC + Form_Login.current_employee;
+            
+            return modify_customer.CustomerID + "," + change_business.Text + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," +  modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
             //CL1231,"BussinesName1",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
         }
 
-        private string modifiedfirstname()
+        private string Modifiedfirstname()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + change_FL.Text + "," + modify_customer.LastName + "," + modify_customer.EmailC + modify_customer.PhoneNumberC + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + change_FL.Text + "," + modify_customer.LastName + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
-        private string modifiedlastname()
+        private string Modifiedlastname()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + change_LN.Text + "," + modify_customer.EmailC + modify_customer.PhoneNumberC + Form_Login.current_employee;
+            Customer cust = new Customer();
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + change_LN.Text + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
-        private string modifiedemail()
+        private string Modifiedemail()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + Change_email.Text + modify_customer.PhoneNumberC + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + Change_email.Text + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
-        private string modifiedphone()
+        private string Modifiedphone()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + Change_phone.Text + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + "," + Change_phone.Text + "," + Form_Login.current_employee;
         }
 
         private void modify_bus_Click(object sender, EventArgs e)
         {
             if(change_business.Text != null)
             {
-                modifycustomerbusiness();
+                Modifycustomerbusiness();
             }
-            if (change_FL.Text != null)
+           /* if (change_FL.Text != null)
             {
-                modifycustomerfname();
+                Modifycustomerfname();
             }
-            if (change_LN.Text != null)
+            if (lable3.Text != null)
             {
-                modifycustomerlname();
+                Modifycustomerlname();
             }
             if (Change_email.Text != null)
             {
-                modifycustomeremail();
+                Modifycustomeremail();
             }
             if (Change_phone.Text != null)
             {
-                modifycustomerPhone();
-            }
+                ModifycustomerPhone();
+            }*/
 
         }
 
@@ -266,6 +267,7 @@ namespace Scheduling_System
             {
                 dataGrid_customer.CurrentRow.Selected = true;
                 CustomerID_text.Text = dataGrid_customer.Rows[e.RowIndex].Cells["CustomerID"].FormattedValue.ToString();
+                //DateTime date2 = Convert.ToDateTime(dataGrid_customer.CurrentRow.Cells[4].Value.ToString());
                 modify_customer.CustomerID = CustomerID_text.Text;
             }
         }

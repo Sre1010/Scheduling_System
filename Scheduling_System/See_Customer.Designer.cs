@@ -35,10 +35,10 @@ namespace Scheduling_System
             this.button_removeCustomer = new System.Windows.Forms.Button();
             this.change_business = new System.Windows.Forms.TextBox();
             this.change_FL = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.change_LN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.change_LN = new System.Windows.Forms.Label();
+            this.lable3 = new System.Windows.Forms.Label();
             this.modify_bus = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -101,12 +101,12 @@ namespace Scheduling_System
             this.change_FL.Size = new System.Drawing.Size(100, 22);
             this.change_FL.TabIndex = 4;
             // 
-            // textBox3
+            // change_LN
             // 
-            this.textBox3.Location = new System.Drawing.Point(288, 337);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.change_LN.Location = new System.Drawing.Point(288, 337);
+            this.change_LN.Name = "change_LN";
+            this.change_LN.Size = new System.Drawing.Size(100, 22);
+            this.change_LN.TabIndex = 5;
             // 
             // label1
             // 
@@ -126,14 +126,14 @@ namespace Scheduling_System
             this.label2.TabIndex = 7;
             this.label2.Text = "First name";
             // 
-            // change_LN
+            // lable3
             // 
-            this.change_LN.AutoSize = true;
-            this.change_LN.Location = new System.Drawing.Point(285, 306);
-            this.change_LN.Name = "change_LN";
-            this.change_LN.Size = new System.Drawing.Size(74, 17);
-            this.change_LN.TabIndex = 8;
-            this.change_LN.Text = "Last name";
+            this.lable3.AutoSize = true;
+            this.lable3.Location = new System.Drawing.Point(285, 306);
+            this.lable3.Name = "lable3";
+            this.lable3.Size = new System.Drawing.Size(74, 17);
+            this.lable3.TabIndex = 8;
+            this.lable3.Text = "Last name";
             // 
             // modify_bus
             // 
@@ -199,10 +199,10 @@ namespace Scheduling_System
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.modify_bus);
-            this.Controls.Add(this.change_LN);
+            this.Controls.Add(this.lable3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.change_LN);
             this.Controls.Add(this.change_FL);
             this.Controls.Add(this.change_business);
             this.Controls.Add(this.button_removeCustomer);
@@ -224,10 +224,10 @@ namespace Scheduling_System
         private System.Windows.Forms.Button button_removeCustomer;
         private System.Windows.Forms.TextBox change_business;
         private System.Windows.Forms.TextBox change_FL;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox change_LN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label change_LN;
+        private System.Windows.Forms.Label lable3;
         private System.Windows.Forms.Button modify_bus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
