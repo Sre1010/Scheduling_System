@@ -150,5 +150,10 @@ namespace Scheduling_System
             loadform(new Cancel_Event_Form());
 
         }
+
+        private void todays_event_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
