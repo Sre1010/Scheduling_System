@@ -44,7 +44,6 @@ namespace Scheduling_System
             this.menu_panel = new System.Windows.Forms.Panel();
             this.button_see_cust = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_removeCustomer = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -227,29 +226,11 @@ namespace Scheduling_System
             this.panel1.Size = new System.Drawing.Size(3, 480);
             this.panel1.TabIndex = 12;
             // 
-            // button_removeCustomer
-            // 
-            this.button_removeCustomer.BackColor = System.Drawing.Color.Transparent;
-            this.button_removeCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_removeCustomer.BackgroundImage")));
-            this.button_removeCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_removeCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_removeCustomer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_removeCustomer.ForeColor = System.Drawing.Color.White;
-            this.button_removeCustomer.Location = new System.Drawing.Point(38, 136);
-            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.button_removeCustomer.Name = "button_removeCustomer";
-            this.button_removeCustomer.Size = new System.Drawing.Size(220, 34);
-            this.button_removeCustomer.TabIndex = 13;
-            this.button_removeCustomer.Text = "Remove Customer";
-            this.button_removeCustomer.UseVisualStyleBackColor = false;
-            this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
-            // 
             // main_panel
             // 
             this.main_panel.BackColor = System.Drawing.Color.Transparent;
             this.main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.main_panel.Controls.Add(this.label1);
-            this.main_panel.Controls.Add(this.button_removeCustomer);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.main_panel.Location = new System.Drawing.Point(256, 0);
             this.main_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -308,7 +289,6 @@ namespace Scheduling_System
         private System.Windows.Forms.Panel main_panel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_removeCustomer;
         private System.Windows.Forms.Button button_see_cust;
     }
 }

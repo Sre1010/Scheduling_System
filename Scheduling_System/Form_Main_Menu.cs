@@ -29,11 +29,11 @@ namespace Scheduling_System
             form_login = fl;
 
             // Hide remove customer button from associate  
-            if (username[2] == 'A')
+            /*if (username[2] == 'A')
                 button_removeCustomer.Visible = false;
             // Show remove customer button to manager
             else if (username[2] == 'M')
-                button_removeCustomer.Visible = true;
+                button_removeCustomer.Visible = true;*/
         }
 
         public void loadform(object Form)

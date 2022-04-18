@@ -16,11 +16,11 @@ namespace Scheduling_System
         List<string> customers = new List<string>();      // List of customer IDs (used to figure out which person to remove from list/file)
         Form_Main_Menu rmc = null;
         Customer modify_customer = null;
-        public See_Customer_panel(Form_Main_Menu mainMenuForm)
+        public See_Customer_panel(Form_Main_Menu mainMenuForm, Customer cust)
         {
             InitializeComponent();
             rmc = mainMenuForm;
-            //modify_customer = cust;
+            modify_customer = cust;
             dataGrid_customer.DataSource = Form_Login.customerList; // Display all events by default
         }    
 
@@ -78,7 +78,7 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.FirstName = change_FL.Text;
-                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.FirstName = cust.FirstName;
                     break;
                 }
             }
@@ -113,7 +113,7 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.LastName = change_LN.Text;
-                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.LastName = cust.LastName;
                     break;
                 }
             }
@@ -140,6 +140,76 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
+        private void modifycustomeremail()
+        {
+            // Modify client from  clientlist
+            foreach (Customer cust in Form_Login.customerList)
+            {
+                if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
+                {
+                    cust.EmailC = Change_email.Text;
+                    modify_customer.EmailC = cust.EmailC;
+                    break;
+                }
+            }
+
+            // Modify in file
+            string[] oldLines = File.ReadAllLines("..//..//text_files//ClientFile.txt");
+            string[] newLines = new string[oldLines.Length];
+            int index = 0;
+            foreach (string line in oldLines)
+            {
+                if (line == null)
+                    break;
+                string[] lineInfo = line.Split(',');
+                if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
+                {
+                    newLines[index] = modifiedemail();
+                    index++;
+                    continue;
+                }
+                newLines[index] = line;
+                index++;
+            }
+
+            File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
+
+        }
+        private void modifycustomerPhone()
+        {
+            // Modify client from  clientlist
+            foreach (Customer cust in Form_Login.customerList)
+            {
+                if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
+                {
+                    cust.PhoneNumberC = Change_phone.Text;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
+                    break;
+                }
+            }
+
+            // Modify in file
+            string[] oldLines = File.ReadAllLines("..//..//text_files//ClientFile.txt");
+            string[] newLines = new string[oldLines.Length];
+            int index = 0;
+            foreach (string line in oldLines)
+            {
+                if (line == null)
+                    break;
+                string[] lineInfo = line.Split(',');
+                if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
+                {
+                    newLines[index] = modifiedphone();
+                    index++;
+                    continue;
+                }
+                newLines[index] = line;
+                index++;
+            }
+
+            File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
+
+        }
         private string modifiedBusiness()
         {
             return modify_customer.CustomerID + "," + change_business.Text + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + modify_customer.PhoneNumberC + Form_Login.current_employee;
@@ -153,6 +223,14 @@ namespace Scheduling_System
         private string modifiedlastname()
         {
             return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + change_LN.Text + "," + modify_customer.EmailC + modify_customer.PhoneNumberC + Form_Login.current_employee;
+        }
+        private string modifiedemail()
+        {
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + Change_email.Text + modify_customer.PhoneNumberC + Form_Login.current_employee;
+        }
+        private string modifiedphone()
+        {
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + Change_phone.Text + Form_Login.current_employee;
         }
 
         private void modify_bus_Click(object sender, EventArgs e)
@@ -169,7 +247,25 @@ namespace Scheduling_System
             {
                 modifycustomerlname();
             }
+            if (Change_email.Text != null)
+            {
+                modifycustomerlname();
+            }
+            if (Change_phone.Text != null)
+            {
+                modifycustomerlname();
+            }
 
+        }
+
+        private void dataGrid_customer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGrid_customer.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGrid_customer.CurrentRow.Selected = true;
+                CustomerID_text.Text = dataGrid_customer.Rows[e.RowIndex].Cells["CustomerID"].FormattedValue.ToString();
+                //modify_customer.CustomerID = CustomerID_text.Text;
+            }
         }
     }
 }
