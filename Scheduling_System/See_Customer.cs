@@ -16,9 +16,10 @@ namespace Scheduling_System
         List<string> customers = new List<string>();      // List of customer IDs (used to figure out which person to remove from list/file)
         Form_Main_Menu rmc = null;
         Customer modify_customer = null;
-        public See_Customer_panel(Form_Main_Menu mainMenuForm, Customer cust)
+        public See_Customer_panel(Form_Main_Menu mainMenuForm)
         {
             InitializeComponent();
+            Customer cust = new Customer();
             rmc = mainMenuForm;
             modify_customer = cust;
             dataGrid_customer.DataSource = Form_Login.customerList; // Display all events by default
@@ -212,7 +213,8 @@ namespace Scheduling_System
         }
         private string modifiedBusiness()
         {
-            return modify_customer.CustomerID + "," + change_business.Text + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + modify_customer.PhoneNumberC + Form_Login.current_employee;
+            Customer cust = new Customer();
+            return cust.CustomerID + "," + change_business.Text + "," + cust.FirstName + "," + cust.LastName + "," + cust.EmailC + cust.PhoneNumberC + Form_Login.current_employee;
             //CL1231,"BussinesName1",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
         }
 
@@ -249,11 +251,11 @@ namespace Scheduling_System
             }
             if (Change_email.Text != null)
             {
-                modifycustomerlname();
+                modifycustomeremail();
             }
             if (Change_phone.Text != null)
             {
-                modifycustomerlname();
+                modifycustomerPhone();
             }
 
         }
@@ -264,7 +266,7 @@ namespace Scheduling_System
             {
                 dataGrid_customer.CurrentRow.Selected = true;
                 CustomerID_text.Text = dataGrid_customer.Rows[e.RowIndex].Cells["CustomerID"].FormattedValue.ToString();
-                //modify_customer.CustomerID = CustomerID_text.Text;
+                modify_customer.CustomerID = CustomerID_text.Text;
             }
         }
     }
