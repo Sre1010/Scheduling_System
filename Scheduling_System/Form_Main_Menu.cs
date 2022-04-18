@@ -53,6 +53,22 @@ namespace Scheduling_System
 
         public void loadform(object Form)
         {
+            //Set Today's Event text
+            if (Form_Login.eventList.Exists(x => x.BookedDate == DateTime.Today))
+            {
+                foreach (Event ev in Form_Login.eventList)
+                {
+                    if (ev.BookedDate == DateTime.Today)
+                    {
+                        todays_event.Text = "Today's event is " + ev.Description + "!";
+                        break;
+                    }
+                }
+            }
+            else
+                todays_event.Text = "No events Scheduled for Today";
+
+
             if (this.main_panel.Controls.Count > 0)
             {
                 this.main_panel.Controls.RemoveAt(0);
