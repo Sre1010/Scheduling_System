@@ -121,7 +121,7 @@
   <data name="button_scheduleEvent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHYAAABDCAYAAABJEPEPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAA59JREFUeF7tnTFy00AUhjOuaNKlpqCAAhvbXIAux0iDKzxjwyEoaKEhQBI7HMRn
+        wQAADsEBuJFr7QAAA59JREFUeF7tnTFy00AUhjOuaNKlpqCAAhvbXIAux0iDKzxjwyEoaKEhQBI7HMRn
         yCF8DvN+7b71Sn6K0WSQrMfvmW8yu/skrf5vVzI0PtPPs3fvB8JM2AhbYUd6AVzBGdwNos7wkY6L88sP
         Dy+uPu+G86+76adr0iPgDO7gEC5V6gAdw/k38yDSH+Awyh1A7Ay2rULSP+ASTiF2w8evH+ASTiF2axWQ
         /gKnEGsOkv4CpxTrEIp1CsU6JRP7gzgiiZ1Ig/iBYp1CsU6hWKdQrFMo1ikU65RM7E/iCIp1ShI7lgbx
@@ -143,7 +143,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAygAAAIqCAYAAADPS25OAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAhOVJREFUeF7tvQnUBllZmEkvLGKcZHJyMs6cySQnmS2ZM8lMjmLEqBhFRAVkacQF
+        cQAAEnEB89x6jgAAhOVJREFUeF7tvQnUBllZmEkvLGKcZHJyMs6cySQnmS2ZM8lMjmLEqBhFRAVkacQF
         FWi2btZuUGj2fQcVXJOJC4o7LtFoEs24jElEEzQqGkMLiKAIgqyydP8173vrvrfee+utqlvf/zdWdz/P
         Oc95b9Xf4k/yf/3V4636vtsMB+Hsva8bht9/FCIi4k3mFVdcMXzS3a9L07zsrk9fP/789vgZ68d3a4+f
         WR9/wc7juz9r/fgL2+Nnrx9/UXv8nPr4i+vjS5vjy+7RHj+3Or70nlvHz6uP77Vx/CXPXz++d3v8gvXj
