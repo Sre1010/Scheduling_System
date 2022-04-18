@@ -134,7 +134,7 @@ namespace Scheduling_System
             this.button_change_date.Location = new System.Drawing.Point(453, 172);
             this.button_change_date.Name = "button_change_date";
             this.button_change_date.Size = new System.Drawing.Size(111, 43);
-            this.button_change_date.TabIndex = 16;
+            this.button_change_date.TabIndex = 3;
             this.button_change_date.Text = "Change Date";
             this.button_change_date.UseVisualStyleBackColor = true;
             this.button_change_date.Click += new System.EventHandler(this.button_change_date_Click);
@@ -149,7 +149,7 @@ namespace Scheduling_System
             this.dateTimePicker_new_date.MinDate = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
             this.dateTimePicker_new_date.Name = "dateTimePicker_new_date";
             this.dateTimePicker_new_date.Size = new System.Drawing.Size(84, 20);
-            this.dateTimePicker_new_date.TabIndex = 21;
+            this.dateTimePicker_new_date.TabIndex = 1;
             this.dateTimePicker_new_date.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             // 
             // button_change_description
@@ -161,7 +161,7 @@ namespace Scheduling_System
             this.button_change_description.Location = new System.Drawing.Point(453, 260);
             this.button_change_description.Name = "button_change_description";
             this.button_change_description.Size = new System.Drawing.Size(111, 42);
-            this.button_change_description.TabIndex = 22;
+            this.button_change_description.TabIndex = 4;
             this.button_change_description.Text = "Change Description";
             this.button_change_description.UseVisualStyleBackColor = true;
             this.button_change_description.Click += new System.EventHandler(this.button_change_description_Click);
@@ -171,7 +171,7 @@ namespace Scheduling_System
             this.textBox_new_description.Location = new System.Drawing.Point(130, 272);
             this.textBox_new_description.Name = "textBox_new_description";
             this.textBox_new_description.Size = new System.Drawing.Size(289, 20);
-            this.textBox_new_description.TabIndex = 23;
+            this.textBox_new_description.TabIndex = 2;
             // 
             // button_modify_different_event
             // 
@@ -182,7 +182,7 @@ namespace Scheduling_System
             this.button_modify_different_event.Location = new System.Drawing.Point(453, 345);
             this.button_modify_different_event.Name = "button_modify_different_event";
             this.button_modify_different_event.Size = new System.Drawing.Size(111, 42);
-            this.button_modify_different_event.TabIndex = 24;
+            this.button_modify_different_event.TabIndex = 5;
             this.button_modify_different_event.Text = "Modify a Different Event";
             this.button_modify_different_event.UseVisualStyleBackColor = true;
             this.button_modify_different_event.Click += new System.EventHandler(this.button_modify_different_event_Click);

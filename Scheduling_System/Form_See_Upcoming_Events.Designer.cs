@@ -74,14 +74,14 @@ namespace Scheduling_System
             this.dateTimePicker_start.Location = new System.Drawing.Point(69, 99);
             this.dateTimePicker_start.Name = "dateTimePicker_start";
             this.dateTimePicker_start.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_start.TabIndex = 7;
+            this.dateTimePicker_start.TabIndex = 1;
             // 
             // dateTimePicker_end
             // 
             this.dateTimePicker_end.Location = new System.Drawing.Point(327, 99);
             this.dateTimePicker_end.Name = "dateTimePicker_end";
             this.dateTimePicker_end.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_end.TabIndex = 8;
+            this.dateTimePicker_end.TabIndex = 2;
             // 
             // label_date_range
             // 
@@ -114,7 +114,7 @@ namespace Scheduling_System
             this.button_search.Location = new System.Drawing.Point(21, 182);
             this.button_search.Name = "button_search";
             this.button_search.Size = new System.Drawing.Size(79, 28);
-            this.button_search.TabIndex = 11;
+            this.button_search.TabIndex = 4;
             this.button_search.Text = "Search";
             this.button_search.UseVisualStyleBackColor = true;
             this.button_search.Click += new System.EventHandler(this.button_search_Click);
@@ -124,7 +124,7 @@ namespace Scheduling_System
             this.textBox_client_company_name.Location = new System.Drawing.Point(126, 137);
             this.textBox_client_company_name.Name = "textBox_client_company_name";
             this.textBox_client_company_name.Size = new System.Drawing.Size(143, 20);
-            this.textBox_client_company_name.TabIndex = 12;
+            this.textBox_client_company_name.TabIndex = 3;
             // 
             // label_client_company_name
             // 
@@ -146,7 +146,7 @@ namespace Scheduling_System
             this.button_modify_event.Location = new System.Drawing.Point(467, 182);
             this.button_modify_event.Name = "button_modify_event";
             this.button_modify_event.Size = new System.Drawing.Size(118, 28);
-            this.button_modify_event.TabIndex = 14;
+            this.button_modify_event.TabIndex = 5;
             this.button_modify_event.Text = "Modify Event";
             this.button_modify_event.UseVisualStyleBackColor = true;
             this.button_modify_event.Click += new System.EventHandler(this.button_modify_event_Click);

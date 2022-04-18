@@ -53,9 +53,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(143, 157);
+            this.label1.Location = new System.Drawing.Point(107, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 19);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bussines Name";
             // 
@@ -63,9 +64,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 194);
+            this.label2.Location = new System.Drawing.Point(127, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "First Name";
             // 
@@ -73,9 +75,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(169, 232);
+            this.label3.Location = new System.Drawing.Point(127, 188);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Last Name";
             // 
@@ -83,9 +86,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(156, 345);
+            this.label4.Location = new System.Drawing.Point(117, 280);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 19);
+            this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Date of Birth";
             // 
@@ -93,9 +97,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(169, 118);
+            this.label5.Location = new System.Drawing.Point(127, 96);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 19);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Event Date";
             // 
@@ -103,9 +108,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(130, 384);
+            this.label6.Location = new System.Drawing.Point(98, 312);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 19);
+            this.label6.Size = new System.Drawing.Size(100, 16);
             this.label6.TabIndex = 5;
             this.label6.Text = "Event Description";
             // 
@@ -113,9 +119,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(203, 304);
+            this.label7.Location = new System.Drawing.Point(152, 247);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 19);
+            this.label7.Size = new System.Drawing.Size(36, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Email";
             // 
@@ -123,65 +130,66 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(144, 270);
+            this.label8.Location = new System.Drawing.Point(108, 219);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 19);
+            this.label8.Size = new System.Drawing.Size(88, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "Phone Number";
             // 
             // textBox_BusName
             // 
-            this.textBox_BusName.AcceptsTab = true;
-            this.textBox_BusName.Location = new System.Drawing.Point(266, 156);
+            this.textBox_BusName.Location = new System.Drawing.Point(200, 127);
+            this.textBox_BusName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_BusName.Multiline = true;
             this.textBox_BusName.Name = "textBox_BusName";
-            this.textBox_BusName.Size = new System.Drawing.Size(328, 23);
-            this.textBox_BusName.TabIndex = 9;
+            this.textBox_BusName.Size = new System.Drawing.Size(247, 19);
+            this.textBox_BusName.TabIndex = 2;
             // 
             // textBox_LastName
             // 
-            this.textBox_LastName.AcceptsTab = true;
-            this.textBox_LastName.Location = new System.Drawing.Point(266, 232);
+            this.textBox_LastName.Location = new System.Drawing.Point(200, 188);
+            this.textBox_LastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_LastName.Multiline = true;
             this.textBox_LastName.Name = "textBox_LastName";
-            this.textBox_LastName.Size = new System.Drawing.Size(328, 23);
-            this.textBox_LastName.TabIndex = 10;
+            this.textBox_LastName.Size = new System.Drawing.Size(247, 19);
+            this.textBox_LastName.TabIndex = 4;
             // 
             // textBox_FirstName
             // 
-            this.textBox_FirstName.AcceptsTab = true;
-            this.textBox_FirstName.Location = new System.Drawing.Point(266, 194);
+            this.textBox_FirstName.Location = new System.Drawing.Point(200, 158);
+            this.textBox_FirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_FirstName.Multiline = true;
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(328, 23);
-            this.textBox_FirstName.TabIndex = 11;
+            this.textBox_FirstName.Size = new System.Drawing.Size(247, 19);
+            this.textBox_FirstName.TabIndex = 3;
             // 
             // textBox_PhoneNum
             // 
-            this.textBox_PhoneNum.AcceptsTab = true;
-            this.textBox_PhoneNum.Location = new System.Drawing.Point(266, 270);
+            this.textBox_PhoneNum.Location = new System.Drawing.Point(200, 219);
+            this.textBox_PhoneNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PhoneNum.Multiline = true;
             this.textBox_PhoneNum.Name = "textBox_PhoneNum";
-            this.textBox_PhoneNum.Size = new System.Drawing.Size(328, 23);
-            this.textBox_PhoneNum.TabIndex = 12;
+            this.textBox_PhoneNum.Size = new System.Drawing.Size(247, 19);
+            this.textBox_PhoneNum.TabIndex = 5;
             // 
             // textBox_Email
             // 
-            this.textBox_Email.AcceptsTab = true;
-            this.textBox_Email.Location = new System.Drawing.Point(266, 304);
+            this.textBox_Email.Location = new System.Drawing.Point(200, 247);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Email.Multiline = true;
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(328, 23);
-            this.textBox_Email.TabIndex = 13;
+            this.textBox_Email.Size = new System.Drawing.Size(247, 19);
+            this.textBox_Email.TabIndex = 6;
             // 
             // textBox_EventDescription
             // 
-            this.textBox_EventDescription.AcceptsTab = true;
-            this.textBox_EventDescription.Location = new System.Drawing.Point(267, 389);
+            this.textBox_EventDescription.Location = new System.Drawing.Point(200, 316);
+            this.textBox_EventDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_EventDescription.Multiline = true;
             this.textBox_EventDescription.Name = "textBox_EventDescription";
-            this.textBox_EventDescription.Size = new System.Drawing.Size(328, 65);
-            this.textBox_EventDescription.TabIndex = 14;
+            this.textBox_EventDescription.Size = new System.Drawing.Size(247, 54);
+            this.textBox_EventDescription.TabIndex = 8;
             // 
             // button_scheduleEvent
             // 
@@ -191,10 +199,11 @@
             this.button_scheduleEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_scheduleEvent.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_scheduleEvent.ForeColor = System.Drawing.Color.White;
-            this.button_scheduleEvent.Location = new System.Drawing.Point(653, 384);
+            this.button_scheduleEvent.Location = new System.Drawing.Point(490, 312);
+            this.button_scheduleEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_scheduleEvent.Name = "button_scheduleEvent";
-            this.button_scheduleEvent.Size = new System.Drawing.Size(117, 60);
-            this.button_scheduleEvent.TabIndex = 17;
+            this.button_scheduleEvent.Size = new System.Drawing.Size(88, 49);
+            this.button_scheduleEvent.TabIndex = 9;
             this.button_scheduleEvent.Text = "Schedule This Event";
             this.button_scheduleEvent.UseVisualStyleBackColor = true;
             this.button_scheduleEvent.Click += new System.EventHandler(this.button1_Click);
@@ -203,23 +212,25 @@
             // 
             this.dateTimePicker_DOB.CustomFormat = "MM-dd-yyyy";
             this.dateTimePicker_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_DOB.Location = new System.Drawing.Point(267, 345);
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(200, 280);
+            this.dateTimePicker_DOB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker_DOB.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_DOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
-            this.dateTimePicker_DOB.Size = new System.Drawing.Size(111, 22);
-            this.dateTimePicker_DOB.TabIndex = 19;
+            this.dateTimePicker_DOB.Size = new System.Drawing.Size(84, 20);
+            this.dateTimePicker_DOB.TabIndex = 7;
             // 
             // dateTimePicker_Event
             // 
             this.dateTimePicker_Event.CustomFormat = "MM-dd-yyyy";
             this.dateTimePicker_Event.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_Event.Location = new System.Drawing.Point(267, 118);
+            this.dateTimePicker_Event.Location = new System.Drawing.Point(200, 96);
+            this.dateTimePicker_Event.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker_Event.MaxDate = new System.DateTime(2025, 4, 10, 12, 54, 0, 0);
             this.dateTimePicker_Event.MinDate = new System.DateTime(2022, 4, 10, 0, 0, 0, 0);
             this.dateTimePicker_Event.Name = "dateTimePicker_Event";
-            this.dateTimePicker_Event.Size = new System.Drawing.Size(111, 22);
-            this.dateTimePicker_Event.TabIndex = 20;
+            this.dateTimePicker_Event.Size = new System.Drawing.Size(84, 20);
+            this.dateTimePicker_Event.TabIndex = 1;
             this.dateTimePicker_Event.Value = new System.DateTime(2022, 4, 15, 0, 0, 0, 0);
             // 
             // button1
@@ -229,9 +240,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(785, 3);
+            this.button1.Location = new System.Drawing.Point(589, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 26);
+            this.button1.Size = new System.Drawing.Size(19, 21);
             this.button1.TabIndex = 21;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -239,12 +251,12 @@
             // 
             // New_Event_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(811, 554);
+            this.ClientSize = new System.Drawing.Size(608, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker_Event);
             this.Controls.Add(this.dateTimePicker_DOB);
@@ -266,6 +278,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(259, 0);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "New_Event_Form";
             this.Text = "New_Event_Form";
             this.ResumeLayout(false);

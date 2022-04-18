@@ -50,7 +50,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(222, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 16);
+            this.label1.Size = new System.Drawing.Size(178, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select a customer to remove";
             // 
@@ -63,7 +63,7 @@
             this.button_removeCustomer.Location = new System.Drawing.Point(246, 301);
             this.button_removeCustomer.Name = "button_removeCustomer";
             this.button_removeCustomer.Size = new System.Drawing.Size(119, 28);
-            this.button_removeCustomer.TabIndex = 2;
+            this.button_removeCustomer.TabIndex = 1;
             this.button_removeCustomer.Text = "Remove";
             this.button_removeCustomer.UseVisualStyleBackColor = true;
             this.button_removeCustomer.Click += new System.EventHandler(this.button_removeCustomer_Click);
