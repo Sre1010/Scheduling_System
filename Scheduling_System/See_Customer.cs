@@ -23,6 +23,7 @@ namespace Scheduling_System
             rmc = mainMenuForm;
             modify_customer = cust;
             dataGrid_customer.DataSource = Form_Login.customerList; // Display all events by default
+            
         }    
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Scheduling_System
             this.Close();
             rmc.loadform(new Form_Delete_Customer(rmc));
         }
-        private void Modifycustomerbusiness()
+        private void modifycustomerbusiness()
         {
             // Modify client from  clientlist
             foreach (Customer cust in Form_Login.customerList)
@@ -45,6 +46,11 @@ namespace Scheduling_System
                 {
                     cust.BussinessName = change_business.Text;
                     modify_customer.BussinessName = change_business.Text;
+                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.LastName = cust.LastName;
+                    modify_customer.FirstName = cust.FirstName;
                     break;
                 }
             }
@@ -80,6 +86,11 @@ namespace Scheduling_System
                 {
                     cust.FirstName = change_FL.Text;
                     modify_customer.FirstName = change_FL.Text;
+                    modify_customer.LastName = cust.LastName;
+                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
                     break;
                 }
             }
@@ -113,8 +124,13 @@ namespace Scheduling_System
             {
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
-                    cust.LastName = lable3.Text;
-                    modify_customer.LastName = lable3.Text;
+                    cust.LastName = change_LN.Text;
+                    modify_customer.LastName = change_LN.Text;
+                    modify_customer.FirstName = cust.FirstName;
+                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
                     break;
                 }
             }
@@ -149,7 +165,12 @@ namespace Scheduling_System
                 if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
                 {
                     cust.EmailC = Change_email.Text;
-                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.EmailC = Change_email.Text;
+                    modify_customer.LastName = cust.LastName;
+                    modify_customer.FirstName = cust.FirstName;
+                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;
                     break;
                 }
             }
@@ -185,6 +206,11 @@ namespace Scheduling_System
                 {
                     cust.PhoneNumberC = Change_phone.Text;
                     modify_customer.PhoneNumberC = Change_phone.Text;
+                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.LastName = cust.LastName;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.FirstName = cust.FirstName;
+                    modify_customer.BussinessName = cust.BussinessName;
                     break;
                 }
             }
@@ -211,52 +237,100 @@ namespace Scheduling_System
             File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
 
         }
+        private void ModifycustomerDob()
+        {
+            // Modify client from  clientlist
+            foreach (Customer cust in Form_Login.customerList)
+            {
+                if (cust.CustomerID == modify_customer.CustomerID)     // Modify date of event based on event ID
+                {
+                    cust.dobC = Convert.ToDateTime(Change_Dob.Text);
+                    modify_customer.dobC = Convert.ToDateTime(Change_Dob.Text);
+                    modify_customer.EmailC = cust.EmailC;
+                    modify_customer.LastName = cust.LastName;
+                    modify_customer.dobC = cust.dobC;
+                    modify_customer.FirstName = cust.FirstName;
+                    modify_customer.BussinessName = cust.BussinessName;
+                    modify_customer.PhoneNumberC = cust.PhoneNumberC;    
+                    break;
+                }
+            }
+
+            // Modify in file
+            string[] oldLines = File.ReadAllLines("..//..//text_files//ClientFile.txt");
+            string[] newLines = new string[oldLines.Length];
+            int index = 0;
+            foreach (string line in oldLines)
+            {
+                if (line == null)
+                    break;
+                string[] lineInfo = line.Split(',');
+                if (lineInfo[0] == modify_customer.CustomerID) // If event ID of selected event found, modify the line
+                {
+                    newLines[index] = ModifiedDob();
+                    index++;
+                    continue;
+                }
+                newLines[index] = line;
+                index++;
+            }
+
+            File.WriteAllLines("..//..//text_files//ClientFile.txt", newLines);     // Copy into the Event File
+
+        }
         private string ModifiedBusiness()
         {
             
-            return modify_customer.CustomerID + "," + change_business.Text + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," +  modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + change_business.Text + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.dobC + ","+  modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
             //CL1231,"BussinesName1",ClientFirstName1,ClientLastName1,03/04/1974,client1@usf.edu,123-456-789
         }
 
         private string Modifiedfirstname()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + change_FL.Text + "," + modify_customer.LastName + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + change_FL.Text + "," + modify_customer.LastName + "," + modify_customer.dobC + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
         private string Modifiedlastname()
         {
             Customer cust = new Customer();
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + change_LN.Text + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + change_LN.Text + "," + modify_customer.dobC + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
         private string Modifiedemail()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + Change_email.Text + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.dobC  + "," + Change_email.Text + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
         }
         private string Modifiedphone()
         {
-            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.EmailC + "," + Change_phone.Text + "," + Form_Login.current_employee;
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + modify_customer.FirstName + "," + modify_customer.LastName + "," + modify_customer.dobC + "," + modify_customer.EmailC + "," + Change_phone.Text + "," + Form_Login.current_employee;
         }
-
+        private string ModifiedDob()
+        {
+            return modify_customer.CustomerID + "," + modify_customer.BussinessName + "," + change_FL.Text + "," + modify_customer.LastName + "," + Convert.ToDateTime(Change_Dob.Text) + "," + modify_customer.EmailC + "," + modify_customer.PhoneNumberC + "," + Form_Login.current_employee;
+        }
         private void modify_bus_Click(object sender, EventArgs e)
         {
-            if(change_business.Text != null)
+            if(!string.IsNullOrEmpty(change_business.Text))
             {
-                Modifycustomerbusiness();
+                modifycustomerbusiness();
             }
-           if (change_FL.Text != null)
+            if (!string.IsNullOrEmpty(change_FL.Text))
             {
                 Modifycustomerfname();
             }
-            if (lable3.Text != null)
+            if (!string.IsNullOrEmpty(change_LN.Text))
             {
                 Modifycustomerlname();
             }
-            if (Change_email.Text != null)
+            if (!string.IsNullOrEmpty(Change_email.Text))
             {
                 Modifycustomeremail();
             }
-            if (Change_phone.Text != null)
+            if (!string.IsNullOrEmpty(Change_phone.Text))
             {
                 ModifycustomerPhone();
+            }
+            if(!string.IsNullOrEmpty(Change_Dob.Text))
+            {
+                ModifiedDob();
             }
 
         }

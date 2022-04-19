@@ -45,6 +45,8 @@ namespace Scheduling_System
 
     public class Customer
     {
+        private List<Customer> customerList;
+
         public Customer(string customerID, string bussinessName, string firstName, string lastName,
             DateTime dobC, string emailC, string phoneNumberC)
         {
@@ -61,11 +63,16 @@ namespace Scheduling_System
         {
         }
 
+        public Customer(List<Customer> customerList)
+        {
+            this.customerList = customerList;
+        }
+
         public string CustomerID { get; set; }
         public string BussinessName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        DateTime dobC { get; set; }
+        public DateTime dobC { get; set; }
         public string EmailC { get; set; }
         public string PhoneNumberC { get; set; }
         public override string ToString()
