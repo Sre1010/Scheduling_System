@@ -47,13 +47,13 @@ namespace Scheduling_System
             if (username[2] == 'A')
             {
                 button_cancel.Visible = false;
-                button_removeCustomer.Visible = false;
+               // button_removeCustomer.Visible = false;
             }
             // Show remove customer and cancel event button to manager
             else if (username[2] == 'M')
             {
                 button_cancel.Visible = true;
-                button_removeCustomer.Visible = true;
+                //button_removeCustomer.Visible = true;
             }
         }
 
@@ -145,11 +145,6 @@ namespace Scheduling_System
         }
 
         // Only shows for manager, able to remove cutomer from client file
-        private void button_removeCustomer_Click(object sender, EventArgs e)
-        {
-            // Open delete customer form and hide this one
-            loadform(new Form_Delete_Customer(this));
-        }
 
         private void button_cancel_Click(object sender, EventArgs e)
         {
@@ -160,6 +155,11 @@ namespace Scheduling_System
         private void todays_event_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void See_custoemer_Click(object sender, EventArgs e)
+        {
+            loadform(new Form_See_Customer_panel(this));
         }
     }
 }
