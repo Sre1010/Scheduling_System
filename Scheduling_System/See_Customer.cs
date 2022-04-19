@@ -242,7 +242,7 @@ namespace Scheduling_System
             {
                 Modifycustomerbusiness();
             }
-           /* if (change_FL.Text != null)
+           if (change_FL.Text != null)
             {
                 Modifycustomerfname();
             }
@@ -257,7 +257,7 @@ namespace Scheduling_System
             if (Change_phone.Text != null)
             {
                 ModifycustomerPhone();
-            }*/
+            }
 
         }
 

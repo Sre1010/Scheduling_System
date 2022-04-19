@@ -51,11 +51,13 @@ namespace Scheduling_System
             // dataGrid_customer
             // 
             this.dataGrid_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_customer.Location = new System.Drawing.Point(40, 75);
+            this.dataGrid_customer.Location = new System.Drawing.Point(30, 61);
+            this.dataGrid_customer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGrid_customer.Name = "dataGrid_customer";
+            this.dataGrid_customer.ReadOnly = true;
             this.dataGrid_customer.RowHeadersWidth = 51;
             this.dataGrid_customer.RowTemplate.Height = 24;
-            this.dataGrid_customer.Size = new System.Drawing.Size(733, 223);
+            this.dataGrid_customer.Size = new System.Drawing.Size(550, 181);
             this.dataGrid_customer.TabIndex = 0;
             this.dataGrid_customer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_customer_CellClick);
             // 
@@ -65,9 +67,10 @@ namespace Scheduling_System
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(765, 3);
+            this.button1.Location = new System.Drawing.Point(574, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 26);
+            this.button1.Size = new System.Drawing.Size(19, 21);
             this.button1.TabIndex = 1;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,9 +82,10 @@ namespace Scheduling_System
             this.button_removeCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_removeCustomer.FlatAppearance.BorderSize = 0;
             this.button_removeCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_removeCustomer.Location = new System.Drawing.Point(656, 393);
+            this.button_removeCustomer.Location = new System.Drawing.Point(492, 319);
+            this.button_removeCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_removeCustomer.Name = "button_removeCustomer";
-            this.button_removeCustomer.Size = new System.Drawing.Size(117, 60);
+            this.button_removeCustomer.Size = new System.Drawing.Size(88, 49);
             this.button_removeCustomer.TabIndex = 2;
             this.button_removeCustomer.Text = "Delete Customer";
             this.button_removeCustomer.UseVisualStyleBackColor = true;
@@ -89,57 +93,64 @@ namespace Scheduling_System
             // 
             // change_business
             // 
-            this.change_business.Location = new System.Drawing.Point(40, 337);
+            this.change_business.Location = new System.Drawing.Point(30, 274);
+            this.change_business.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.change_business.Name = "change_business";
-            this.change_business.Size = new System.Drawing.Size(101, 22);
+            this.change_business.Size = new System.Drawing.Size(77, 20);
             this.change_business.TabIndex = 3;
             // 
             // change_FL
             // 
-            this.change_FL.Location = new System.Drawing.Point(169, 337);
+            this.change_FL.Location = new System.Drawing.Point(127, 274);
+            this.change_FL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.change_FL.Name = "change_FL";
-            this.change_FL.Size = new System.Drawing.Size(100, 22);
+            this.change_FL.Size = new System.Drawing.Size(76, 20);
             this.change_FL.TabIndex = 4;
             // 
             // change_LN
             // 
-            this.change_LN.Location = new System.Drawing.Point(288, 337);
+            this.change_LN.Location = new System.Drawing.Point(216, 274);
+            this.change_LN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.change_LN.Name = "change_LN";
-            this.change_LN.Size = new System.Drawing.Size(100, 22);
+            this.change_LN.Size = new System.Drawing.Size(76, 20);
             this.change_LN.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 306);
+            this.label1.Location = new System.Drawing.Point(30, 249);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 17);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Business name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 306);
+            this.label2.Location = new System.Drawing.Point(124, 249);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "First name";
             // 
             // lable3
             // 
             this.lable3.AutoSize = true;
-            this.lable3.Location = new System.Drawing.Point(285, 306);
+            this.lable3.Location = new System.Drawing.Point(214, 249);
+            this.lable3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lable3.Name = "lable3";
-            this.lable3.Size = new System.Drawing.Size(74, 17);
+            this.lable3.Size = new System.Drawing.Size(56, 13);
             this.lable3.TabIndex = 8;
             this.lable3.Text = "Last name";
             // 
             // modify_bus
             // 
-            this.modify_bus.Location = new System.Drawing.Point(287, 393);
+            this.modify_bus.Location = new System.Drawing.Point(215, 319);
+            this.modify_bus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.modify_bus.Name = "modify_bus";
-            this.modify_bus.Size = new System.Drawing.Size(101, 25);
+            this.modify_bus.Size = new System.Drawing.Size(76, 20);
             this.modify_bus.TabIndex = 9;
             this.modify_bus.Text = "modify";
             this.modify_bus.UseVisualStyleBackColor = true;
@@ -148,51 +159,56 @@ namespace Scheduling_System
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 306);
+            this.label3.Location = new System.Drawing.Point(312, 249);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Email";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(549, 306);
+            this.label4.Location = new System.Drawing.Point(412, 249);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Phone #";
             // 
             // Change_email
             // 
-            this.Change_email.Location = new System.Drawing.Point(419, 337);
+            this.Change_email.Location = new System.Drawing.Point(314, 274);
+            this.Change_email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Change_email.Name = "Change_email";
-            this.Change_email.Size = new System.Drawing.Size(100, 22);
+            this.Change_email.Size = new System.Drawing.Size(76, 20);
             this.Change_email.TabIndex = 12;
             // 
             // Change_phone
             // 
-            this.Change_phone.Location = new System.Drawing.Point(552, 337);
+            this.Change_phone.Location = new System.Drawing.Point(414, 274);
+            this.Change_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Change_phone.Name = "Change_phone";
-            this.Change_phone.Size = new System.Drawing.Size(100, 22);
+            this.Change_phone.Size = new System.Drawing.Size(76, 20);
             this.Change_phone.TabIndex = 13;
             // 
             // CustomerID_text
             // 
             this.CustomerID_text.AutoSize = true;
-            this.CustomerID_text.Location = new System.Drawing.Point(675, 306);
+            this.CustomerID_text.Location = new System.Drawing.Point(506, 249);
+            this.CustomerID_text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CustomerID_text.Name = "CustomerID_text";
-            this.CustomerID_text.Size = new System.Drawing.Size(46, 17);
+            this.CustomerID_text.Size = new System.Drawing.Size(35, 13);
             this.CustomerID_text.TabIndex = 14;
             this.CustomerID_text.Text = "label5";
             // 
             // See_Customer_panel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 507);
+            this.ClientSize = new System.Drawing.Size(595, 412);
             this.Controls.Add(this.CustomerID_text);
             this.Controls.Add(this.Change_phone);
             this.Controls.Add(this.Change_email);
@@ -209,6 +225,7 @@ namespace Scheduling_System
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGrid_customer);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "See_Customer_panel";
             this.Text = "See_Customer";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_customer)).EndInit();
