@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scheduling_System
 {
@@ -37,20 +38,27 @@ namespace Scheduling_System
                     {
                         string event_text = ev.Description;
                         event_text = event_text.Substring(1, event_text.Length-2); //removes quotations marks from description text
-                        todays_event.Text = "Today's event: " + event_text + "!";
+                        label_todays_event.Text = "Today's event: " + event_text + "!";
                         break;
                     }
                 }
             }
             else
-                todays_event.Text = "No events Scheduled for Today";
+                label_todays_event.Text = "No events Scheduled for Today";
+            
+            //display Employee name
+            label_employee_name.Text = getUserName(u);
 
-            // Hide remove customer button from associate  
+            // Hide remove customer button and from associate  
             if (username[2] == 'A')
+            {
                 button_removeCustomer.Visible = false;
+            }
             // Show remove customer button to manager
             else if (username[2] == 'M')
+            {
                 button_removeCustomer.Visible = true;
+            }
         }
 
         public void loadform(object Form)
@@ -141,6 +149,37 @@ namespace Scheduling_System
         private void todays_event_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //takes User ID, returns string containing their first name and last name separated by a space
+        private string getUserName(string id)
+        {
+            string filePath = "..//..//text_files//EmployeeFile.txt";
+
+            List<string> names = File.ReadAllLines(filePath).ToList();
+
+            string fullName = "";
+
+            foreach (string name in names)
+            {
+                string[] items = name.Split(',');
+                Console.WriteLine("ITEM LENGTH: " + items.Length);
+                if (items[0].Equals(id))
+                {
+                    fullName = items[2] + " " + items[3];
+                    goto found; //line 176, just returns fullName
+                }
+            }
+
+            names.Clear();
+            return "Failed to find matching ID";
+
+            found:
+            {
+                names.Clear();
+                return fullName;
+            }
+            
         }
     }
 }

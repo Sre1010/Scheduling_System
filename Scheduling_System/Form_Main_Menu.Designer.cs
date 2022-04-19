@@ -45,7 +45,8 @@ namespace Scheduling_System
             this.button_removeCustomer = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.todays_event = new System.Windows.Forms.Label();
+            this.label_todays_event = new System.Windows.Forms.Label();
+            this.label_employee_name = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
@@ -187,6 +188,7 @@ namespace Scheduling_System
             // menu_panel
             // 
             this.menu_panel.BackColor = System.Drawing.Color.Transparent;
+            this.menu_panel.Controls.Add(this.label_employee_name);
             this.menu_panel.Controls.Add(this.button_removeCustomer);
             this.menu_panel.Controls.Add(this.panel1);
             this.menu_panel.Controls.Add(this.pictureBox1);
@@ -233,7 +235,7 @@ namespace Scheduling_System
             // 
             this.main_panel.BackColor = System.Drawing.Color.Transparent;
             this.main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.main_panel.Controls.Add(this.todays_event);
+            this.main_panel.Controls.Add(this.label_todays_event);
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.main_panel.Location = new System.Drawing.Point(192, 0);
             this.main_panel.Margin = new System.Windows.Forms.Padding(2);
@@ -241,18 +243,29 @@ namespace Scheduling_System
             this.main_panel.Size = new System.Drawing.Size(608, 450);
             this.main_panel.TabIndex = 15;
             // 
-            // todays_event
+            // label_todays_event
             // 
-            this.todays_event.AutoSize = true;
-            this.todays_event.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todays_event.ForeColor = System.Drawing.Color.Black;
-            this.todays_event.Location = new System.Drawing.Point(54, 185);
-            this.todays_event.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.todays_event.Name = "todays_event";
-            this.todays_event.Size = new System.Drawing.Size(152, 25);
-            this.todays_event.TabIndex = 12;
-            this.todays_event.Text = "Today\'s event:";
-            this.todays_event.Click += new System.EventHandler(this.todays_event_Click);
+            this.label_todays_event.AutoSize = true;
+            this.label_todays_event.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_todays_event.ForeColor = System.Drawing.Color.Black;
+            this.label_todays_event.Location = new System.Drawing.Point(54, 185);
+            this.label_todays_event.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_todays_event.Name = "label_todays_event";
+            this.label_todays_event.Size = new System.Drawing.Size(152, 25);
+            this.label_todays_event.TabIndex = 12;
+            this.label_todays_event.Text = "Today\'s event:";
+            this.label_todays_event.Click += new System.EventHandler(this.todays_event_Click);
+            // 
+            // label_employee_name
+            // 
+            this.label_employee_name.AutoSize = true;
+            this.label_employee_name.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_employee_name.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label_employee_name.Location = new System.Drawing.Point(10, 401);
+            this.label_employee_name.Name = "label_employee_name";
+            this.label_employee_name.Size = new System.Drawing.Size(108, 17);
+            this.label_employee_name.TabIndex = 13;
+            this.label_employee_name.Text = "Employee Name";
             // 
             // Form_Main_Menu
             // 
@@ -295,7 +308,8 @@ namespace Scheduling_System
         private System.Windows.Forms.Panel menu_panel;
         private System.Windows.Forms.Panel main_panel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label todays_event;
+        private System.Windows.Forms.Label label_todays_event;
         private System.Windows.Forms.Button button_removeCustomer;
+        private System.Windows.Forms.Label label_employee_name;
     }
 }
