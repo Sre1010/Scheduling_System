@@ -303,5 +303,21 @@ namespace Scheduling_System
         {
 
         }
+
+        private void textBox_username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button_login_Click(sender, e);
+            }
+        }
+
+        private void textBox_password_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button_login_Click(sender, e);
+            }
+        }
     }
 }
