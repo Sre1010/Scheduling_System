@@ -36,7 +36,7 @@ namespace Scheduling_System
         public string Password { get; set; }
         public string FirstNameE { get; set; }
         public string LastNameE { get; set; }
-        DateTime dobE { get; set; }
+        public DateTime dobE { get; set; }
 
         public string EmailE { get; set; }
         public string PhoneNumberE { get; set; }
@@ -72,7 +72,7 @@ namespace Scheduling_System
         public string BussinessName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        DateTime dobC { get; set; }
+        public DateTime dobC { get; set; }
         public string EmailC { get; set; }
         public string PhoneNumberC { get; set; }
         public override string ToString()

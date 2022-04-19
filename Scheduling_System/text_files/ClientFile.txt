@@ -1,4 +1,4 @@
-CL1231,BlueProduct,Alex,Smith,03/04/1974,alexsmith@usf.edu,723-456-789
+CL1231,BlueProduct,,Smith,6/3/1999 12:00:00 AM,alexsmith@usf.edu,723-456-789,SSA523456
 CL2232,DenverCo,Dena,Cruz,03/04/1974,denacrus@mail.ru,823-456-789
 CL3233,Inc34,Pitt,Russel,03/05/1974,russelpitt@usf.edu,523-456-789
 CL1234,RoCompany,Robert,Delago,04/12/1974,robdelago@gmail.com,423-456-789

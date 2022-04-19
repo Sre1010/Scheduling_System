@@ -77,6 +77,12 @@
     <Compile Include="Form_Modify_Event.Designer.cs">
       <DependentUpon>Form_Modify_Event.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_See_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_See_Customer.Designer.cs">
+      <DependentUpon>Form_See_Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_See_Upcoming_Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Modify_Event.resx">
       <DependentUpon>Form_Modify_Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_See_Customer.resx">
+      <DependentUpon>Form_See_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_See_Upcoming_Events.resx">
       <DependentUpon>Form_See_Upcoming_Events.cs</DependentUpon>
