@@ -43,12 +43,18 @@ namespace Scheduling_System
             else
                 todays_event.Text = "No events Scheduled for Today";
 
-            // Hide remove customer button from associate  
+            // Hide remove customer and cancel event button from associate  
             if (username[2] == 'A')
+            {
+                button_cancel.Visible = false;
                 button_removeCustomer.Visible = false;
-            // Show remove customer button to manager
+            }
+            // Show remove customer and cancel event button to manager
             else if (username[2] == 'M')
+            {
+                button_cancel.Visible = true;
                 button_removeCustomer.Visible = true;
+            }
         }
 
         public void loadform(object Form)
