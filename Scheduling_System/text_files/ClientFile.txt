@@ -1,4 +1,5 @@
 CL1231,BlueProduct,Alex,Smith,03/04/1974,alexsmith@usf.edu,723-456-789
 CL2232,DenverCo,Dena,Cruz,03/04/1974,denacrus@mail.ru,823-456-789
 CL3233,Inc34,Pitt,Russel,03/05/1974,russelpitt@usf.edu,523-456-789
-CL1234,RoCompany,Robert,Delago,04/12/1974,robdelago@gmail.com,423-456-789
+CL1234,RoCompany,Robert,Delago,04/12/1974,robdelago@gmail.com,423-456-789CL6192,Tech 8,All,Managers,4/19/2022 12:00:00 AM,tdtiedge@usf.edu,1234567890
+CL9649,Tech 8,Taylor,Tiedge,1/22/1999 12:00:00 AM,tdtiedge@usf.edu,1234567890

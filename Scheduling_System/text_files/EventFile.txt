@@ -1,4 +1,6 @@
 EV8789,CL2232,8/17/2022 12:00:00 AM,"Football Game. Call a day before",SSM323456
 EV5139,CL1234,4/18/2022 12:00:00 AM,"Wedding of Brad Pitt and Jolie. If raining, might have to cancel",SSM623456
 EV6924,CL1231,6/12/2022 12:00:00 AM,"Jojo Siwva Concert, more staff needed",SSA523456
-EV6254,CL3233,4/23/2022 12:00:00 AM,"Corporate Event of Inc34, we will be contacted by InSea restaraunt",SSA223456
+EV6254,CL3233,4/23/2022 12:00:00 AM,"Corporate Event of Inc34, we will be contacted by InSea restaraunt",
+SSA223456EV6192,CL6192,4/21/2022 12:00:00 AM,"Demo Day!! Report/Documentation + video due at midnight",SSM723456
+EV9649,CL9649,4/19/2022 12:00:00 AM,"testing today's event feature",SSM723456
