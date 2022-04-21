@@ -94,6 +94,22 @@ namespace Scheduling_System
             Boolean hasLowerCaseLetter = false;     // Keep track if password has at least 1 lowercase letter
             Boolean hasSpecialSymbol = false;       // Keep track if password has at least 1 special symbol
 
+            //Check that text was entered
+            if(textBox_username.Text.Length == 0)
+            {
+                label_verifyLogin.Visible = true;
+                label_verifyLogin.Text = "Invalid username.";
+                return;
+            }
+            else if (textBox_password.Text.Length == 0)
+            {
+                label_verifyLogin.Visible = true;
+                label_verifyLogin.Text = "Invalid password.";
+                return;
+            }
+
+
+
             //------------------------ Verify username ------------------------//
 
             // Verify letters, make sure there's 3 uppercase letters in beginning
